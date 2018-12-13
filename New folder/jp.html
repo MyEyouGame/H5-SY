@@ -1,0 +1,34 @@
+<script>
+function smellplanedeath() {
+    //迴圈遍歷小飛機和子彈陣列
+    for(i=0;
+    i < smellplanelist.length;
+    i++) {
+        for(j=0;
+        j < bulletlist.length;
+        j++) {
+            // 得到小飛機和子彈的座標
+            var zdleft=parseInt(bulletlist[j].bullernode.style.left);
+            var zdtop=parseInt(bulletlist[j].bullernode.style.top);
+            var fjleft=parseInt(smellplanelist[i].semllplaneNode.style.left);
+            var fjtop=parseInt(smellplanelist[i].semllplaneNode.style.top);
+            if(smellplanelist[i].isdead==false) {
+                //如果飛機狀態為活著
+                //判斷子彈的與飛機的位置關係
+                if(zdleft >=fjleft - 10 && zdleft < fjleft + 40 && zdtop > fjtop && zdtop < fjtop + 60) {
+                    smellplanelist[i].semllplaneNode.src="../img/ss.gif"; //子彈擊中飛機
+                    //改變敵方小飛機的狀態(死掉狀態)
+                    smellplanelist[i].isdead=true;
+                    //子彈擊中飛機
+                    bulletlist[j].btstate=false;
+                    /*legendarys();//執行飛機被擊中的聲音*/
+                    //殺敵數量
+                    killnum++;
+                    //殺敵總分
+                    score=killnum * 5;
+                }
+            }
+        }
+    }
+}
+</script>
