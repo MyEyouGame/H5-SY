@@ -124,17 +124,16 @@ window.requestAnimFrame = (function(){
 
 		  mTop-=10;
 		  ls1.style.marginTop = mTop + '%';
-		  
+		   
 		  if (mTop > -30) {
 		  GetBox(); 
-		  m2.style.WebkitAnimationName="killMonster";
-		   
+		  
 		  if(x2<x && x<(x2+w2))
 			{
-				mWidth-=2;
+				mWidth-=3;
 				document.getElementById('xuetiao').style.width= mWidth + "%";
 			}
-			if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >0) )
+			if((mWidth < 3.5 && swordAmount <=0) || (mWidth <3.5 && swordAmount >0) )
 			{
 				document.getElementById("m2").style.display="none";
 				lose_win.style.backgroundImage="url('nextlevel.png')";
@@ -142,7 +141,7 @@ window.requestAnimFrame = (function(){
 				inner_container3.style.display="block"; 
 				window.cancelAnimationFrame(s);
 			}
-			else if (mWidth > 3 && swordAmount <0)
+			else if (mWidth > 3.5 && swordAmount <0)
 			{
 				window.cancelAnimationFrame(s);
 				document.getElementById("m2").style.display="none";
@@ -162,7 +161,7 @@ window.requestAnimFrame = (function(){
 			
 		mons = window.requestAnimationFrame(monster);
  
-		if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
+		if((mWidth < 3.5 && swordAmount <=0) || (mWidth < 3.5 && swordAmount >=0) )
 		{
 			     window.cancelAnimationFrame(mons);
 			     lose_win.style.backgroundImage="url('nextlevel.png')";
@@ -170,7 +169,7 @@ window.requestAnimFrame = (function(){
 				 document.getElementById("glove2").style.display="none";
 			     inner_container3.style.display="block";
 		}
-		else if (mWidth > 3 && swordAmount <=0)
+		else if (mWidth > 4 && swordAmount <=0)
 		{
 				 window.cancelAnimationFrame(mons);
 				 lose_win.style.backgroundImage="url('lose.png')";
@@ -179,8 +178,7 @@ window.requestAnimFrame = (function(){
 		}		
 		
 	}	
-    		
-			m2.style.WebkitAnimationPlayState="running";
+    	
 		
 	function createImage(){
 	

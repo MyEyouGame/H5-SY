@@ -672,21 +672,21 @@ body{
 	     background-Repeat: no-repeat;
 		 z-index: 90;
 		 
-		 -webkit-animation-name: scaleDraw, LeftRight, killMonster;
-         -webkit-animation-timing-function: linear,linear, linear; 
-         -webkit-animation-iteration-count: 1 , infinite, 1;  
-         -webkit-animation-duration: 0.7s, 9.5s, 2s; 
-		 -webkit-animation-delay:0s, 1.2s, 1s;
-		 -webkit-animation-direction: alternate, alternate, alternate;
-		 -webkit-animation-play-state: running,running, paused;
+		 -webkit-animation-name: scaleDraw, LeftRight;
+         -webkit-animation-timing-function: linear,linear; 
+         -webkit-animation-iteration-count: 1 , infinite;  
+         -webkit-animation-duration: 0.7s, 10s; 
+		 -webkit-animation-delay:0s, 1.2s;
+		 -webkit-animation-direction: alternate, alternate;
+		 -webkit-animation-play-state: running,running;
 		 
-		 animation-name: scaleDraw, LeftRight,killMonster; 
-         animation-timing-function: linear, linear, linear; 
-         animation-iteration-count: 1, infinite, 1;
-         animation-duration: 0.7s ,9.5s,2s;  
-		 animation-delay: 0s, 1.2s,1s;
-         animation-direction: alternate, alternate,alternate;
-		 animation-play-state:running,running,paused;
+		 animation-name: scaleDraw, LeftRight; 
+         animation-timing-function: linear, linear; 
+         animation-iteration-count: 1, infinite;
+         animation-duration: 0.7s ,10s;  
+		 animation-delay: 0s, 1.2s;
+         animation-direction: alternate, alternate;
+		 animation-play-state:running,running;
 	}
 	@keyframes scaleDraw {  
          0%  {transform: scale(1.0); }
