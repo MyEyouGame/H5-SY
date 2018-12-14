@@ -121,13 +121,14 @@ window.requestAnimFrame = (function(){
 	var mTop = 130;
 		
 	function sword(timestamp) {
-		
+
 		  mTop-=10;
 		  ls1.style.marginTop = mTop + '%';
 		  
 		  if (mTop > -30) {
 		  GetBox(); 
-		  
+		  m2.style.WebkitAnimationName="killMonster";
+		   
 		  if(x2<x && x<(x2+w2))
 			{
 				mWidth-=2;
@@ -158,7 +159,7 @@ window.requestAnimFrame = (function(){
 	}
 	
     function monster(timestamp) {
-		
+			
 		mons = window.requestAnimationFrame(monster);
  
 		if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
@@ -179,6 +180,7 @@ window.requestAnimFrame = (function(){
 		
 	}	
     		
+			m2.style.WebkitAnimationPlayState="running";
 		
 	function createImage(){
 	
