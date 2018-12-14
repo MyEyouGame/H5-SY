@@ -69,7 +69,7 @@ window.requestAnimFrame = (function(){
 		var widthToHeight = 0 ;
 		var newWidth = window.innerWidth;
 		var newHeight = window.innerHeight;
-		
+				
 		sizeData(newWidth,newHeight);
 		resize(newWidth,newHeight);		
 		createImage();
@@ -86,12 +86,10 @@ window.requestAnimFrame = (function(){
 		inner_container2.style.display = "block";
 		document.getElementById('tut').style.display = "block";
 		document.getElementById("m2").style.display="block";
-		inner_container.removeEventListener('mousedown', touchstart);
-		}
+		inner_container.removeEventListener('mousedown', touchstart);		
+	}
 	
-     var mLeft = 9;
  	 var mWidth = 100;
-	 var toggle = -1;
 	 var s;
 	 
 	function attack(event) {
@@ -100,7 +98,7 @@ window.requestAnimFrame = (function(){
 		document.getElementById('glove').style.display = "none";
 		document.getElementById('wuci').style.display = "none";
 		document.getElementById('att').style.display = "none";
-		
+	
 		var swords = document.getElementsByClassName('swords');
 	
 		if(swordAmount <= 0){
@@ -133,8 +131,8 @@ window.requestAnimFrame = (function(){
 			}
 			if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >0) )
 			{
-				lose_win.style.backgroundImage="url('nextlevel.png')";
 				document.getElementById("m2").style.display="none";
+				lose_win.style.backgroundImage="url('nextlevel.png')";
 				inner_container3.style.display="block"; 
 				window.cancelAnimationFrame(s);
 			}
@@ -154,132 +152,25 @@ window.requestAnimFrame = (function(){
 		 s= window.requestAnimationFrame(sword);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-// function monster(timestamp) {
+    function monster(timestamp) {
           
-    	// if (toggle === 0){			
-		  // mLeft++;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft < 55) {
-		  // }
-		  // else {
-			// toggle=1;
-		  // }
-		// }
-		// if (toggle === 1){
-		  // mLeft--;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft>-30) {
-		  // }
-		  // else {
-			// toggle=2;
-		  // }
-		// }
-		// if (toggle === 2){
-		  // mLeft++;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft <55) {     
-		  // }
-		  // else {
-			// toggle=3;
-		  // }
-		// }
-		// if (toggle === 3){
-		  // mLeft--;  
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft>-110) {
-		  // }
-		  // else {
-			// toggle=4;
-		  // }
-		// }
-        // if (toggle === 4){
-		  // mLeft++;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft <50) {
-		  // }
-		  // else {
-			// toggle=5;
-		  // }
-		// }
-		// if (toggle === 5){
-		  // mLeft--;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft>-1) {
-		  // }
-		  // else {
-			// toggle=6;
-		  // }
-		// }
-		// if (toggle === 6){
-		  // mLeft++;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft <55) {
-		  // }
-		  // else {
-			// toggle=7;
-		  // }
-		// }
-		// if (toggle === 7){
-		  // mLeft--;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft>-100) {
-		  // }
-		  // else {
-			// toggle=8;
-		  // }
-		// }	
-		// if (toggle === 8){
-		  // mLeft++;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft <55) {
-		  // }
-		  // else {
-			// toggle=9;
-		  // }
-		// }
-		// if (toggle === 9){
-		  // mLeft--;
-		  // m2.style.marginLeft = mLeft + '%';
-		  // if (mLeft>-40) {
-		  // }
-		  // else {
-			// toggle=0;
-		  // }
-		// }
-		
-		// mons = window.requestAnimationFrame(monster);
+		mons = window.requestAnimationFrame(monster);
 
-		// if((mWidth < 4 && swordAmount <=0) || (mWidth < 4 && swordAmount >=0) )
-		// {
-			     // window.cancelAnimationFrame(mons);
-			     // lose_win.style.backgroundImage="url('nextlevel.png')";
-				 // document.getElementById("m2").style.display="none";
-			     // inner_container3.style.display="block";
-		// }
-		// else if (mWidth > 4 && swordAmount <=0)
-		// {
-				 // window.cancelAnimationFrame(mons);
-				 // lose_win.style.backgroundImage="url('lose.png')";
-				 // document.getElementById("m2").style.display="none";
-				 // inner_container3.style.display="block";
-		// }		
-	// }	
-
-
-
-
-
-	
+		if((mWidth < 4 && swordAmount <=0) || (mWidth < 4 && swordAmount >=0) )
+		{
+			     window.cancelAnimationFrame(mons);
+			     lose_win.style.backgroundImage="url('nextlevel.png')";
+				 document.getElementById("m2").style.display="none";
+			     inner_container3.style.display="block";
+		}
+		else if (mWidth > 4 && swordAmount <=0)
+		{
+				 window.cancelAnimationFrame(mons);
+				 lose_win.style.backgroundImage="url('lose.png')";
+				 document.getElementById("m2").style.display="none";
+				 inner_container3.style.display="block";
+		}		
+	}	
 	
 	function createImage(){
 	
