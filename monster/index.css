@@ -734,8 +734,8 @@ body{
 	     95% {transform: scale(0.95);}
 	     100%{transform: scale(1.0); }	
 	}	
-	@-webkit-keyframes LeftRight{
-         0%  { left : 40px;   }
+	@keyframes LeftRight{
+		 0%  { left : 40px;   }
 		 10% { left : 260px;  }
 		 20% { left : -200px; }
 		 35% { left : 260px;  }
@@ -747,8 +747,8 @@ body{
 		 85% { left : 260px;  }
 		 100%{ left : -200px; }
 	}
-    @keyframes LeftRight{
-		 0%  { left : 40px;   }
+	@-webkit-keyframes LeftRight{
+         0%  { left : 40px;   }
 		 10% { left : 260px;  }
 		 20% { left : -200px; }
 		 35% { left : 260px;  }
