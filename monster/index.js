@@ -82,6 +82,7 @@ window.requestAnimFrame = (function(){
 		createImage();
     		
 		window.requestAnimationFrame(monster);	
+
 	}	
 	
 	inner_container.addEventListener('mousedown', touchstart);
@@ -111,7 +112,6 @@ window.requestAnimFrame = (function(){
 		
 		var swords = document.getElementsByClassName('swords');
 		
-		m2.style.animationName="killMonster";
 		
         if(swordAmount <= 0){
 			document.getElementById('value').innerHTML = "0/7";		
@@ -141,7 +141,7 @@ window.requestAnimFrame = (function(){
 		  
 		if(x2<x && x<(x2+w2))			
 		    {
-				mWidth-=2.5;
+				mWidth-=2;
 				document.getElementById('xuetiao').style.width= mWidth + "%";
 			}
 			
