@@ -50,8 +50,11 @@ window.requestAnimFrame = (function(){
 		
 		var inner_container = document.getElementById('inner_container');
 		var inner_container2 = document.getElementById('inner_container2');
+		var inner_container4 = document.getElementById('inner_container4');
+		
 		
 		var ls1 = document.getElementsByClassName("ls1");	
+		
 		var swo1 = document.getElementsByClassName("swo1");	
 		var swo2 = document.getElementsByClassName("swo2");	
 		var swo3 = document.getElementsByClassName("swo3");	
@@ -61,6 +64,8 @@ window.requestAnimFrame = (function(){
 		var swo7 = document.getElementsByClassName("swo7");	
 		
 		var m2 = document.getElementsByClassName("m2");	
+		
+		// var d2 = document.getElementsByClassName("d2");	
 		
         var lose_win=document.getElementsByClassName("lose_win");
 	
@@ -81,6 +86,9 @@ window.requestAnimFrame = (function(){
 	
 	inner_container.addEventListener('mousedown', touchstart);
 	inner_container2.addEventListener('mousedown', attack);
+	// inner_container4.addEventListener('mousedown',attack);
+	
+	
 	
 	function touchstart(event) {
 		event.preventDefault();
@@ -118,50 +126,55 @@ window.requestAnimFrame = (function(){
 			inner_container2.removeEventListener('mousedown', attack);
 	  	}
 		
-	var mTop = 130;
+	var mTop = 128;
 		
 	function sword(timestamp) {
 
 		  mTop-=10;
 		  ls1.style.marginTop = mTop + '%';
-		   
-		  if (mTop > -30) {
+		  		  
+	if (mTop > -30) {
+		
 		  GetBox(); 
 		  
-		  if(x2<x && x<(x2+w2))
-			{
-				mWidth-=3;
+		if(x2<x && x<(x2+w2))			
+		    {
+				mWidth-=2.5;
 				document.getElementById('xuetiao').style.width= mWidth + "%";
 			}
-			if((mWidth < 3.5 && swordAmount <=0) || (mWidth <3.5 && swordAmount >0) )
+			
+			if((mWidth < 3 && swordAmount <=0) || (mWidth <3 && swordAmount >0) )
 			{
 				document.getElementById("m2").style.display="none";
 				lose_win.style.backgroundImage="url('nextlevel.png')";
-				document.getElementById("glove2").style.display="none";
 				inner_container3.style.display="block"; 
 				window.cancelAnimationFrame(s);
 			}
-			else if (mWidth > 3.5 && swordAmount <0)
+			else if (mWidth > 3 && swordAmount <0)
 			{
 				window.cancelAnimationFrame(s);
 				document.getElementById("m2").style.display="none";
 				lose_win.style.backgroundImage="url('lose.png')";
+				// document.getElementById("win").style.display="none";
 				inner_container3.style.display="block";
-			}				
-		  }
-		  else{
-		    ls1.style.marginTop = 130 + '%'; 		  
-		  }	
-	        window.requestAnimationFrame(sword);
+			}	
 		}	
+		else{
+		         ls1.style.marginTop = 128 + '%'; 		  
+		    }	
+	        window.requestAnimationFrame(sword);
+		}
+		
 		 s= window.requestAnimationFrame(sword);
 	}
 	
     function monster(timestamp) {
+
+            m2.style.animationPlayState="running";
+
+			mons = window.requestAnimationFrame(monster);
 			
-		mons = window.requestAnimationFrame(monster);
- 
-		if((mWidth < 3.5 && swordAmount <=0) || (mWidth < 3.5 && swordAmount >=0) )
+		if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
 		{
 			     window.cancelAnimationFrame(mons);
 			     lose_win.style.backgroundImage="url('nextlevel.png')";
@@ -169,17 +182,39 @@ window.requestAnimFrame = (function(){
 				 document.getElementById("glove2").style.display="none";
 			     inner_container3.style.display="block";
 		}
-		else if (mWidth > 4 && swordAmount <=0)
+		else if (mWidth > 3 && swordAmount <=0)
 		{
 				 window.cancelAnimationFrame(mons);
 				 lose_win.style.backgroundImage="url('lose.png')";
 				 document.getElementById("m2").style.display="none";
+				 // document.getElementById("win").style.display="none";
 				 inner_container3.style.display="block";
 		}		
 		
 	}	
-    	
+	
+	 // function dragon(timestamp) {
+
+			// dra = window.requestAnimationFrame(dragon);
+			
+		// if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
+		// {
+			     // window.cancelAnimationFrame(dra);
+			     // lose_win.style.backgroundImage="url('nextlevel.png')";
+				 // document.getElementById("d2").style.display="none";
+				 // document.getElementById("glove2").style.display="none";
+			     // inner_container3.style.display="block";
+		// }
+		// else if (mWidth > 3 && swordAmount <=0)
+		// {
+				 // window.cancelAnimationFrame(dra);
+				 // lose_win.style.backgroundImage="url('lose.png')";
+				 // document.getElementById("d2").style.display="none";
+				 // inner_container3.style.display="block";
+		// }		
 		
+	// }	
+    		
 	function createImage(){
 	
 		var myImageArray = ['sword.png'];
@@ -206,6 +241,12 @@ window.requestAnimFrame = (function(){
 				inner_container2.appendChild(myImg);	
 			}
 	    }
+	      
+       		  
+
+   	 
+		
+		
 		
 	} 
 	
