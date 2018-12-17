@@ -129,7 +129,7 @@ window.requestAnimFrame = (function(){
 		{  
 			 inner_container2.removeEventListener('mousedown', attack); 
 			
-			 if(toggle=0){ 
+			 if(toggle===0){ 
 			     m2.style.animationName="killMonster";
 			         if(){
 				     }
@@ -138,7 +138,7 @@ window.requestAnimFrame = (function(){
 				     } 
 		     }
 		 
-		     if(toggle=1){
+		     if(toggle===1){
 			     m2.style.animationName="killMonster";
 			         if(){
 					 }
