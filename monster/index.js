@@ -76,7 +76,9 @@ window.requestAnimFrame = (function(){
 		var widthToHeight = 0 ;
 		var newWidth = window.innerWidth;
 		var newHeight = window.innerHeight;
-				
+			
+        var sb = document.getElementsByClassName("sb");
+			
 		sizeData(newWidth,newHeight);
 		resize(newWidth,newHeight);		
 		createImage();
@@ -108,8 +110,10 @@ window.requestAnimFrame = (function(){
 		document.getElementById('tut').style.display = "none";
 		document.getElementById('glove').style.display = "none";
 		document.getElementById('wuci').style.display = "none";
-		document.getElementById('att').style.display = "none";	
+		document.getElementById('att').style.display = "none";
+		
 		m2.style.animationPlayState = "running";
+
 		var swords = document.getElementsByClassName('swords');
 		
 		if(swordAmount <= 0){
@@ -138,7 +142,7 @@ window.requestAnimFrame = (function(){
 	    if (mTop > -30) {
 		
 		     GetBox(); 
-				
+			 
 		         if(x2<x && x<(x2+w2))			
 		        {
 				      mWidth-=2;
