@@ -809,6 +809,34 @@ body{
 
 
 
+    @keyframes killDragon{
+		0%  { opacity:1;  
+		      filter: brightness(1); }
+	    1%  { top: 2%; 
+		      opacity:1; 
+			  filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2); }
+	    11% { top: 0%; }
+	    22% { top: 2%; }
+	    33% { top: 0%; }
+	    44% { top: 2%; 
+		      opacity:1; }
+	    100%{ opacity:1; 
+		      filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2);}
+	}
+	@-webkit-keyframes killDragon{
+		0%  { opacity:1;  
+		      filter: brightness(1); }
+	    1%  { top: 2%; 
+		      opacity:1; 
+			  filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2); }
+	    11% { top: 0%; }
+	    22% { top: 2%; }
+	    33% { top: 0%; }
+	    44% { top: 2%; 
+		      opacity:1; }
+	    100%{ opacity:1; 
+		      filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2);}
+	}
 
 
 
