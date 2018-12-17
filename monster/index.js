@@ -128,10 +128,10 @@ window.requestAnimFrame = (function(){
 		if(swordAmount <= 0)
 		{  
 			 inner_container2.removeEventListener('mousedown', attack); 
-			 
-			 if(toggle=0){
+			
+			 if(toggle=0){ 
 			     m2.style.animationName="killMonster";
-			         if(m2.style.animationName==="killMonster"){
+			         if(){
 				     }
 			         else{
 					      toggle = 1;
@@ -140,7 +140,7 @@ window.requestAnimFrame = (function(){
 		 
 		     if(toggle=1){
 			     m2.style.animationName="killMonster";
-			         if(m2.style.animationName==="killMonster"){
+			         if(){
 					 }
 			         else{
 					     toggle = 0;
