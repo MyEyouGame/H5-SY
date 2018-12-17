@@ -69,7 +69,7 @@ window.requestAnimFrame = (function(){
 		
         var lose_win=document.getElementsByClassName("lose_win");
 	
-	    var again=document.getElementsByClassName("again");
+	    // var again=document.getElementsByClassName("again");
 	
 		var myImageArray = ['sword.png'];
 		
@@ -110,6 +110,8 @@ window.requestAnimFrame = (function(){
 		document.getElementById('att').style.display = "none";	
 		
 		var swords = document.getElementsByClassName('swords');
+		
+		m2.style.animationName="killMonster";
 		
         if(swordAmount <= 0){
 			document.getElementById('value').innerHTML = "0/7";		
@@ -167,10 +169,8 @@ window.requestAnimFrame = (function(){
 		
 		 s= window.requestAnimationFrame(sword);
 	}
-	
-    function monster(timestamp) {
 
-            m2.style.animationPlayState="running";
+    function monster(timestamp) {
 
 			mons = window.requestAnimationFrame(monster);
 			
@@ -213,8 +213,8 @@ window.requestAnimFrame = (function(){
 				 // inner_container3.style.display="block";
 		// }		
 		
-	// }	
-    		
+	// }		
+			
 	function createImage(){
 	
 		var myImageArray = ['sword.png'];
@@ -241,13 +241,7 @@ window.requestAnimFrame = (function(){
 				inner_container2.appendChild(myImg);	
 			}
 	    }
-	      
-       		  
-
-   	 
-		
-		
-		
+	   
 	} 
 	
 	function GetBox () {
