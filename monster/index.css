@@ -692,9 +692,9 @@ body{
 		 
 		 -webkit-animation-name: scaleDraw, LeftRight,killMonster;
          -webkit-animation-timing-function: linear, linear, linear; 
-         -webkit-animation-iteration-count: 1 , infinite, 1;  
+         -webkit-animation-iteration-count: 1 , infinite, 1 ;  
          -webkit-animation-duration: 0.7s, 11s, 0.5s; 
-		 -webkit-animation-delay:0s, 1.2s,0s;
+		 -webkit-animation-delay:0s, 1.2s, 0s;
 		 -webkit-animation-direction: alternate, alternate, alternate;
 		 -webkit-animation-play-state: running, running, paused;
 		 
@@ -778,7 +778,6 @@ body{
 		 85% { left : 260px;  }
 		 100%{ left : -200px; }
 	}
-	
 	@keyframes killMonster{
 		0%  { opacity:1;  
 		      filter: brightness(1); }

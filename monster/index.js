@@ -91,8 +91,6 @@ window.requestAnimFrame = (function(){
 	inner_container2.addEventListener('mousedown', attack);
 	// inner_container4.addEventListener('mousedown',attack);
 	
-	
-	
 	function touchstart(event) {
 		event.preventDefault();
 		inner_container.style.display = "none";
@@ -104,33 +102,51 @@ window.requestAnimFrame = (function(){
 	
  	 var mWidth = 100;
 	 var s;
-	 	
-	function attack(event) {
-		event.preventDefault();
-		document.getElementById('tut').style.display = "none";
-		document.getElementById('glove').style.display = "none";
-		document.getElementById('wuci').style.display = "none";
-		document.getElementById('att').style.display = "none";
+	 var toggle = 0;	
 		
-		m2.style.animationPlayState = "running";
+	function attack(event) {
+		 event.preventDefault();
+		 document.getElementById('tut').style.display = "none";
+		 document.getElementById('glove').style.display = "none";
+		 document.getElementById('wuci').style.display = "none";
+		 document.getElementById('att').style.display = "none";
+		
+		 m2.style.animationPlayState = "running";
 
 		var swords = document.getElementsByClassName('swords');
 		
 		if(swordAmount <= 0){
-			document.getElementById('value').innerHTML = "0/7";		
-			swordAmount = 0;
+			 document.getElementById('value').innerHTML = "0/7";		
+			 swordAmount = 0;
 		}	
 		else{
-		    swordAmount--;
-			document.getElementById('value').innerHTML = swordAmount +"/7";
-			swords[swordAmount].style.display="none";	
+		     swordAmount--;
+			 document.getElementById('value').innerHTML = swordAmount +"/7";
+			 swords[swordAmount].style.display="none";	
 		}
-	
+		
 		if(swordAmount <= 0)
 		{  
-			inner_container2.removeEventListener('mousedown', attack); 
-			m2.style.animationName = "killMonster";
-		}
+			 inner_container2.removeEventListener('mousedown', attack); 
+			 
+			 if(toggle=0){
+			     m2.style.animationName="killMonster";
+			         if(m2.style.animationName==="killMonster"){
+				     }
+			         else{
+					      toggle = 1;
+				     } 
+		     }
+		 
+		     if(toggle=1){
+			     m2.style.animationName="killMonster";
+			         if(m2.style.animationName==="killMonster"){
+					 }
+			         else{
+					     toggle = 0;
+				     }
+		     }
+	    }
 		
 	var mTop = 128;
 		
@@ -143,26 +159,26 @@ window.requestAnimFrame = (function(){
 		
 		     GetBox(); 
 			 
-		         if(x2<x && x<(x2+w2))			
+		        if(x2<x && x<(x2+w2))			
 		        {
-				      mWidth-=2;
-				      document.getElementById('xuetiao').style.width= mWidth + "%";
+				     mWidth-=2;
+				     document.getElementById('xuetiao').style.width= mWidth + "%";
 				}
 			
 			    if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >0) )
 			    {
-				      document.getElementById("m2").style.display="none";
-				      lose_win.style.backgroundImage="url('nextlevel.png')";
-				      inner_container3.style.display="block"; 
-				      window.cancelAnimationFrame(s);
+				     document.getElementById("m2").style.display="none";
+				     lose_win.style.backgroundImage="url('nextlevel.png')";
+				     inner_container3.style.display="block"; 
+				     window.cancelAnimationFrame(s);
 			    }
 			    else if (mWidth > 3 && swordAmount <0)
 			    {
-				      window.cancelAnimationFrame(s);
-				      document.getElementById("m2").style.display="none";
-				      lose_win.style.backgroundImage="url('lose.png')";
-				      document.getElementById("win").style.display="none";
-				      inner_container3.style.display="block";
+				     window.cancelAnimationFrame(s);
+				     document.getElementById("m2").style.display="none";
+				     lose_win.style.backgroundImage="url('lose.png')";
+				     document.getElementById("win").style.display="none";
+				     inner_container3.style.display="block";
 			    }	
 		}	
 		else{
@@ -170,10 +186,10 @@ window.requestAnimFrame = (function(){
 		    }	
 	             window.requestAnimationFrame(sword);
 		}
-	    s= window.requestAnimationFrame(sword);
+	    s = window.requestAnimationFrame(sword);
 	}
 					
-    function monster(timestamp) {
+    function monster(timestamp) {		
 		
 			mons = window.requestAnimationFrame(monster);
 			
