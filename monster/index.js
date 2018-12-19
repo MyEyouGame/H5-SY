@@ -151,38 +151,33 @@ window.requestAnimFrame = (function(){
 		
 		     GetBox(); 
 			 
-		        if(x2<x && x<(x2+w2))			
-		        {
-				     mWidth-=2;
-				     document.getElementById('xuetiao').style.width= mWidth + "%";
-				}
-			
-			    if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >0) )
-			    {
-				     document.getElementById("m2").style.display="none";
-					 nextlevel.style.backgroundImage="url('nextlevel.png')";
-					 // inner_container3.style.display="block";
-					 inner_container4.style.display="block";
-					 document.getElementById("glove2").style.display="none";
-					 document.getElementById("lose").style.display="none";
-				     window.cancelAnimationFrame(s);
-			    }
-			    else if (mWidth > 3 && swordAmount <0)
-			    {
-				     window.cancelAnimationFrame(s);
-					 lose.style.backgroundImage="url('lose.png')";
-				     document.getElementById("m2").style.display="none";
-					 document.getElementById("nextlevel").style.display="none";
-					 document.getElementById("win").style.display="none";
-				     inner_container3.style.display="block";  				 
-			    }		
+		        if(x2<x && x<(x2+w2))
+			{
+				mWidth-=2;
+				document.getElementById('xuetiao').style.width= mWidth + "%";
+			}
+			if((mWidth < 3 && swordAmount <=0) || (mWidth <3 && swordAmount >0) )
+			{
+				document.getElementById("m2").style.display="none";
+				lose_win.style.backgroundImage="url('nextlevel.png')";
+				document.getElementById("glove2").style.display="none";
+				inner_container3.style.display="block"; 
+				window.cancelAnimationFrame(s);
+			}
+			else if (mWidth > 3 && swordAmount <0)
+			{
+				window.cancelAnimationFrame(s);
+				document.getElementById("m2").style.display="none";
+				lose_win.style.backgroundImage="url('lose.png')";
+				inner_container3.style.display="block";
+			}				
+		  }
+		  else{
+		    ls1.style.marginTop = 130 + '%'; 		  
+		  }	
+	        window.requestAnimationFrame(sword);
 		}	
-		else{
-		         ls1.style.marginTop = 128 + '%'; 		  
-		    }	
-	             window.requestAnimationFrame(sword);
-		}
-	    s = window.requestAnimationFrame(sword);		
+		 s= window.requestAnimationFrame(sword);
 	}
 		
 	function reloadPage(){
@@ -191,26 +186,24 @@ window.requestAnimFrame = (function(){
 		
     function monster(timestamp) {		
 		
-		mons = window.requestAnimationFrame(monster);
-			
+	mons = window.requestAnimationFrame(monster);
+ 
 		if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
 		{
 			     window.cancelAnimationFrame(mons);
+			     lose_win.style.backgroundImage="url('nextlevel.png')";
+				 
 				 document.getElementById("m2").style.display="none";
 				 document.getElementById("glove2").style.display="none";
-				 document.getElementById("lose").style.display="none";
-				 nextlevel.style.backgroundImage="url('nextlevel.png')";
 			     inner_container3.style.display="block";
 		}
 		else if (mWidth > 3 && swordAmount <=0)
 		{
-				 window.cancelAnimationFrame(mons); 
-				 lose.style.backgroundImage="url('lose.png')";
-				 inner_container3.style.display="block";
+				 window.cancelAnimationFrame(mons);
+				 lose_win.style.backgroundImage="url('lose.png')";
 				 document.getElementById("m2").style.display="none";
-				 document.getElementById("nextlevel").style.display="none";
-				 document.getElementById("win").style.display="none";
-        }		
+				 inner_container3.style.display="block";
+		}		
 	}		
 	
 	function createImage(){
