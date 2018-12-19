@@ -159,8 +159,10 @@ window.requestAnimFrame = (function(){
 			if((mWidth < 3 && swordAmount <=0) || (mWidth <3 && swordAmount >0) )
 			{
 				document.getElementById("m2").style.display="none";
-				lose_win.style.backgroundImage="url('nextlevel.png')";
+				nextlevel.style.backgroundImage="url('nextlevel.png')";
 				document.getElementById("glove2").style.display="none";
+				document.getElementById("lose").style.display="none";
+				document.getElementById("againF").style.display="none";
 				inner_container3.style.display="block"; 
 				window.cancelAnimationFrame(s);
 			}
@@ -168,12 +170,13 @@ window.requestAnimFrame = (function(){
 			{
 				window.cancelAnimationFrame(s);
 				document.getElementById("m2").style.display="none";
-				lose_win.style.backgroundImage="url('lose.png')";
+				lose.style.backgroundImage="url('lose.png')";
+				document.getElementById("nextlevel").style.display="none";
 				inner_container3.style.display="block";
 			}				
 		  }
 		  else{
-		    ls1.style.marginTop = 130 + '%'; 		  
+		    ls1.style.marginTop = 128 + '%'; 		  
 		  }	
 	        window.requestAnimationFrame(sword);
 		}	
@@ -191,17 +194,19 @@ window.requestAnimFrame = (function(){
 		if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
 		{
 			     window.cancelAnimationFrame(mons);
-			     lose_win.style.backgroundImage="url('nextlevel.png')";
-				 
+			     nextlevel.style.backgroundImage="url('nextlevel.png')";
 				 document.getElementById("m2").style.display="none";
 				 document.getElementById("glove2").style.display="none";
+				 document.getElementById("lose").style.display="none";
+				 document.getElementById("againF").style.display="none";
 			     inner_container3.style.display="block";
 		}
 		else if (mWidth > 3 && swordAmount <=0)
 		{
 				 window.cancelAnimationFrame(mons);
-				 lose_win.style.backgroundImage="url('lose.png')";
+				 lose.style.backgroundImage="url('lose.png')";
 				 document.getElementById("m2").style.display="none";
+				 document.getElementById("nextlevel").style.display="none";
 				 inner_container3.style.display="block";
 		}		
 	}		

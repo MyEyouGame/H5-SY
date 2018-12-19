@@ -570,8 +570,9 @@ body{
 		 background-Size: 100% 100%;
 	}
 	
-	#lose_win{
+	#lose{
 	     position: absolute;
+		 background-image: url(lose.png);
 		 background-Size: 100% 100%;
 		 background-Repeat: no-repeat;
 		 z-index: 90;
@@ -580,13 +581,13 @@ body{
 		 margin-top: 20%;
 		 margin-left:0%;
 		
-		 -webkit-animation-name: lose,win;
-         -webkit-animation-timing-function: linear,linear; 
-         -webkit-animation-iteration-count: 1,1; 
-         -webkit-animation-duration: 1s,1s;
-   		 animation-name: lose,win; 
-         animation-timing-function: linear,linear; 
-         animation-iteration-count: 1,;
+		 -webkit-animation-name: lose;
+         -webkit-animation-timing-function: linear; 
+         -webkit-animation-iteration-count: 1; 
+         -webkit-animation-duration: 1s;
+   		 animation-name: lose; 
+         animation-timing-function: linear; 
+         animation-iteration-count: 1;
          animation-duration: 1s,;  
     }
 	@keyframes lose{  
@@ -615,7 +616,7 @@ body{
 		 90% {transform: scale(1.0);}
 		 100%{transform: scale(1.0);}
     }
-	@keyframes win{
+	#nextlevel{
 		 position: absolute;
 		 background-image: url(nextlevel.png);
 		 background-Size: 100% 100%;
@@ -625,25 +626,16 @@ body{
 		 height: 14%;
 		 margin-top: 58%;
 		 margin-left:20%;
-		 z-index: 97;
-		 color: gold;
-		 font-size: 41px;
-		 text-shadow: 2px 4px 46px gold;
+	     filter: brightness(170%);
 	}
-	@-webkit-keyframes win{
+	#win{
 		 position: absolute;
-		 background-image: url(nextlevel.png);
-		 background-Size: 100% 100%;
-		 background-Repeat: no-repeat;
-		 z-index: 90;
-		 width: 67%;
-		 height: 14%;
-		 margin-top: 58%;
-		 margin-left:20%;
+		 margin-top: 11%;
+		 margin-left:39%;
 		 z-index: 97;
 		 color: gold;
 		 font-size: 41px;
-		 text-shadow: 2px 4px 46px gold;
+		 text-shadow: 4px 4px 73px gold;
 	}
 	
 	#canvas{
@@ -821,7 +813,7 @@ body{
 	    100%{ opacity:1; 
 		      filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2);}	
     }
-    @ke yframes killDragon{
+    @keyframes killDragon{
 		0%  { opacity:1;  
 		      filter: brightness(1); }
 	    1%  { top: 2%; 
