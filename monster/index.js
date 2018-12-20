@@ -105,7 +105,6 @@ window.requestAnimFrame = (function(){
 	
  	 var mWidth = 100;
 	 var s;
-	 var k;
 	 var toggle = 0;			
 		
 	function attack(event) {
@@ -115,7 +114,7 @@ window.requestAnimFrame = (function(){
 		 document.getElementById('wuci').style.display = "none";
 		 document.getElementById('att').style.display = "none";
 
-		 // m2.style.animationPlayState = "running";
+		 m2.style.animationPlayState = "running";
 		 
 		var swords = document.getElementsByClassName('swords');
 		
@@ -131,7 +130,8 @@ window.requestAnimFrame = (function(){
 		
 		if(swordAmount <= 0)
 		{  
-		     inner_container2.removeEventListener('mousedown', attack); 		 
+		     inner_container2.removeEventListener('mousedown', attack); 	
+             // m2.style.animationName="killMonster";				
 		}	
 		
 	var mTop = 128;
@@ -144,8 +144,8 @@ window.requestAnimFrame = (function(){
 	    if (mTop > -30) {
 		
 		    GetBox(); 
-			 
-		    if(x2<x && x<(x2+w2))
+		    
+			if(x2<x && x<(x2+w2))
 			{
 				mWidth-=2;
 				document.getElementById('xuetiao').style.width= mWidth + "%";
@@ -195,16 +195,16 @@ window.requestAnimFrame = (function(){
 		if(swordAmount <= 0)
 		{  
 		     inner_container4.removeEventListener('mousedown', attack2); 
-			 // d2.style.animationName="killDragon";	
+			 d2.style.animationName="killDragon";	
 		
 		    // if(toggle===0){
 			     // d2.style.animationName="killDragon";		
-	                 // if(d2.style.){}
+	                 // if(){}
 					 // else{toggle=1;}
 			// }
 			// if(toggle===1){
 				// d2.style.animationName = "killDragon";
-				     // if(d2.style.){}
+				     // if(){}
 		             // else{toggle=0;}
 			// }
 			
@@ -235,22 +235,23 @@ window.requestAnimFrame = (function(){
 				document.getElementById("cloud3").style.display="none";
 				document.getElementById("cloud4").style.display="none";
 				inner_container3.style.display="block"; 
-				window.cancelAnimationFrame(k);
+				window.cancelAnimationFrame(s);
 			}
 			else if (mWidth > 3 && swordAmount < 0)
 			{
-				window.cancelAnimationFrame(k);
+				window.cancelAnimationFrame(s);
 				document.getElementById("d2").style.display="none";
 				lose.style.backgroundImage="url('lose.png')";
 				inner_container2.style.display="block";
 			}				
 		  }
+		  
 		  else{
 		    ls2.style.marginTop = 128 + '%'; 		  
 		  }	
 	        window.requestAnimationFrame(sword);
 		}	
-		 k= window.requestAnimationFrame(sword);
+		 s= window.requestAnimationFrame(sword);
 	}
   	
     function monster(timestamp) {		
@@ -259,18 +260,18 @@ window.requestAnimFrame = (function(){
  
 		if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
 		{
-		        document.getElementById("m2").style.display="none";
-				document.getElementById("tut2").style.display="block";
-				inner_container4.style.display="block";
-                inner_container2.style.display="none"; 				
-				window.cancelAnimationFrame(mons);
+		    document.getElementById("m2").style.display="none";
+			document.getElementById("tut2").style.display="block";
+			inner_container4.style.display="block";
+            inner_container2.style.display="none"; 				
+			window.cancelAnimationFrame(mons);
 		}
 		else if (mWidth > 3 && swordAmount <=0)
 		{
-				 window.cancelAnimationFrame(mons);
-				 lose.style.backgroundImage="url('lose.png')";
-				 document.getElementById("m2").style.display="none";
-				 inner_container3.style.display="block";
+			window.cancelAnimationFrame(mons);
+			lose.style.backgroundImage="url('lose.png')";
+			document.getElementById("m2").style.display="none";
+			inner_container3.style.display="block";
 		}		
 	}		
 	
@@ -493,5 +494,5 @@ window.requestAnimFrame = (function(){
 		container.style.fontSize = (newWidth / 400) + 'em';
 	}
 	
-	 window.addEventListener("orientationchange", function() {location.reload();}, false);
+	 // window.addEventListener("orientationchange", function() {location.reload();}, false);
      // document.getElementById("x").innerHTML = "";

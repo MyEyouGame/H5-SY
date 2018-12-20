@@ -416,7 +416,7 @@ body{
 		 background-Repeat: no-repeat;
 		 background-Size: 100% 100%;
 		 -webkit-transform: rotate(360deg);
-         animation: rotation 2s linear infinite;
+         animation: rotation 1.5s linear infinite;
 		 z-index : 101;
 	}
 	@-webkit-keyframes rotation{
@@ -756,48 +756,15 @@ body{
 		      filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2);}	
     }
 	@-webkit-keyframes killMonster{		
-	    0%  { opacity:1;
-		      filter: brightness(1); }
-	    1%  { top: 2%;
-		      opacity:1;
-		      filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2); }
+        0%  { opacity:1; filter: brightness(1); }
+	    1%  { top: 2%; opacity:1; filter:invert(35%) brightness(28%) sepia(1) hue-rotate(-30deg) saturate(450%) contrast(2); }
 	    11% { top: 0%; }
 	    22% { top: 2%; }
 	    33% { top: 0%; }
-	    44% { top: 2%; 
-		      opacity:1; }
-	    100%{ opacity:1; 
-		      filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2);}	
+	    44% { top: 2%; opacity:1; }
+	    100%{ opacity:1; filter:invert(35%) brightness(28%) sepia(1) hue-rotate(-30deg) saturate(450%) contrast(2);}
     }
-    @keyframes killDragon{
-		0%  { opacity:1;  
-		      filter: brightness(1); }
-	    1%  { top: 2%; 
-		      opacity:1; 
-			  filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2); }
-	    11% { top: 0%; }
-	    22% { top: 2%; }
-	    33% { top: 0%; }
-	    44% { top: 2%; 
-		      opacity:1; }
-	    100%{ opacity:1; 
-		      filter:invert(30%) brightness(40%) sepia(1) hue-rotate(-30deg) saturate(400%) contrast(2);}
-	}
-	@-webkit-keyframes killDragon{
-		0%  { opacity:1;  
-		      filter: brightness(1); }
-	    1%  { top: 2%; 
-		      opacity:1; 
-			  filter:invert(35%) brightness(28%) sepia(1) hue-rotate(-30deg) saturate(450%) contrast(2); }
-	    11% { top: 0%; }
-	    22% { top: 2%; }
-	    33% { top: 0%; }
-	    44% { top: 2%; 
-		      opacity:1; }
-	    100%{ opacity:1; 
-		      filter:invert(35%) brightness(28%) sepia(1) hue-rotate(-30deg) saturate(450%) contrast(2);}
-	}
- 
+	 
     #againF{
 		 position: absolute;
 		 overflow: hidden;
@@ -951,7 +918,7 @@ body{
 		 92% { transform: scale(0.8);  left:0%;   top:0%; }
 		 94% { transform: scale(1.0);  left:0%;   top:0%; }
 		 96% { transform: scale(0.8);  left:0%;   top:0%; }
-		 98% { transform: scale(0.8);  left:0%;   top:0%; }
+		 98% { transform: scale(0.8);  left:20%;  top:0%; }
 		 100%{ transform: scale(1.0);  left:0%;   top:0%; }
 	}
     @keyframes move{
@@ -981,8 +948,8 @@ body{
          46% { transform: scale(0.2);  left:0%;   top:0%; }
 		 48% { transform: scale(0.4);  left:0%;   top:0%; }
 	     50% { transform: scale(0.6);  left:0%;   top:0%; }
-	     52% { transform: scale(0.6);  left:-20%; top:2%; } 
-		 54% { transform: scale(0.6);  left:-40%; top:4%; }
+	     52% { transform: scale(0.6);  left:-20%; top:4%; } 
+		 54% { transform: scale(0.6);  left:-40%; top:6%; }
 		 56% { transform: scale(0.6);  left:0%;   top:0%; }
          58% { transform: scale(0.6);  left:20%;  top:0%; }
 		 60% { transform: scale(0.6);  left:40%;  top:0%; }
@@ -1003,7 +970,7 @@ body{
 		 92% { transform: scale(0.8);  left:0%;   top:0%; }
 		 94% { transform: scale(1.0);  left:0%;   top:0%; }
 		 96% { transform: scale(0.8);  left:0%;   top:0%; }
-		 98% { transform: scale(0.2);  left:20%;   top:0%; }
+		 98% { transform: scale(0.2);  left:20%;  top:0%; }
 		 100%{ transform: scale(1.0);  left:0%;   top:0%; }
 	}
     @-webkit-keyframes killDragon{
@@ -1021,18 +988,13 @@ body{
 		      filter:invert(35%) brightness(30%) sepia(1) hue-rotate(-30deg) saturate(450%) contrast(2);}
 	}
     @keyframes killDragon{
-		0%  { opacity:1;  
-		      filter: brightness(1); }
-	    1%  { top: 2%; 
-		      opacity:1; 
-			  filter:invert(35%) brightness(30%) sepia(1) hue-rotate(-30deg) saturate(450%) contrast(2); }
+		0%  { opacity:1; filter: brightness(1); }
+	    1%  { top: 2%; opacity:1; filter: brightness(25%); }
 	    11% { top: 0%; }
 	    22% { top: 2%; }
 	    33% { top: 0%; }
-	    44% { top: 2%; 
-		      opacity:1; }
-	    100%{ opacity:1; 
-		      filter:invert(35%) brightness(30%) sepia(1) hue-rotate(-30deg) saturate(450%) contrast(2);}
+	    44% { top: 2%; opacity:1; }
+	    100%{ opacity:1; filter: brightness(25%); }
 	}
 	
 	#cloud1{
@@ -1575,4 +1537,15 @@ body{
 		 text-shadow: 4px 4px 73px gold;
 		 filter: brightness(250%); 
 	}
+	
+	#hiddenBox{
+		 position: absolute;
+		 z-index: 99;
+		 width: 67%;
+		 height: 14%;
+		 top: 58%;
+		 left: 20%;
+		 overflow: hidden;
+	}
+	
 	
