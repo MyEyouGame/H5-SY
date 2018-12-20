@@ -1538,14 +1538,4 @@ body{
 		 filter: brightness(250%); 
 	}
 	
-	#hiddenBox{
-		 position: absolute;
-		 z-index: 99;
-		 width: 67%;
-		 height: 14%;
-		 top: 58%;
-		 left: 20%;
-		 overflow: hidden;
-	}
-	
 	
