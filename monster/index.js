@@ -50,11 +50,12 @@ window.requestAnimFrame = (function(){
 		
 		var inner_container = document.getElementById('inner_container');
 		var inner_container2 = document.getElementById('inner_container2');
-		// var inner_container3 = document.getElementById('inner_container3');
+		var inner_container3 = document.getElementById('inner_container3');
 		var inner_container4 = document.getElementById('inner_container4');
+		var inner_container5 = document.getElementById('inner_container5');
 		
 		var ls1 = document.getElementsByClassName("ls1");	
-		// var ls2 = document.getElementsByClassName("ls2");
+		var ls2 = document.getElementsByClassName("ls2");
 		
 		var swo1 = document.getElementsByClassName("swo1");	
 		var swo2 = document.getElementsByClassName("swo2");	
@@ -64,13 +65,18 @@ window.requestAnimFrame = (function(){
 		var swo6 = document.getElementsByClassName("swo6");	
 		var swo7 = document.getElementsByClassName("swo7");	
 		
+		var cloud1 = document.getElementsByClassName("cloud1");
+		var cloud2 = document.getElementsByClassName("cloud2");
+		var cloud3 = document.getElementsByClassName("cloud3");
+		var cloud4 = document.getElementsByClassName("cloud4");
+		
 		var m2 = document.getElementsByClassName("m2");	
+		var d2 = document.getElementsByClassName("d2");	
 		
-		// var d2 = document.getElementsByClassName("d2");	
-		
-        var lose_win=document.getElementsByClassName("lose_win");
-	
+        var lose=document.getElementsByClassName("lose");
 	    var againF=document.getElementsByClassName("againF");
+		
+		var nextlevel=document.getElementsByClassName("nextlevel");
 		
 		var myImageArray = ['sword.png'];
 		
@@ -86,7 +92,7 @@ window.requestAnimFrame = (function(){
 	
 	inner_container.addEventListener('mousedown', touchstart);
 	inner_container2.addEventListener('mousedown', attack);
-	inner_container4.addEventListener('mousedown',attack);
+	inner_container4.addEventListener('mousedown', attack2);
 	
 	function touchstart(event) {
 		event.preventDefault();
@@ -99,6 +105,7 @@ window.requestAnimFrame = (function(){
 	
  	 var mWidth = 100;
 	 var s;
+	 var k;
 	 var toggle = 0;			
 		
 	function attack(event) {
@@ -107,7 +114,7 @@ window.requestAnimFrame = (function(){
 		 document.getElementById('glove').style.display = "none";
 		 document.getElementById('wuci').style.display = "none";
 		 document.getElementById('att').style.display = "none";
-		 
+
 		 // m2.style.animationPlayState = "running";
 		 
 		var swords = document.getElementsByClassName('swords');
@@ -124,17 +131,80 @@ window.requestAnimFrame = (function(){
 		
 		if(swordAmount <= 0)
 		{  
-		     inner_container2.removeEventListener('mousedown', attack); 
-			// m2.style.animationName="killMonster";	
+		     inner_container2.removeEventListener('mousedown', attack); 		 
+		}	
+		
+	var mTop = 128;
+		
+	function sword(timestamp) {
+
+		mTop-=10;
+		ls1.style.marginTop = mTop + '%';
+				
+	    if (mTop > -30) {
+		
+		    GetBox(); 
+			 
+		    if(x2<x && x<(x2+w2))
+			{
+				mWidth-=2;
+				document.getElementById('xuetiao').style.width= mWidth + "%";
+			}
+			
+			if((mWidth < 2.5 && swordAmount <=0) || (mWidth <2.5 && swordAmount >0) )
+			{
+				document.getElementById("m2").style.display="none";
+				document.getElementById("tut2").style.display="block";
+				inner_container4.style.display="block"; 
+				inner_container2.style.display="none"; 
+				window.cancelAnimationFrame(s);
+			}
+			else if (mWidth > 2.5 && swordAmount <0)
+			{
+				window.cancelAnimationFrame(s);
+				document.getElementById("m2").style.display="none";
+				lose.style.backgroundImage="url('lose.png')";
+				inner_container3.style.display="block";
+			}				
+		}
+		  else{
+		    ls1.style.marginTop = 128 + '%'; 		  
+		  }	
+	        window.requestAnimationFrame(sword);
+		}	
+		 s= window.requestAnimationFrame(sword);
+}	
+    
+	function attack2(event) {
+		 event.preventDefault();
+		 document.getElementById('tut2').style.display = "none";
+		 d2.style.animationPlayState = "running";
+		
+		var swooo = document.getElementsByClassName('swooo');
+		
+		if(swordAmount <= 0){
+			 document.getElementById('value').innerHTML = "0/7";		
+			 swordAmount = 0;
+		}	
+		else{
+		     swordAmount--;
+			 document.getElementById('value').innerHTML = swordAmount +"/7";
+			 swooo[swordAmount].style.display="none";	
+		}
+		
+		if(swordAmount <= 0)
+		{  
+		     inner_container4.removeEventListener('mousedown', attack2); 
+			 // d2.style.animationName="killDragon";	
 		
 		    // if(toggle===0){
-			     // m2.style.animationName="killMonster";		
-	                 // if(m2.style.){}
+			     // d2.style.animationName="killDragon";		
+	                 // if(d2.style.){}
 					 // else{toggle=1;}
 			// }
 			// if(toggle===1){
-				// m2.style.animationName = "killMonster";
-				     // if(m2.style.){}
+				// d2.style.animationName = "killDragon";
+				     // if(d2.style.){}
 		             // else{toggle=0;}
 			// }
 			
@@ -145,101 +215,139 @@ window.requestAnimFrame = (function(){
 	function sword(timestamp) {
 
 		  mTop-=10;
-		  ls1.style.marginTop = mTop + '%';
+		  ls2.style.marginTop = mTop + '%';
 				
 	    if (mTop > -30) {
 		
-		     GetBox(); 
+		     GetBox2(); 
 			 
 		        if(x2<x && x<(x2+w2))
 			{
 				mWidth-=2;
-				document.getElementById('xuetiao').style.width= mWidth + "%";
+				document.getElementById('xuetiao2').style.width= mWidth + "%";
 			}
-			if((mWidth < 3 && swordAmount <=0) || (mWidth <3 && swordAmount >0) )
+			if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount > 0 ) )
 			{
-				document.getElementById("m2").style.display="none";
-				nextlevel.style.backgroundImage="url('nextlevel.png')";
-				document.getElementById("glove2").style.display="none";
-				document.getElementById("lose").style.display="none";
-				document.getElementById("againF").style.display="none";
+				document.getElementById("d2").style.display="none";
+				document.getElementById("tut3").style.display="block";
+				document.getElementById("cloud1").style.display="none";
+				document.getElementById("cloud2").style.display="none";
+				document.getElementById("cloud3").style.display="none";
+				document.getElementById("cloud4").style.display="none";
 				inner_container3.style.display="block"; 
-				window.cancelAnimationFrame(s);
+				window.cancelAnimationFrame(k);
 			}
-			else if (mWidth > 3 && swordAmount <0)
+			else if (mWidth > 3 && swordAmount < 0)
 			{
-				window.cancelAnimationFrame(s);
-				document.getElementById("m2").style.display="none";
+				window.cancelAnimationFrame(k);
+				document.getElementById("d2").style.display="none";
 				lose.style.backgroundImage="url('lose.png')";
-				document.getElementById("nextlevel").style.display="none";
-				inner_container3.style.display="block";
+				inner_container2.style.display="block";
 			}				
 		  }
 		  else{
-		    ls1.style.marginTop = 128 + '%'; 		  
+		    ls2.style.marginTop = 128 + '%'; 		  
 		  }	
 	        window.requestAnimationFrame(sword);
 		}	
-		 s= window.requestAnimationFrame(sword);
+		 k= window.requestAnimationFrame(sword);
 	}
-		
-	function reloadPage(){
-         window.location.reload();
-    }
-		
+  	
     function monster(timestamp) {		
 		
 	mons = window.requestAnimationFrame(monster);
  
 		if((mWidth < 3 && swordAmount <=0) || (mWidth < 3 && swordAmount >=0) )
 		{
-			     window.cancelAnimationFrame(mons);
-			     nextlevel.style.backgroundImage="url('nextlevel.png')";
-				 document.getElementById("m2").style.display="none";
-				 document.getElementById("glove2").style.display="none";
-				 document.getElementById("lose").style.display="none";
-				 document.getElementById("againF").style.display="none";
-			     inner_container3.style.display="block";
+		        document.getElementById("m2").style.display="none";
+				document.getElementById("tut2").style.display="block";
+				inner_container4.style.display="block";
+                inner_container2.style.display="none"; 				
+				window.cancelAnimationFrame(mons);
 		}
 		else if (mWidth > 3 && swordAmount <=0)
 		{
 				 window.cancelAnimationFrame(mons);
 				 lose.style.backgroundImage="url('lose.png')";
 				 document.getElementById("m2").style.display="none";
-				 document.getElementById("nextlevel").style.display="none";
 				 inner_container3.style.display="block";
 		}		
 	}		
 	
+	function dragon(timestamp) {		
+		
+	dra = window.requestAnimationFrame(dragon);
+ 
+		if((mWidth < 2.5 && swordAmount <=0) || (mWidth < 2.5 && swordAmount >=0) )
+		{
+			document.getElementById("d2").style.display="none";
+			document.getElementById("cloud1").style.display="none";
+			document.getElementById("cloud2").style.display="none";
+			document.getElementById("cloud3").style.display="none";
+			document.getElementById("cloud4").style.display="none";
+			document.getElementById("tut3").style.display="block";
+			window.cancelAnimationFrame(dra);
+			inner_container5.style.display="block";
+		}
+		else if (mWidth > 2.5 && swordAmount <=0)
+		{
+			window.cancelAnimationFrame(dra);
+			lose.style.backgroundImage="url('lose.png')";
+			document.getElementById("d2").style.display="none";
+			inner_container3.style.display="block";
+		}		
+	}	
+	
 	function createImage(){
 	
 		var myImageArray = ['sword.png'];
-		
+
 		ls1.style.backgroundImage= "url("+ myImageArray[0] +")";
 		ls1.style.backgroundSize="100% 100%";
 		ls1.style.backgroundRepeat="no-repeat";
-		
+
+        ls2.style.backgroundImage= "url("+ myImageArray[0] +")";
+		ls2.style.backgroundSize="100% 100%";
+		ls2.style.backgroundRepeat="no-repeat";
+								
 		var mLeft= 62.5 ;
 		var i;
-		
+
 		for (i=0; i<7; i++)
 		{
 			if(i<7)
 			{
 				var myImg = document.createElement('IMG');
 				mLeft = mLeft + 4.3;
-				myImg.src = "sword.png";
 				console.log(myImageArray[0]);
+				myImg.src = "sword.png";
 				myImg.className = 'swords';
 				myImg.alt = 'swords'+(i+1);
 				myImg.style.marginLeft= (mLeft) + "%";
-				inner_container2.appendChild(myImg);	
+				inner_container2.appendChild(myImg);
 			}
-	    }
-	   
+		}
+	
+		var mmLeft= 62.5 ;
+		var j;
+		
+		for (j=0; j<7; j++)
+		{
+			if(j<7)
+			{
+				var myImg = document.createElement('IMG');
+				mmLeft = mmLeft + 4.3;
+				myImg.src = "sword.png";
+				console.log(myImageArray[0]);
+				myImg.className = 'swooo';
+				myImg.alt = 'swooo'+(j+1);
+				myImg.style.marginLeft= (mmLeft) + "%";
+				inner_container4.appendChild(myImg);
+			}
+		}		
 	} 
 	
-	function GetBox () {
+	function GetBox() {
 		var weakness = document.getElementById ("weakness");
 		var attackPoint = document.getElementById ("attackPoint");	
 				
@@ -263,6 +371,35 @@ window.requestAnimFrame = (function(){
 		}
 	
 	}
+
+    function GetBox2 () {
+		var weakness2 = document.getElementById ("weakness2");
+		var attackPoint2 = document.getElementById ("attackPoint2");	
+				
+		if (weakness2.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+			var rect = attackPoint2.getBoundingClientRect ();
+			x = rect.left;
+			y = rect.top;
+			w = rect.right - rect.left;
+			h = rect.bottom - rect.top;  
+	
+		}
+		
+		if (attackPoint2.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+			var rect2 = weakness2.getBoundingClientRect ();
+			x2 = rect2.left;
+			y2 = rect2.top;
+			w2 = rect2.right - rect2.left;
+			h2 = rect2.bottom - rect2.top;
+	
+			return(x,y,x2,y2,w,h,w2,h2);
+		}
+	
+	}
+
+	function reloadPage(){
+         window.location.reload();
+    }
 	
 	function sizeData(w,h){
 	
@@ -356,5 +493,5 @@ window.requestAnimFrame = (function(){
 		container.style.fontSize = (newWidth / 400) + 'em';
 	}
 	
-	 // window.addEventListaener("orientationchange", function() {location.reload();}, false);
+	 window.addEventListener("orientationchange", function() {location.reload();}, false);
      // document.getElementById("x").innerHTML = "";
