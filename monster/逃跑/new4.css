@@ -1,0 +1,717 @@
+    html{
+		 -webkit-text-size-adjust: none;
+	}
+	body{
+		margin:0 auto;
+		overflow:hidden;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		background-color:black;
+	}
+	
+	#gameContainer{	
+		position:absolute;	
+		height:100%;
+		width:100%;
+		display:block;
+		background-image:url('background.png');
+		background-Size : 100% 100%; 
+		background-repeat:no-repeat;
+		overflow:hidden;
+		border:solid 1px white;
+	}
+	
+	.animate-bottom {
+	     position: relative;
+	     -webkit-animation-name: animatebottom;
+	     -webkit-animation-duration: 1s;
+	     animation-name: animatebottom;
+	     animation-duration: 1s
+	}
+	@-webkit-keyframes animatebottom {
+	  from { bottom:-100px; opacity:0 } 
+	  to   { bottom:0px;    opacity:1 }
+	}
+	@keyframes animatebottom { 
+	  from { bottom:-100px; opacity:0 } 
+	  to   { bottom:0;      opacity:1 }
+	}
+			
+	#inner_container{
+		 position          : fixed;
+		 width             : 100%;
+		 height            : 100%;   
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 z-index           : 80; 		 
+	
+	}
+	
+	#ored{
+		 position          : absolute;
+		 width             : 100%;
+		 height            : 50%;
+		 top               : 50%;
+		 left              : 0%; 
+		 z-index           : 90;
+		 opacity           : 1;
+		 background-image  : url(ored.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat; 
+
+		 -webkit-animation-name            : opacityred;
+		 -webkit-animation-duration        : 2s;
+		 -webkit-animation-iteration-count : infinite;
+		 -webkit-animation-direction       : alternate;
+		 -webkit-animation-fill-mode       : forwards;
+		 -webkit-animation-timing-function : linear;
+		 -webkit-animation-play-state      : paused;
+		 
+		 animation-name            : opacityred;
+		 animation-timing-function : linear;
+		 animation-fill-mode       : forwards;
+		 animation-duration        : 2s;
+		 animation-iteration-count : infinite;
+		 animation-direction       : alternate;
+		 animation-play-state      : paused;
+	}		
+	@-webkit-keyframe opacityred{
+		0%  { opacity : 0; }
+		100%{ opacity : 1; }
+	}
+	@keyframe opacityred{
+		0%  { opacity : 0; }
+		100%{ opacity : 1; }
+	}
+	#redLayer{
+		 position          : fixed;
+		 width             : 100%;
+		 height            : 50%;
+		 top               : 50%;
+		 left              : 0%; 
+		 z-index           : 85;
+		 background-image  : url(red.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat; 	 
+	}
+	#greenLayer{
+		 position          : fixed;
+		 width             : 100%;
+		 height            : 50%;
+		 top               : 0%;
+		 left              : 0%; 
+		 z-index           : 85;
+		 background-image  : url(green.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : repeat-x; 
+	}	
+	
+	
+	
+	
+	#tut{
+		 display:black;
+		 position: absolute;
+		 height:100%; 
+		 width:100%; 
+		 background-color:black;
+		 opacity:0.4;
+		 z-index:91;
+	}	
+	#glove{
+		 position  : absolute;
+		 width     : 10%;
+		 height    : 12%;
+		 top       : 47%;
+		 left      : 58%;
+		 z-index   : 93; 
+		
+  		 background-image  : url(glove.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 
+		 -webkit-animation-name            : glove;
+		 -webkit-animation-duration        : 5s;
+		 -webkit-animation-iteration-count : infinite;
+		 -webkit-animation-direction       : alternate;
+		 -webkit-animation-fill-mode       : forwards;
+		 -webkit-animation-timing-function : linear;
+		 
+		 animation-name            : glove;
+		 animation-timing-function : linear;
+		 animation-fill-mode       : forwards;
+		 animation-duration        : 5s;
+		 animation-iteration-count : infinite;
+		 animation-direction       : alternate;
+	}
+	@-webkit-keyframes glove {
+	     0%  { opacity:1; top:49%; }
+		 10% { opacity:1; top:47%; }
+	     20% { opacity:1; top:49%; }
+		 30% { opacity:1; top:47%; }
+		 40% { opacity:1; top:49%; }
+	     50% { opacity:1; top:47%; }
+	     60% { opacity:1; top:49%; }
+		 70% { opacity:1; top:47%; }
+		 80% { opacity:1; top:49%; }
+		 90% { opacity:1; top:47%; }
+		 100%{ opacity:1; top:49%; }	
+	}
+	@keyframes glove{
+	     0%  { opacity:1; top:49%; }
+		 10% { opacity:1; top:47%; }
+	     20% { opacity:1; top:49%; }
+		 30% { opacity:1; top:47%; }
+		 40% { opacity:1; top:49%; }
+	     50% { opacity:1; top:47%; }
+	     60% { opacity:1; top:49%; }
+		 70% { opacity:1; top:47%; }
+		 80% { opacity:1; top:49%; }
+		 90% { opacity:1; top:47%; }
+		 100%{ opacity:1; top:49%; }	
+	}	
+	#start{
+		 position          : absolute;
+		 width             : 29%;
+		 height            : 59%;
+		 top               : 19%;
+		 left              : 38%;
+		 z-index           : 92;  
+		 background-image  : url(start.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+	}
+	#tstart{
+		 position: absolute;
+		 overflow: hidden;
+		 width: 21%;
+		 height: 51%;
+	     top: 23%;
+		 left: 42%;
+		 z-index: 94;
+		 /* border-style : solid; */
+	}
+	#girl{
+		 position          : absolute;
+		 width             : 15%;
+		 height            : 61%;
+		 top               : 17%;
+		 left              : 30%; 
+		 z-index           : 93;
+		 background-image  : url(girl.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat; 
+	}
+	
+
+	#gRun{
+		 position : absolute;
+		 width    : 6%;
+		 height   : 19%;
+		 top      : 72%;
+		 left     : 23%; 
+		 z-index  : 89;
+		 
+		 overflow-x: hidden;	 
+		 
+	     background-image  : url(gRun1.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 
+		 -webkit-animation-name            : run      , gHurt;
+		 -webkit-animation-duration        : 0.3s      , 1s;
+		 -webkit-animation-iteration-count : infinite  , 1;
+		 -webkit-animation-direction       : alternate , alternate;
+		 -webkit-animation-fill-mode       : forwards  , forwards;
+		 -webkit-animation-timing-function : linear    , linear;
+	     -webkit-animation-play-state      : paused    , paused;
+		 
+		 animation-name            : run      , gHurt;
+		 animation-duration        : 0.3s      , 1s;
+		 animation-iteration-count : infinite  , 1;
+		 animation-direction       : alternate , alternate;
+		 animation-fill-mode       : forwards  , forwards;
+		 animation-timing-function : linear    , linear;
+	     animation-play-state      : paused    , paused;
+	}	
+	@-webkit-keyframes run{
+		 0%  {background-image: url(gRun1.png);}
+         50% {background-image: url(gRun2.png);}
+         100%{background-image: url(gRun3.png);}
+	}
+	@keyframes run{
+		 0%  {background-image: url(gRun1.png);}
+         50% {background-image: url(gRun2.png);}
+         100%{background-image: url(gRun3.png);}
+	}	
+	/* @-webkit-keyframes gHurt{ */
+		/* 0%  { opacity:1; filter: brightness(1); } */
+	    /* 1%  { left: 2%; opacity:1; filter: brightness(25%); } */
+	    /* 11% { left: 0%; } */
+	    /* 22% { left: 2%; } */
+	    /* 33% { left: 0%; } */
+	    /* 44% { left: 2%; opacity:1; } */
+	    /* 100%{ opacity:1; filter: brightness(25%); } */
+		
+	/* }	 */
+	/* @keyframes gHurt{ */
+		/* 0%  { opacity:1; filter: brightness(1); } */
+	    /* 1%  { left: 2%; opacity:1; filter: brightness(25%); } */
+	    /* 11% { left: 0%; } */
+	    /* 22% { left: 2%; } */
+	    /* 33% { left: 0%; } */
+	    /* 44% { left: 2%; opacity:1; } */
+	    /* 100%{ opacity:1; filter: brightness(25%); } */
+	/* }	 */
+	
+	#monster{
+		 position          : absolute;
+		 width             : 14%;
+		 height            : 27%;
+		 top               : 63%;
+		 left              : 2%;
+		 z-index           : 89;
+		 background-image  : url(m1.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 
+		 -webkit-animation-name            : move      , chase;
+		 -webkit-animation-duration        : 2s        , 4s;
+		 -webkit-animation-iteration-count : infinite  , infinite;
+		 -webkit-animation-direction       : alternate , alternate;
+		 -webkit-animation-fill-mode       : forwards  , forwards;
+		 -webkit-animation-timing-function : linear    , linear;
+	     -webkit-animation-play-state      : paused    , paused;
+		 -webkit-animation-delay           : 0s        , 3s;
+		 
+		 animation-name            : move      , chase;
+		 animation-duration        : 2s        , 4s;
+		 animation-iteration-count : infinite  , infinite;
+		 animation-direction       : alternate , alternate;
+		 animation-fill-mode       : forwards  , forwards;
+		 animation-timing-function : linear    , linear;
+	     animation-play-state      : paused    , paused;
+		 animation-delay           : 0s        , 3s;
+	}
+	@keyframes move{
+		 0%  { top : 65%; }
+         25% { top : 63%; }
+         50% { top : 65%; }
+         75% { top : 63%; }
+         100%{ top : 65%; }
+	}	
+	@-webkit-keyframes move{
+		 0%  { top : 65%; }
+         25% { top : 63%; }
+         50% { top : 65%; }
+         75% { top : 63%; }
+         100%{ top : 65%; }
+	}
+	@keyframes chase{
+         0%  { background-image: url(m1.png); }
+         25% { background-image: url(m2.png); }
+         50% { background-image: url(m3.png); }
+         75% { background-image: url(m4.png); }
+         100%{ background-image: url(m5.png); }		
+	}
+	@-webkit-keyframes chase{
+         0%  { background-image: url(m1.png); }
+         25% { background-image: url(m2.png); }
+         50% { background-image: url(m3.png); }
+         75% { background-image: url(m4.png); }
+         100%{ background-image: url(m5.png); }		
+	}	
+	
+	
+	/**命**/
+    #jewel1{
+		 position : absolute;
+		 height   : 10%;
+		 width    : 5.5%; 
+		 top      : 8%;
+		 left     : 11%;
+		 z-index  : 88;
+		 
+		 background-image  : url(jewel.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat; 
+		 /* border-style : solid; */
+	}	    
+	#jewel2{
+		 position : absolute;
+		 height   : 10%;
+		 width    : 5.5%; 
+		 top      : 8%;
+		 left     : 15%;
+		 z-index  : 88;
+		 
+		 background-image  : url(jewel.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat; 
+		 /* border-style : solid; */
+	}	    
+	#jewel3{
+		 position : absolute;
+		 height   : 10%;
+		 width    : 5.5%; 
+		 top      : 8%;
+		 left     : 19%;
+		 z-index  : 88;
+		 
+		 background-image  : url(jewel.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat; 
+		 /* border-style : solid; */
+	}	
+
+ 
+
+	#girlHead{
+		 position          : absolute;
+		 width             : 8%;
+		 height            : 18%;
+		 top               : 1.5%;
+		 left              : 3%;
+		 z-index           : 88; 
+		 background-image  : url(girlHead.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+	}
+	#score{
+		 position  : absolute;
+		 top       : 4%;
+		 left      : 93%;
+		 z-index   : 101;
+		 font-size : 49px;
+		 color     : white;
+		 /* var(sec); */
+	}
+	
+	
+	
+	
+	
+    #block{
+		 position          : absolute;
+		 width             : 15%;
+		 height            : 15%;
+		 top               : -44%;
+		 left              : 90%;
+		 z-index           : 89; 
+		 background-image  : url(block1.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 
+		 -webkit-animation-name            : block, LR;
+	     -webkit-animation-duration        : 1s, 2s;
+		 -webkit-animation-fill-mode       : forwards, forwards;
+		 -webkit-animation-iteration-count : infinite, infinite;
+		 -webkit-animation-play-state      : paused, paused;
+		 -webkit-animation-direction       : alternate, alternate-reverse;
+		 
+		 animation-name            : block, LR;
+		 animation-duration        : 1s, 2s;
+		 animation-fill-mode       : forwards, forwards;
+		 animation-iteration-count : infinite, infinite;
+	     animation-play-state      : paused, paused;
+		 animation-direction       : alternate, alternate-reverse;
+	}
+	@keyframes block{
+		 0%   { background-image: url(block2.png); opacity : 1;  }
+         50%  { background-image: url(block1.png); opacity : 0.5;}
+         100% { background-image: url(block2.png); opacity : 0;  }
+	}
+	@-webkit-keyframes block{
+		 0%   { background-image: url(block2.png); opacity : 1;  }
+         50%  { background-image: url(block1.png); opacity : 0.5;}
+         100% { background-image: url(block2.png); opacity : 0;  }
+	}
+	@keyframes LR{
+		 0%   { left : 90%; }
+		 10%  { left : 89%; }
+         20%  { left : 88%; }
+		 30%  { left : 87%; }
+		 40%  { left : 86%; }
+         50%  { left : 85%; }
+		 60%  { left : 85%; }
+		 70%  { left : 86%; }
+		 80%  { left : 87%; }
+		 90%  { left : 88%; }
+         100% { left : 90%; }
+	}
+	@-webkit-keyframes LR{
+		 0%   { left : 90%; }
+		 10%  { left : 89%; }
+         20%  { left : 88%; }
+		 30%  { left : 87%; }
+		 40%  { left : 86%; }
+         50%  { left : 85%; }
+		 60%  { left : 85%; }
+		 70%  { left : 86%; }
+		 80%  { left : 87%; }
+		 90%  { left : 88%; }
+         100% { left : 90%; }
+	}
+	
+	
+		
+	#moveBG{
+		 position          : relative;
+		 width             : 100%;
+		 height            : 100%;   
+		 background-Size   : 270% 270%;
+		 background-Repeat : no-repeat;
+		 z-index           : 81; 
+	}
+	#brick1{
+		 position          : absolute;
+		 width             : 88%;
+		 height            : 13%;
+		 top               : -12%;
+		 left              : -9%;
+		 z-index           : 89;
+		 background-image  : url(brick1.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+	}
+	#brick2{
+		 position          : absolute;
+		 width             : 8%;
+		 height            : 52%;
+		 top               : -104%;
+		 left              : 70%;
+		 z-index           : 89; 
+		 background-image  : url(brick2.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 
+		 -webkit-animation-name            : brick2;
+	     -webkit-animation-duration        : 5s;
+		 -webkit-animation-fill-mode       : forwards;
+		 -webkit-animation-play-state      : paused;
+		 -webkit-animation-iteration-count : infinite;
+		 -webkit-animation-direction       : alternate;
+		 
+		 animation-name            : brick2;
+		 animation-duration        : 5s;
+		 animation-fill-mode       : forwards;
+	     animation-play-state      : paused;
+		 animation-iteration-count : infinite; 
+		 animation-direction       : alternate;
+	}
+	@keyframes brick2{
+		 0%   { top : -158%; }
+		 2%   { top : -152%; }
+		 4%   { top : -148%; }
+		 6%   { top : -144%; }
+		 8%   { top : -140%; }
+		 10%  { top : -136%; }
+		 12%  { top : -132%; }
+		 14%  { top : -128%; }
+		 16%  { top : -124%; }
+		 18%  { top : -120%; }
+		 20%  { top : -116%; } 
+		 22%  { top : -112%; }
+		 24%  { top : -108%; }
+		 26%  { top : -104%; }
+		 28%  { top : -108%; }
+		 30%  { top : -112%; }
+		 32%  { top : -116%; }
+		 34%  { top : -120%; }
+		 36%  { top : -124%; }
+		 38%  { top : -128%; }
+		 40%  { top : -130%; }
+		 42%  { top : -128%; }
+		 44%  { top : -124%; }
+		 46%  { top : -120%; }
+		 48%  { top : -116%; }
+		 50%  { top : -112%; }
+		 52%  { top : -108%; }
+		 54%  { top : -104%; }
+		 56%  { top : -108%; }
+		 58%  { top : -112%; }
+		 60%  { top : -116%; }
+		 62%  { top : -120%; }
+		 64%  { top : -124%; }
+		 68%  { top : -128%; }
+		 70%  { top : -124%; }
+		 72%  { top : -120%; }
+		 74%  { top : -116%; }
+		 76%  { top : -112%; }
+		 78%  { top : -108%; }
+		 80%  { top : -104%; }
+		 82%  { top : -108%; }
+		 84%  { top : -112%; }
+		 86%  { top : -116%; }
+		 88%  { top : -120%; }
+		 90%  { top : -124%; }
+		 92%  { top : -120%; }
+		 94%  { top : -116%; }
+		 98%  { top : -112%; }
+		 100% { top : -108%; }
+	}
+	@-wekit-keyframes brick2{
+		 0%   { top : -52%; }
+		 2%   { top : -48%; }
+		 4%   { top : -44%; }
+		 6%   { top : -40%; }
+		 8%   { top : -36%; }
+		 10%  { top : -32%; }
+		 12%  { top : -28%; }
+		 14%  { top : -24%; }
+		 16%  { top : -20%; }
+		 18%  { top : -16%; }
+		 20%  { top : -12%; } 
+		 22%  { top : -8%;  }
+		 24%  { top : -4%;  }
+		 26%  { top : 0%;   }
+		 28%  { top : -4%;  }
+		 30%  { top : -8%;  }
+		 32%  { top : -12%; }
+		 34%  { top : -16%; }
+		 36%  { top : -20%; }
+		 38%  { top : -24%; }
+		 40%  { top : -28%; }
+		 42%  { top : -24%; }
+		 44%  { top : -20%; }
+		 46%  { top : -16%; }
+		 48%  { top : -12%; }
+		 50%  { top : -8%;  }
+		 52%  { top : -4%;  }
+		 54%  { top : 0%;   }
+		 56%  { top : -4%;  }
+		 58%  { top : -8%;  }
+		 60%  { top : -12%; }
+		 62%  { top : -16%; }
+		 64%  { top : -20%; }
+		 68%  { top : -24%; }
+		 70%  { top : -28%; }
+		 72%  { top : -24%; }
+		 74%  { top : -20%; }
+		 76%  { top : -16%; }
+		 78%  { top : -12%; }
+		 80%  { top : -8%;  }
+		 82%  { top : -4%;  }
+		 84%  { top : 0%;   }
+		 86%  { top : -4%;  }
+		 88%  { top : -8%;  }
+		 90%  { top : -12%; }
+		 92%  { top : -16%; }
+		 94%  { top : -20%; }
+		 98%  { top : -24%; }
+		 100% { top : -28%; }
+	}
+	#brick3{
+		 position  : absolute;
+		 width     : 52%;
+		 height    : 10%;
+		 top       : 44%;
+		 left      : 111%;
+		 background-image  : url(brick3.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 z-index   : 89; 
+	}
+	#brick4{
+		 position : absolute;
+         width    : 103%;
+         height   : 13%;
+         top      : 89%;
+         left     : 129%;
+		 z-index  : 89%;
+		 background-image: url(brick4.png);
+		 background-Size: 100% 100%;
+		 background-Repeat: no-repeat;
+	}
+	#brick5{
+		 position  : absolute;
+		 width     : 54%;
+         height    : 10%;
+         top       : 44%;
+         left      : 176%;
+		 background-image  : url(brick5.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 z-index : 89; 
+	}	
+	#brick6{
+		 position : absolute;
+		 width    : 50%;
+		 height   : 15%;
+		 top      : 87%;
+		 left     : 244%;
+		 z-index  : 89;  
+		 background-image  : url(brick6.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		
+	}
+	#brick7{
+		 position : absolute;
+		 width    : 50%;
+         height   : 26%;
+         top      : 35%;
+         left     : 243%;
+		 background-image  : url(brick7.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 z-index : 89; 
+	}
+	#brick8{
+		 position : absolute;
+		 width    : 11%;
+         height   : 15%;
+         top      : 67%;
+         left     : 300%;
+		 background-image  : url(brick8.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 z-index : 89; 
+	}
+	#brick9{
+		 position : absolute;
+		 width    : 11%;
+         height   : 15%;
+         top      : 51%;
+         left     : 318%;
+		 background-image  : url(brick8.png);
+		 background-Size   : 100% 100%;
+		 background-Repeat : no-repeat;
+		 z-index : 89; 
+	}
+	#brick10{
+		 position: absolute;
+		 width: 73%;
+		 height: 14%;
+		 top: 34%;
+		 left: 336%;
+		 background-image: url(brick10.png);
+		 background-Size: 100% 100%;
+		 background-Repeat: no-repeat;
+		 z-index: 89; 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

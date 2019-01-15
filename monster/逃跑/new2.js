@@ -12,7 +12,7 @@ window.requestAnimFrame = (function(){
 		var vendors = ['webkit', 'moz'];
 		for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
 			window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-			window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] ||   
+			window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] ||    // Webkit中此取消方法的名字变了
 										  window[vendors[x] + 'CancelRequestAnimationFrame'];
 		}
 
@@ -33,19 +33,96 @@ window.requestAnimFrame = (function(){
 			};
 		}
 	}());
-  
-	var g = document.getElementById("gameContainer");
+	
+		var mv;
+		var jewelAmount = 3;
+		// var countTime = document.getElementById('countTime').innerHTML;
+		
+	function lp() {	
+		     mv = setTimeout(main, 500);
+	}
+	
+    function jump(){	
+		 game.input.onDown.add(this.jump, this); //给鼠标按下事件绑定龙的跳跃动作
+         this.spaceKey = game.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
+         this.upKey = game.input.keyboard.addKey(Phaser.KeyCode.UP);
+         game.input.keyboard.addKeyCapture([Phaser.KeyCode.SPACEBAR, Phaser.KeyCode.UP]);
 
-	var w = document.getElementById("gameContainer"),
-    d = document,
-    e = d.documentElement,
-    x = w.innerWidth || e.clientWidth 
-    y = w.innerHeight|| e.clientHeight;
+		 if (this.spaceKey.isDown || this.upKey.isDown) {
+         this.jump();
+        }
+		
+    if (game.input.keyboard.isDown(Phaser.KeyCode.DOWN) && this.dragon.downRun === false) {
+         this.dragon.downRun = true;
+         this.dragon.animations.stop();
+         this.dragon.animations.play('down_run');
+         this.dragon.body.setSize(this.dragon.width, this.dragon.height / 2, 0, this.dragon.height / 2);
+        } else if (!game.input.keyboard.isDown(Phaser.KeyCode.DOWN) && this.dragon.downRun === true) {
+         this.dragon.downRun = false;
+         this.dragon.animations.stop();
+         this.dragon.animations.play('run');
+         this.dragon.body.setCircle(this.dragon.width / 2);
+         this.dragon.body.offset.set(0, 0);//恢复一下偏移为0
+        }
+    }		
+		
+		 var gameContainer   = document.getElementById("gameContainer");
+		 var inner_container = document.getElementById('inner_container');
+		
+	     var jewel = document.getElementById("jewel");
+		 var score = document.getElementById("score");
+		 
+		 var monster = document.getElementById("monster");
+		 var gRun  = document.getElementById("gRun"); 
+        
+         var grave1 = document.getElementById("grave1");
+         var grave2 = document.getElementById("grave2");
+         var grave3 = document.getElementById("grave3");
+         var grave4 = document.getElementById("grave4");
+		
+		 var m1 = document.getElementById("m1");
+		 var m2 = document.getElementById("m2");
+		
+		 var bfire = document.getElementById("bfire"); 
+		 var sfire = document.getElementById("sfire"); 
+            
+         //背景			        
+		 var redLayer   = document.getElementById("redLayer");
+		 var ored       = document.getElementById("ored");
+         var greenLayer = document.getElementById("greenLayer");			
+		
+		 var flower1  = document.getElementById("folwer1");			
+		 var flower2 = document.getElementById("folwer2");				
+				
+		 var key   = document.getElementById("key");
+		 var block = document.getElementById("block");
+		 var gift = document.getElementById("gift");
+	    
 	
-	x=w.clientWidth;
-	y=w.clientHeight;
+	function main(){
+		
+		document.getElementById("loader").style.display = "none";		
+		gameContainer.style.display = "block";
+		
+		var jewelImage = document.getElementsByClassName("jewel");
+		// jewelImage[1].style.left = "110%";
+		// jewelImage[2].style.left = "220%";		
+		
+		var gRun = document.getElementsByClassName("gRun");
+		createImage();
+		// jump();
+	}
 	
-	     var jewelAmount = 3;
+	var tstart = document.getElementById("tstart");
+	
+    tstart.onclick = function() { //为start按键添加点击事件处理程序
+         girl.style.display = "none"; //隐藏标题
+		 glove.style.display = "none";
+		 start.style.display = "none";
+		 tut.style.display = "none";
+		 begin();
+	}
+	var jewelAmount = 3;
 	 
 		 var inner_container = document.getElementById('inner_container');
 	
@@ -64,12 +141,12 @@ window.requestAnimFrame = (function(){
 		
 		 // var bfire = document.getElementById("bfire"); 
 		 // var sfire = document.getElementById("sfire"); 
-                    
+            
+         //背景			        
 		 var redLayer   = document.getElementById("redLayer");
 		 var ored       = document.getElementById("ored");
          var greenLayer = document.getElementById("greenLayer");			
 		
-	
 		 var flower1 = document.getElementById("folwer1");			
 		 var flower2 = document.getElementById("folwer2");				
 	
@@ -78,6 +155,9 @@ window.requestAnimFrame = (function(){
 		 var block = document.getElementById("block");
 		 var gift  = document.getElementById("gift");
 		
+     	  
+         		
+	// document.getElementById("demo").innerHTML = ms.getMilliseconds();s
 	
 	function main(){
 		
@@ -92,9 +172,20 @@ window.requestAnimFrame = (function(){
 
 	}
 	
+	
 	function reloadPage(){ //again
          window.location.reload();
-    }	
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	var tstart = document.getElementById("tstart");
@@ -105,8 +196,10 @@ window.requestAnimFrame = (function(){
 		 start.style.display = "none";
 		 tut.style.display = "none";
 		 begin();
-		 bgMove();
+		 landRun();
 	}	
+	
+  
 	
 	function begin(){
 	    		
@@ -118,6 +211,7 @@ window.requestAnimFrame = (function(){
 		
 		gRun.style.AnimationPlayState = "running";
 		gRun.style.WebkitAnimationPlayState = "running";
+		
 		
 		block.style.animationName = "LR";
 		block.style.WebkitanimationName = "LR";
@@ -141,35 +235,96 @@ window.requestAnimFrame = (function(){
 		brick2.style.WebkitAnimationPlayState = "running";
 	}
 	   
-	function bgMove(){
+	function landRun() {
+           
+	    if (land.offsetLeft <= -2600) {    //270%
+             land.style.left="0";
+        } 
+		   
+		land.style.left  = land.offsetLeft  - 3 + "px";
+ 
+	
 		
-	    if(move.offsetLeft <= -2600){
-          move.style.left="0";
-		}
-		
-	    move.style.left = move.offsetLeft -3 + "px";
-		
-	    setTimeout(function(){
-             bgMove();
+			setTimeout(function(){
+             landRun();
         },20);
 		
-	}
+		
+	    // clearTimeout(landRun());	
+		// var landTimer = setInterval(landRun,600); //让草地动起来的定时器
+	}    
+
+	
+	
+	
+	
+	
+	// function move(){
+		
+		// if(brick1.offsetLeft <= 100 ){
+			// brick1.style.left = "-100px";
+		// }
+		
+   		// if (brick2.offsetLeft <= 100) {
+             // brick2.style.left = "-100px";
+		// }
+
+        // if (brick3.offsetLeft <= -100){
+			 // brick3.style.left = "-100px"
+		// }
+			
+        // redLayer.style.left = redLayer.offsetLeft - 3 + "px";
+        // ored.style.left = ored.offsetLeft - 3 + "px";
+		// greenLayer.style.Left = greenLayer.offsetLeft - 3 + "px";
+        			
+	// }
 	
 	
 	
 	
 	
 	
-  (function () {
+	
+	
+	
+	
+	
+	
+
+	    
+		
+   	function reloadPage(){ //again
+         window.location.reload();
+    }
+
+    function createImage(){
+		var mLeft = 0 ;
+		var jewelArray = ['jewel.png'];
+		var i;
+		for(i=0; i<3; i++)
+		{	 
+			if(i < 3)
+			{
+				 var jewelImage = document.createElement("IMG");
+				 mLeft = mLeft + 70;
+				 jewelImage.setAttribute("src", jewelArray[0]);
+                 jewelImage.style.marginLeft= (mLeft) + "%";				
+				 jewelImage.setAttribute("class","jewel");
+				 jewel.appendChild(jewelImage);
+			}
+		}
+    }
+
+(function () {
   
 	if (window.matchMedia("(orientation: portrait)").matches) {
 		
-		g.style.webkitTransform = 'rotate(90deg)'; 
-		g.style.mozTransform    = 'rotate(90deg)'; 
-		g.style.msTransform     = 'rotate(90deg)'; 
-		g.style.oTransform      = 'rotate(90deg)'; 
-		g.style.transform       = 'rotate(90deg)'; 
-	
+		gameContainer.style.webkitTransform = 'rotate(90deg)'; 
+		gameContainer.style.mozTransform    = 'rotate(90deg)'; 
+		gameContainer.style.msTransform     = 'rotate(90deg)'; 
+		gameContainer.style.oTransform      = 'rotate(90deg)'; 
+		gameContainer.style.transform       = 'rotate(90deg)'; 
+		
 		 window.addEventListener('orientationchange', function() { location.reload(); }, false);
 		
 		var game = {
@@ -183,11 +338,11 @@ window.requestAnimFrame = (function(){
 
 	if (window.matchMedia("(orientation: landscape)").matches) {
 	
-		g.style.webkitTransform = 'rotate(0deg)'; 
-		g.style.mozTransform    = 'rotate(0deg)'; 
-		g.style.msTransform     = 'rotate(0deg)'; 
-		g.style.oTransform      = 'rotate(0deg)'; 
-		g.style.transform       = 'rotate(0deg)'; 
+		gameContainer.style.webkitTransform = 'rotate(0deg)'; 
+		gameContainer.style.mozTransform    = 'rotate(0deg)'; 
+		gameContainer.style.msTransform     = 'rotate(0deg)'; 
+		gameContainer.style.oTransform      = 'rotate(0deg)'; 
+		gameContainer.style.transform       = 'rotate(0deg)'; 
 	
 		 window.addEventListener('orientationchange', function() { location.reload(); }, false);
 			
@@ -245,5 +400,3 @@ window.requestAnimFrame = (function(){
 window.addEventListener("resize", resizeGame);
 resizeGame();
 }())
-
-

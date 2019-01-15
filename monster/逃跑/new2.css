@@ -1108,12 +1108,35 @@
 	}
 	
 		
-	#move{
-		 position          : absolute;
+	#land{
+		 position          : relative;
 		 width             : 100%;
 		 height            : 100%;   
 		 background-Size   : 270% 100%;
 		 background-Repeat : no-repeat;
 		 z-index           : 81; 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	

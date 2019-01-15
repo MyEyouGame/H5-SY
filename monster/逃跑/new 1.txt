@@ -1,0 +1,64 @@
+var screenHeight = window.innerHeight; //创建一个叫做screenHeight的变量，用来获取窗口的高度
+
+     var aBg = document.getElementById("aBg"); //绑定aBg
+     aBg.style.top = 0;  //设定aBg图层的top属性
+
+     var bBg = document.getElementById("aBg")  //绑定bBg
+     bBg.style.top = screenHeight + "px"; //设定bBg图层的top属性
+	 
+	 var cBg = document.getElementById("cBg")  //绑定cBg
+     cBg.style.top = screenHeight + "px"; //设定cBg图层的top属性
+
+     //声明moveTopBg和moveBtmBg两个变量，并且关联两个图层的top属性
+     var moveaBg = aBg.style.top;
+     var movebBg = bBg.style.top;
+	 var movecBg = cBg.style.top;
+     
+	 /*
+     注意原生JavaScript这里有一个坑：
+     如果直接写成var topBg = document.getElementById("topBg").style.top，
+	 用alert(topBg)时不会返回任何结果，然而我重新声明一个变量moveTopBg，绑定topBg.style.top，再alert(moveTopBg)就可以返回正确的值了，请十分注意。
+     */
+
+    var speed = 11; //设定卷动速度
+     
+	 /*
+     注意这个值必须能够现在主流的所有分辨率高度整除，否则会出现错误。我是假设在375*627的iPhone6屏幕上运行的。如果想要兼容所有的浏览器，可以用js进行运算处理。
+     */
+
+function move(){
+    //设定moveTopBg和moveBtmBg的移动距离，由于这两个变量目前是一个字符串，无法进行相加的运算，所以用parseInt()方法转换成数字
+    moveaBg = parseInt(moveaBg) - speed + "px";
+    movebBg = parseInt(movebBg) - speed + "px";
+    movecBg = parseInt(movecBg) - speed + "px";
+
+    //将进行过运算的moveTopBg和moveBtmBg更新给两个需要卷动的背景图层
+    aBg.style.top = moveaBg;
+    bBg.style.top = movebBg;
+    cBg.style.top = movecBg;
+
+    //设定条件，当背景图A的移动距离，和屏幕的高度相加完全等于0的时候(也就是完全向上卷动消失)，执行以下代码。这个时候将背景图A的top属性重新设定到屏幕的最底端
+    if(parseInt(moveaBg) + screenHeight == 0){
+        moveaBg = screenHeight + "px";
+        aBg.style.top = moveaBg;
+    }
+    //同上，这次设定的是背景图B
+    if(parseInt(movebBg) + screenHeight == 0){
+        movebBg = screenHeight + "px";
+        bBg.style.top = movebBg;
+    }
+
+    if(parseInt(movecBg) + screenHeight == 0){
+        movecBg = screenHeight + "px";
+        cBg.style.top = movecBg;
+    }
+    //设置定时器，每200毫秒执行一次本方法​
+    setTimeout(function(){
+        move();
+    },200);
+
+}
+
+
+	
+	
