@@ -53,7 +53,193 @@ window.requestAnimFrame = (function(){
 		sizeData(newWidth,newHeight);
 		resize(newWidth,newHeight);	
 		
+		FengLingAnimation();
+		KaiJuanZhouAnimation()			
 	}
+		
+    var timeouts;
+	function doTimer(length, resolution, oninstance, oncomplete){
+		var steps = (length / 100) * (resolution / 10),
+		speed = length / steps,
+		count = 0,
+		start = new Date().getTime();
+
+		function instance(){
+			if(count++ == steps){
+				oncomplete(steps, count);
+			}
+			else{
+				oninstance(steps, count);
+
+				var diff = (new Date().getTime() - start) - (count * speed);
+				window.setTimeout(instance, (speed - diff));
+			}
+		}
+		timeouts = window.setTimeout(instance, speed);
+	}
+		
+	var start = document.getElementById("tstart");
+	start.onclick = function(){
+        
+        call.style.display = "none";
+
+        call2.style.display = "block";		
+		call2.style.animationPlayState = "running";
+		call2.style.webkitAnimationPlayState = "running";
+		
+		KaiJuanZhou.style.animation = "opacity 0.1s 1 linear forwards";
+		KaiJuanZhou.style.webkitAnimation = "opacity 0.1s 1 linear forwards";
+		
+		xJuanZhou.style.display = "block";
+       	xJuanZhouAnimation();
+				
+
+		
+		
+		
+				
+		
+	}
+	
+	
+	
+	
+	
+	//风铃
+	var FengLingArray = [
+	                        // 'FL00000.png',
+							'FL00030.png',
+							'FL00089.png'
+	                    ];
+		for(i=0; i < FengLingArray.length; i++)
+	    {	 
+		    if(i < FengLingArray.length)
+		    {
+			     var FengLingImage = document.createElement("IMG");
+			     FengLingImage.setAttribute("src", FengLingArray[i]);	
+			     FengLingImage.setAttribute("class","fengling");
+			     fengling.appendChild(FengLingImage);
+		    }
+	    }	
+	var renderFengLing;
+	function FengLingAnimation(){
+		var myIndex = 0;			
+		var FengLingImage = document.getElementsByClassName("fengling");		
+		loopFengLing();
+		
+		function loopFengLing(){
+			var i;
+			for (i=0;i<FengLingImage.length;i++)
+			{
+				FengLingImage[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > FengLingImage.length){}
+			FengLingImage[myIndex-1].style.display = "block";
+			renderFengLing = setTimeout(loopFengLing,1250);			
+			 
+			if (myIndex === 2){
+				myIndex=0;	
+			}		
+		}
+	} 
+	
+	// 开卷轴	
+	var KaiJuanZhouArray = [
+	                            'J00001.png',
+								'J00005.png',
+								'J00009.png',
+								'J00013.png',
+								'J00017.png',
+								'J00024.png'
+	                       ];
+		for(i=0; i < KaiJuanZhouArray.length; i++)
+	    {	 
+		    if(i <KaiJuanZhouArray.length)
+		    {
+			     var KaiJuanZhouImage = document.createElement("IMG");
+			     KaiJuanZhouImage.setAttribute("src", KaiJuanZhouArray[i]);	
+			     KaiJuanZhouImage.setAttribute("class","KaiJuanZhou");
+			     KaiJuanZhou.appendChild(KaiJuanZhouImage);
+		    }
+	    }	
+    var renderKaiJuanZhou;
+	function KaiJuanZhouAnimation(){
+		var myIndex = 0;			
+		var KaiJuanZhouImage = document.getElementsByClassName("KaiJuanZhou");		
+		loopKaiJuanZhou();
+		
+		function loopKaiJuanZhou(){
+			var i;
+			for (i=0;i<KaiJuanZhouImage.length;i++)
+			{
+				KaiJuanZhouImage[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > KaiJuanZhouImage.length){}
+			KaiJuanZhouImage[myIndex-1].style.display = "block";
+			renderKaiJuanZhou = setTimeout(loopKaiJuanZhou,50);			
+			 
+			if (myIndex === 6){
+				clearTimeout(renderKaiJuanZhou);			
+			}		
+		}
+	} 
+	
+    //关卷轴
+    var xJuanZhouArray = [   
+	                         // 'J00024.png',
+	                         'Z00001.png',
+						     'Z00005.png',
+						     'Z00009.png',
+						     'Z00013.png',
+						     'Z00017.png',
+						     'Z00020.png'
+	                     ];	
+		for(i=0; i < xJuanZhouArray.length; i++)
+	    {	 
+		    if(i <xJuanZhouArray.length)
+		    {
+			     var xJuanZhouImage = document.createElement("IMG");
+			     xJuanZhouImage.setAttribute("src", xJuanZhouArray[i]);	
+			     xJuanZhouImage.setAttribute("class","xJuanZhou");
+			     xJuanZhou.appendChild(xJuanZhouImage);
+		    }
+	    }				
+	var renderxJuanZhou;
+	function xJuanZhouAnimation(){
+		var myIndex = 0;			
+		var xJuanZhouImage = document.getElementsByClassName("xJuanZhou");		
+		loopxJuanZhou();
+		
+		function loopxJuanZhou(){
+			var i;
+			for (i=0;i<xJuanZhouImage.length;i++)
+			{
+				xJuanZhouImage[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > xJuanZhouImage.length){}
+			xJuanZhouImage[myIndex-1].style.display = "block";
+			renderxJuanZhou = setTimeout(loopxJuanZhou,60);			
+			 
+			if (myIndex === 6){
+				clearTimeout(renderxJuanZhou);
+                xJuanZhou.style.display = "none";				
+			}		
+		}
+	} 
+				
+    
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	function sizeData(w,h){
 	
@@ -149,5 +335,3 @@ window.requestAnimFrame = (function(){
 	
 	 window.addEventListener("orientationchange", function() {location.reload();}, false);
      document.getElementById("x").innerHTML = "";
-	 
-	 

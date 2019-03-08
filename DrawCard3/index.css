@@ -43,14 +43,265 @@ body{
 	}
 	
 	#container{	
-		 display:none;
-		 position: relative;
-		 margin:0 auto; 
-		 height:100%; 
-		 width:100%; 
-		 overflow:hidden;
-		 border: solid 1px white;
-		 background-image:url('BG。png');
-		 background-repeat:no-repeat;
-		 background-Size : 100% 100%; 
+		 display           : none;
+		 position          : relative;
+		 margin            : 0 auto; 
+		 height            : 100%; 
+		 width             : 100%;
+		 overflow          : hidden;
+		 border            : solid 1px white;
+		 /* background-image  : url('BG.png'); */
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
 	}
+	
+	#top{
+		 width   : 100%;
+         height  : 25%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+	}
+	
+	#square {
+         position          : absolute;
+		 width             : 100%;
+         height            : 50%;
+		 background-image  : url('BG.png');
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+    }
+	
+	#bottom{
+		 width   : 100%;
+         height  : 25%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+	}
+
+    #fengling{
+		 position          : absolute;
+		 height            : 50%; 
+		 width             : 50%;
+		 top               : 0%;
+		 left              : -3%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 150;
+	}
+	.fengling{
+		 position          : absolute;
+		 height            : 50%; 
+		 width             : 50%;
+		 top               : 0%;
+		 left              : -3%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 150;
+	}
+	
+	#border{
+		 position          : absolute;
+         height            : 8%;
+         width             : 16%;
+         top               : 5%;
+         left              : 77%;
+		 background-image  : url(border.png);
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 150;
+	}
+    
+	#amount{
+		 position          : absolute;
+         height            : 66%;
+         width             : 32%;
+         top               : 33%;
+         left              : 36%;
+		 background-image  : url(M3.png);
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 153;
+	}
+
+	#KaiJuanZhou{
+		 position          : absolute;
+         height            : 63%;
+         width             : 88%;
+         top               : 21%;
+         left              : 6%;
+		 /* background-image  : url('J00001.png'); */
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 100;
+	}
+	.KaiJuanZhou{
+		 position          : absolute;
+         height            : 100%;
+         width             : 100%;
+         top               : 0%;
+         left              : 0%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 100;
+	}
+  
+	#xJuanZhou{
+		 position          : absolute;
+		 display           : none;
+         height            : 63%;
+         width             : 88%;
+         top               : 21%;
+         left              : 6%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 105;
+	}
+	.xJuanZhou{
+		 position          : absolute;
+		 display           : none;
+         height            : 100%;
+         width             : 100%;
+         top               : 0%;
+         left              : 0%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 105;
+	}
+  
+    .c{
+		 position          : absolute;
+         height            : 12%;
+         width             : 31%;
+         top               : 83%;
+         left              : 33%;
+		 background-image  : url('confirmButton.png');
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+	}
+    #call{
+		 position          : absolute;
+         height            : 12%;
+         width             : 31%;
+         top               : 83%;
+         left              : 33%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 100;
+		 filter            : opacity(0); 
+		 
+		 -webkit-animation-name            : callB    , scaleCall;
+ 		 -webkit-animation-duration        : 0.5s     , 1.5s;
+		 -webkit-animation-direction       : normal   , alternate-reverse;  
+		 -webkit-animation-timing-function : linear   , linear; 
+		 -webkit-animation-iteration-count : 1        , infinite;
+		 -webkit-animation-fill-mode       : forwards , forwards;
+		 -webkit-animation-delay           : 0.5s     , 1s;
+		 -webkit-animation-play-state      : running  , running; 
+		 
+		 animation-name            : callB    , scaleCall;
+ 		 animation-duration        : 0.5s     , 1.5s;
+		 animation-direction       : normal   , alternate-reverse;  
+		 animation-timing-function : linear   , linear; 
+		 animation-iteration-count : 1        , infinite;
+		 animation-fill-mode       : forwards , forwards;
+		 animation-delay           : 0.5s     , 1s;
+		 animation-play-state      : running  , running; 	 
+	}
+	@-webkit-keyframes callB{
+		0%   { filter : opacity(0); }
+		100% { filter : opacity(1); } 
+	}
+	@keyframes callB{
+		0%   { filter : opacity(0); }
+		100% { filter : opacity(1); } 
+	}
+	@-webkit-keyframes scaleCall{
+		0%   { transform:scale(1.00); }
+		25%  { transform:scale(1.10); }
+		50%  { transform:scale(1.00); }
+		75%  { transform:scale(1.10); }
+		100% { transform:scale(1.00); }
+	}
+	@keyframes scaleCall{
+		0%   { transform:scale(1.00); }
+		25%  { transform:scale(1.10); }
+		50%  { transform:scale(1.00); }
+		75%  { transform:scale(1.10); }
+		100% { transform:scale(1.00); }
+	}
+   
+    #call2{
+		 position          : absolute;
+		 display           : none;
+         height            : 12%;
+         width             : 31%;
+         top               : 83%;
+         left              : 33%;
+		 background-repeat : no-repeat;
+		 background-Size   : 100% 100%; 
+		 z-index           : 100;
+		 filter            : opacity(0); 
+		 
+		 -webkit-animation-name            : confirm  , opacity;
+ 		 -webkit-animation-duration        : 0.5s     , 1s;
+		 -webkit-animation-direction       : normal   , normal;  
+		 -webkit-animation-timing-function : linear   , linear; 
+		 -webkit-animation-iteration-count : 1        , 1;
+		 -webkit-animation-fill-mode       : forwards , forwards;
+		 -webkit-animation-delay           : 0s       , 1s;
+		 -webkit-animation-play-state      : paused   , paused; 
+		 
+		 animation-name            : confirm  , opacity;
+ 		 animation-duration        : 0.5s     , 1s;
+		 animation-direction       : normal   , normal;  
+		 animation-timing-function : linear   , linear; 
+		 animation-iteration-count : 1        , 1;
+		 animation-fill-mode       : forwards , forwards;
+		 animation-delay           : 0s       , 1s;
+		 animation-play-state      : paused   , paused; 	 
+	}
+    @-webkit-keyframes confirm{
+		0%   { filter : opacity(1.0); }
+		20%  { filter : opacity(0.8); }
+		40%  { filter : opacity(0.6); }
+	    50%  { filter : opacity(0.5); }
+		60%  { filter : opacity(0.6); }
+		80%  { filter : opacity(0.8); }
+		100% { filter : opacity(1.0); }
+	}
+	@keyframes confirm{
+		0%   { filter : opacity(1.0); }
+		20%  { filter : opacity(0.8); }
+		40%  { filter : opacity(0.6); }
+	    50%  { filter : opacity(0.5); }
+		60%  { filter : opacity(0.6); }
+		80%  { filter : opacity(0.8); }
+		100% { filter : opacity(1.0); }
+	}
+    @-webkit-keyframes opacity{
+		0%   { filter : opacity(1); }
+		100% { filter : opacity(0); }
+	}
+    @keyframes opacity{
+		0%   { filter : opacity(1); }
+		100% { filter : opacity(0); }
+	}
+
+    #tstart{
+		 position          : absolute;
+		 overflow          : hidden;
+         width             : 40%;
+         height            : 9%;
+         top               : 84%;
+         left              : 28%;
+		 z-index           : 150;
+		 /* border            : solid; */
+	}
+	 
+   
+
+
+
+
+
+
