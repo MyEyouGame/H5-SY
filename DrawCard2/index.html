@@ -603,7 +603,10 @@
 	}
 	@-webkit-keyframes scaleConfirm{
 		0%   { transform:scale(1.00); }
-		100% { transform:scale(0.95); }
+		25%  { transform:scale(0.95); }
+		50%  { transform:scale(1.00); }
+		75%  { transform:scale(0.95); }
+		100% { transform:scale(1.00); }
 	}
 	@keyframes scaleConfirm{
 		0%   { transform:scale(1.00); }
@@ -1053,9 +1056,6 @@
 		65%  { filter:opacity(1); top: 70%; }
 		100% { filter:opacity(0); }
 	}
-	
-	
-	
 		
 	#card1{
 		 position          : absolute;
@@ -1134,14 +1134,7 @@
 	     z-index           : 108;
 		 /* transform         : scale(0); */
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	#card2{
 		 position          : absolute;
 		 display           : none;
@@ -1211,13 +1204,6 @@
 	     z-index           : 118;
 		 /* transform         : scale(0); */
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	#card3{
 		 position          : absolute;
@@ -1672,7 +1658,6 @@
 		0%   { top : 18%;  }
 		100% { top : 100%; }
 	}
-	
 	
 	
 </style>
