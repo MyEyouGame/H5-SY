@@ -346,9 +346,166 @@ window.requestAnimFrame = (function(){
 						document.getElementById('shockWave1').style.display = "block";										
 						shockWave1Animation();
 					}			
+			);	 
+	        
+			ca1();
+	}
+    
+	function ca1(){
+		
+		cardBack1.style.display = "block";
+		cardBack1.style.animationPlayState = "running";
+		cardBack1.style.webkitAnimationPlayState = "running";
+	    
+		callfz1.style.animation = "opacity 0.5s forwards linear normal 1 2.7s";
+		callfz1.style.webkitAnimation = "opacity 0.5s forwards linear normal 1 2.7s";
+  	 
+        card1.style.display = "block";
+		card1.style.animationPlayState = "running";
+		card1.style.webkitAnimationPlayState = "running";
+       
+		cardBack2.style.display = "block";
+		cardBack2.style.animationPlayState = "running";
+		cardBack2.style.webkitAnimationPlayState = "running";
+	
+	    card2.style.display = "block";
+		card2.style.animationPlayState = "running";
+		card2.style.webkitAnimationPlayState = "running";
+	
+	    cardBack3.style.display = "block";
+		cardBack3.style.animationPlayState = "running";
+		cardBack3.style.webkitAnimationPlayState = "running";
+	
+	    card3.style.display = "block";
+		card3.style.animationPlayState = "running";
+		card3.style.webkitAnimationPlayState = "running";
+	
+	    cl1.style.display = "block";
+		cl1.style.animationPlayState = "running";
+		cl1.style.webkitAnimationPlayState = "running";
+	
+	    var non10 = "none";
+			document.getElementById('border1').style.display = non10;
+            doTimer(
+			2000,20,function(steps){
+						non10 = non10 - (1 / steps);
+						document.getElementById('border1').style.display = non10;				
+						},
+			function(){
+						document.getElementById('border1').style.display = "block";										
+						Border1Animation();
+					}			
+			);
+	    
+	    var non11 = "none";
+			document.getElementById('fireworks1').style.display = non11;
+            doTimer(
+			7500,20,function(steps){
+						non11 = non11 - (1 / steps);
+						document.getElementById('fireworks1').style.display = non11;				
+						},
+			function(){
+						document.getElementById('fireworks1').style.display = "block";										
+						FireWorks1Animation();
+					}			
+			);
+			
+		var non12 = "none";
+			document.getElementById('fireworks2').style.display = non12;
+            doTimer(
+			7700,20,function(steps){
+						non12 = non12 - (1 / steps);
+						document.getElementById('fireworks2').style.display = non12;				
+						},
+			function(){
+						document.getElementById('fireworks2').style.display = "block";										
+						FireWorks2Animation();
+					}			
 			);	
 			
+		var non13 = "none";
+			document.getElementById('fireworks3').style.display = non13;
+            doTimer(
+			7900,20,function(steps){
+						non13 = non13 - (1 / steps);
+						document.getElementById('fireworks3').style.display = non13;				
+						},
+			function(){
+						document.getElementById('fireworks3').style.display = "block";										
+						FireWorks3Animation();
+					}			
+			);	
+	    
+		var non14 = "none";
+			document.getElementById('fireworks4').style.display = non14;
+            doTimer(
+			8100,20,function(steps){
+						non14 = non14 - (1 / steps);
+						document.getElementById('fireworks4').style.display = non14;				
+						},
+			function(){
+						document.getElementById('fireworks4').style.display = "block";										
+						FireWorks4Animation();
+					}			
+			);	
+	
+	    var non15 = "none";
+			document.getElementById('fireworks5').style.display = non15;
+            doTimer(
+			8300,20,function(steps){
+						non15 = non15 - (1 / steps);
+						document.getElementById('fireworks5').style.display = non15;				
+						},
+			function(){
+						document.getElementById('fireworks5').style.display = "block";										
+						FireWorks5Animation();
+					}			
+			);	
+	
+	    var non16 = "none";
+			document.getElementById('fireworks6').style.display = non16;
+            doTimer(
+			8500,20,function(steps){
+						non16 = non16 - (1 / steps);
+						document.getElementById('fireworks6').style.display = non16;				
+						},
+			function(){
+						document.getElementById('fireworks6').style.display = "block";										
+						FireWorks6Animation();
+					}			
+			);	
+	    
+		var non17 = "none";
+			document.getElementById('sb1').style.display = non17;
+            doTimer(
+			8500,20,function(steps){
+						non17 = non17 - (1 / steps);
+						document.getElementById('sb1').style.display = non17;				
+						},
+			function(){
+						document.getElementById('sb1').style.display = "block";										
+						sb1Animation();
+					}			
+			);	
+	     
+		
+	
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	var choose2 = document.getElementById("zf2");
@@ -481,7 +638,7 @@ window.requestAnimFrame = (function(){
 			renderFengLing = setTimeout(loopFengLing,210);			
 			 
 			if (myIndex === 16){
-				myIndex=0;	
+				myIndex = 0;
 			}		
 		}
 	} 
@@ -1253,13 +1410,321 @@ window.requestAnimFrame = (function(){
 		}
 	} 
 		
+	//边框
+    var borderArray = [
+	                    's1.png',
+						's33.png',
+						's65.png',
+						's94.png'
+	                  ];	
+	
+    /**边框1**/	
+		for(i=0; i < borderArray.length; i++)
+	    {	 
+		    if(i < borderArray.length)
+		    {
+			     var border1Image = document.createElement("IMG");
+			     border1Image.setAttribute("src", borderArray[i]);	
+			     border1Image.setAttribute("class","border1");
+			     border1.appendChild(border1Image);
+		    }
+	    }	
+	var renderBorder1;
+	function Border1Animation(){
+		var myIndex = 0;			
+		var border1Image = document.getElementsByClassName("border1");		
+		loopBorder1();
+		
+		function loopBorder1(){
+			var i;
+			for (i=0;i < border1Image.length;i++)
+			{
+				border1Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > border1Image.length){}
+			border1Image[myIndex-1].style.display = "block";
+			renderBorder1 = setTimeout(loopBorder1,260);			
+			 
+			if (myIndex === 4){
+				myIndex = 0;
+			}		
+		}
+	} 	
+
+    //烟花
+    var FireWorksArray = [
+	                        'fw1.png',
+							// 'fw5.png',
+							'fw9.png',
+							// 'fw13.png',
+							'fw17.png',
+							// 'fw21.png',
+							'fw25.png',
+							// 'fw29.png',
+							'fw33.png',
+							'fw35.png'
+	                     ];	
+	
+    /**烟花特效1-1**/	
+		for(i=0; i < FireWorksArray.length; i++)
+	    {	 
+		    if(i < FireWorksArray.length)
+		    {
+			     var FireWorks1Image = document.createElement("IMG");
+			     FireWorks1Image.setAttribute("src", FireWorksArray[i]);	
+			     FireWorks1Image.setAttribute("class","fireworks1");
+			     fireworks1.appendChild(FireWorks1Image);
+		    }
+	    }	
+	var renderFireWorks1;
+	function FireWorks1Animation(){
+		var myIndex = 0;			
+		var FireWorks1Image = document.getElementsByClassName("fireworks1");		
+		loopFireWorks1();
+		
+		function loopFireWorks1(){
+			var i;
+			for (i=0;i < FireWorks1Image.length;i++)
+			{
+				FireWorks1Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > FireWorks1Image.length){}
+			FireWorks1Image[myIndex-1].style.display = "block";
+			renderFireWorks1 = setTimeout(loopFireWorks1,130);			
+			 
+			if (myIndex === 5){
+				clearTimeout(renderFireWorks1);
+				fireworks1.style.display = "none";
+			}		
+		}
+	} 	
+				
+    /**烟花特效1-2**/	
+		for(i=0; i < FireWorksArray.length; i++)
+	    {	 
+		    if(i < FireWorksArray.length)
+		    {
+			     var FireWorks2Image = document.createElement("IMG");
+			     FireWorks2Image.setAttribute("src", FireWorksArray[i]);	
+			     FireWorks2Image.setAttribute("class","fireworks2");
+			     fireworks2.appendChild(FireWorks2Image);
+		    }
+	    }	
+	var renderFireWorks2;
+	function FireWorks2Animation(){
+		var myIndex = 0;			
+		var FireWorks2Image = document.getElementsByClassName("fireworks2");		
+		loopFireWorks2();
+		
+		function loopFireWorks2(){
+			var i;
+			for (i=0;i < FireWorks2Image.length;i++)
+			{
+				FireWorks2Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > FireWorks2Image.length){}
+			FireWorks2Image[myIndex-1].style.display = "block";
+			renderFireWorks2 = setTimeout(loopFireWorks2,130);			
+			 
+			if (myIndex === 5){
+				clearTimeout(renderFireWorks2);
+				fireworks2.style.display = "none";
+				// myIndex = 0;
+			}		
+		}
+	} 	
+	
+	/**烟花特效1-3**/	
+		for(i=0; i < FireWorksArray.length; i++)
+	    {	 
+		    if(i < FireWorksArray.length)
+		    {
+			     var FireWorks3Image = document.createElement("IMG");
+			     FireWorks3Image.setAttribute("src", FireWorksArray[i]);	
+			     FireWorks3Image.setAttribute("class","fireworks3");
+			     fireworks3.appendChild(FireWorks3Image);
+		    }
+	    }	
+	var renderFireWorks3;
+	function FireWorks3Animation(){
+		var myIndex = 0;			
+		var FireWorks3Image = document.getElementsByClassName("fireworks3");		
+		loopFireWorks3();
+		
+		function loopFireWorks3(){
+			var i;
+			for (i=0;i < FireWorks3Image.length;i++)
+			{
+				FireWorks3Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > FireWorks3Image.length){}
+			FireWorks3Image[myIndex-1].style.display = "block";
+			renderFireWorks3 = setTimeout(loopFireWorks3,130);			
+			 
+			if (myIndex === 5){
+				clearTimeout(renderFireWorks3);
+				fireworks3.style.display = "none";
+				// myIndex = 0;
+			}		
+		}
+	} 				
+		
+	/**烟花特效1-4**/	
+		for(i=0; i < FireWorksArray.length; i++)
+	    {	 
+		    if(i < FireWorksArray.length)
+		    {
+			     var FireWorks4Image = document.createElement("IMG");
+			     FireWorks4Image.setAttribute("src", FireWorksArray[i]);	
+			     FireWorks4Image.setAttribute("class","fireworks4");
+			     fireworks4.appendChild(FireWorks4Image);
+		    }
+	    }	
+	var renderFireWorks4;
+	function FireWorks4Animation(){
+		var myIndex = 0;			
+		var FireWorks4Image = document.getElementsByClassName("fireworks4");		
+		loopFireWorks4();
+		
+		function loopFireWorks4(){
+			var i;
+			for (i=0;i < FireWorks4Image.length;i++)
+			{
+				FireWorks4Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > FireWorks4Image.length){}
+			FireWorks4Image[myIndex-1].style.display = "block";
+			renderFireWorks4 = setTimeout(loopFireWorks4,130);			
+			 
+			if (myIndex === 5){
+				clearTimeout(renderFireWorks4);
+				fireworks4.style.display = "none";
+				// myIndex = 0;
+			}		
+		}
+	} 			
+	
+    /**烟花特效1-5**/	
+		for(i=0; i < FireWorksArray.length; i++)
+	    {	 
+		    if(i < FireWorksArray.length)
+		    {
+			     var FireWorks5Image = document.createElement("IMG");
+			     FireWorks5Image.setAttribute("src", FireWorksArray[i]);	
+			     FireWorks5Image.setAttribute("class","fireworks5");
+			     fireworks5.appendChild(FireWorks5Image);
+		    }
+	    }	
+	var renderFireWorks5;
+	function FireWorks5Animation(){
+		var myIndex = 0;			
+		var FireWorks5Image = document.getElementsByClassName("fireworks5");		
+		loopFireWorks5();
+		
+		function loopFireWorks5(){
+			var i;
+			for (i=0;i < FireWorks5Image.length;i++)
+			{
+				FireWorks5Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > FireWorks5Image.length){}
+			FireWorks5Image[myIndex-1].style.display = "block";
+			renderFireWorks5 = setTimeout(loopFireWorks5,130);			
+			 
+			if (myIndex === 5){
+				clearTimeout(renderFireWorks5);
+				fireworks5.style.display = "none";
+				// myIndex = 0;
+			}		
+		}
+	} 			
+	 
+	/**烟花特效1-6**/	
+		for(i=0; i < FireWorksArray.length; i++)
+	    {	 
+		    if(i < FireWorksArray.length)
+		    {
+			     var FireWorks6Image = document.createElement("IMG");
+			     FireWorks6Image.setAttribute("src", FireWorksArray[i]);	
+			     FireWorks6Image.setAttribute("class","fireworks6");
+			     fireworks6.appendChild(FireWorks6Image);
+		    }
+	    }	
+	var renderFireWorks6;
+	function FireWorks6Animation(){
+		var myIndex = 0;			
+		var FireWorks6Image = document.getElementsByClassName("fireworks6");		
+		loopFireWorks6();
+		
+		function loopFireWorks6(){
+			var i;
+			for (i=0;i < FireWorks6Image.length;i++)
+			{
+				FireWorks6Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > FireWorks6Image.length){}
+			FireWorks6Image[myIndex-1].style.display = "block";
+			renderFireWorks6 = setTimeout(loopFireWorks6,130);			
+			 
+			if (myIndex === 5){
+				clearTimeout(renderFireWorks6);
+				fireworks6.style.display = "none";
+				// myIndex = 0;
+			}		
+		}
+	} 	
+		
+	//开始键
+    var sbArray = [
+	                'sb1.png',
+					'sb5.png',
+					'sb9.png',
+					'sb13.png',
+					'sb14.png' 
+	              ];	
+	
+		for(i=0; i < sbArray.length; i++)
+	    {	 
+		    if(i < sbArray.length)
+		    {
+			     var sb1Image = document.createElement("IMG");
+			     sb1Image.setAttribute("src", sbArray[i]);	
+			     sb1Image.setAttribute("class","sb1");
+			     sb1.appendChild(sb1Image);
+		    }
+	    }	
+	var rendersb1;
+	function sb1Animation(){
+		var myIndex = 0;			
+		var sb1Image = document.getElementsByClassName("sb1");		
+		loopsb1();
+		
+		function loopsb1(){
+			var i;
+			for (i=0;i < sb1Image.length;i++)
+			{
+				sb1Image[i].style.display="none";
+			}
+			myIndex++;
+			if (myIndex > sb1Image.length){}
+			sb1Image[myIndex-1].style.display = "block";
+			rendersb1 = setTimeout(loopsb1,80);			
+			 
+			if (myIndex === 5){
+				clearTimeout(rendersb1);
+				// fireworks6.style.display = "none";
+				// myIndex = 0;
+			}		
+		}
+	} 	
 			
-		
-			
-		
-		
-		
-		
 		
 		
 		
