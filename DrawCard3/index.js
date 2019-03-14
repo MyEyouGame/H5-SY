@@ -34,7 +34,6 @@ window.requestAnimFrame = (function(){
 	}
 }());
 
-
 	function lp() {
 			 mv = setTimeout(main, 500);
 	    }
@@ -202,18 +201,18 @@ window.requestAnimFrame = (function(){
 	var choose1 = document.getElementById('zf1');
 	choose1.onclick = function(){
 		
-		Fu2.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu2.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
+		Fu2.style.animation = "opacity 0.5s linear forwards normal 1 ";
+		Fu2.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 ";
 		
-		Fu3.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu3.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
+		Fu3.style.animation = "opacity 0.5s linear forwards normal 1 ";
+		Fu3.style.webkitAnimation = "opacity 0.5s linear forwards normal 1";
 
 		zf1.style.display = "none";
 		zf2.style.display = "none";
 		zf3.style.display = "none";
 
-		Fu1.style.animation = "chooseFZ1 0.5s linear forwards normal 1"; 
-		Fu1.style.webkitAnimation = "chooseFZ1 0.5s linear forwards normal 1"; 
+		Fu1.style.animation = "chooseFZ1 5s linear forwards normal 1"; 
+		Fu1.style.webkitAnimation = "chooseFZ1 5s linear forwards normal 1"; 
 	     
 		word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
 		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
@@ -347,18 +346,323 @@ window.requestAnimFrame = (function(){
 						shockWave1Animation();
 					}			
 			);	 
-	        
-			ca1();
+		
+		ca1();
 	}
     
+	var choose2 = document.getElementById("zf2");
+	choose2.onclick = function(){
+		
+		Fu1.style.animation = "opacity 0.5s linear forwards normal 1";
+		Fu1.style.webkitAnimation = "opacity 0.5s linear forwards normal 1";
+		
+		Fu3.style.animation = "opacity 0.5s linear forwards normal 1";
+		Fu3.style.webkitAnimation = "opacity 0.5s linear forwards normal 1";
+		
+		zf1.style.display = "none";
+		zf2.style.display = "none";
+		zf3.style.display = "none";
+		
+		Fu2.style.animation = "chooseFZ2 25s linear forwards normal 1"; 
+		Fu2.style.webkitAnimation = "chooseFZ2 25s linear forwards normal 1"; 
+
+        word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
+		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
+
+		    var non7 = "none";
+			document.getElementById('callfz1').style.display = non7;
+            doTimer(
+			350,20,function(steps){
+						non7 = non7 - (1 / steps);
+						document.getElementById('callfz1').style.display = non7;				
+						},
+			function(){
+						document.getElementById('callfz1').style.display = "block";										
+						callfz1Animation();
+					}				
+            );	
+
+            var non7a = "none";
+			document.getElementById('feb1').style.display = non7a;
+            doTimer(
+			650,20,function(steps){
+						non7a = non7a - (1 / steps);
+						document.getElementById('feb1').style.display = non7a;				
+						},
+			function(){
+						document.getElementById('feb1').style.display = "block";										
+						feb1Animation();
+					}				
+            );
+
+			var non7b = "none";
+			document.getElementById('feb2').style.display = non7b;
+            doTimer(
+			750,20,function(steps){
+						non7b = non7b - (1 / steps);
+						document.getElementById('feb2').style.display = non7b;				
+						},
+			function(){
+						document.getElementById('feb2').style.display = "block";										
+						feb2Animation();
+					}						
+			);
+			
+			var non7c = "none";
+			document.getElementById('feb3').style.display = non7c;
+            doTimer(
+			850,20,function(steps){
+						non7c = non7c - (1 / steps);
+						document.getElementById('feb3').style.display = non7c;				
+						},
+			function(){
+						document.getElementById('feb3').style.display = "block";										
+						feb3Animation();
+					}			
+			);
+			
+			var non7d = "none";
+			document.getElementById('feb4').style.display = non7d;
+            doTimer(
+			950,20,function(steps){
+						non7d = non7d - (1 / steps);
+						document.getElementById('feb4').style.display = non7d;				
+						},
+			function(){
+						document.getElementById('feb4').style.display = "block";										
+						feb4Animation();
+					}			
+			);
+			
+			var non7e = "none";
+			document.getElementById('feb5').style.display = non7e;
+            doTimer(
+			1050,20,function(steps){
+						non7e = non7e - (1 / steps);
+						document.getElementById('feb5').style.display = non7e;				
+						},
+			function(){
+						document.getElementById('feb5').style.display = "block";										
+						feb5Animation();
+					}			
+			);
+			
+			var non7f = "none";
+			document.getElementById('feb6').style.display = non7f;
+            doTimer(
+			1150,20,function(steps){
+						non7f = non7f - (1 / steps);
+						document.getElementById('feb6').style.display = non7f;				
+						},
+			function(){
+						document.getElementById('feb6').style.display = "block";										
+						feb6Animation();
+					}			
+			);
+			
+			var non7g = "none";
+			document.getElementById('feb7').style.display = non7g;
+            doTimer(
+			1250,20,function(steps){
+						non7g = non7g - (1 / steps);
+						document.getElementById('feb7').style.display = non7g;				
+						},
+			function(){
+						document.getElementById('feb7').style.display = "block";										
+						feb7Animation();
+					}			
+			);
+			
+			var non7h = "none";
+			document.getElementById('feb8').style.display = non7h;
+            doTimer(
+			1350,20,function(steps){
+						non7h = non7h - (1 / steps);
+						document.getElementById('feb8').style.display = non7h;				
+						},
+			function(){
+						document.getElementById('feb8').style.display = "block";										
+						feb8Animation();
+					}			
+			);
+			
+		    var non9 = "none";
+			document.getElementById('shockWave1').style.display = non9;
+            doTimer(
+			2400,20,function(steps){
+						non9 = non9 - (1 / steps);
+						document.getElementById('shockWave1').style.display = non9;				
+						},
+			function(){
+						document.getElementById('shockWave1').style.display = "block";										
+						shockWave1Animation();
+					}			
+			);
+		
+		ca1();
+	}
+    
+	var choose3 = document.getElementById('zf3');
+	choose3.onclick = function(){
+		
+		Fu1.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
+		Fu1.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
+		
+		Fu2.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
+		Fu2.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
+
+		zf1.style.display = "none";
+		zf2.style.display = "none";
+		zf3.style.display = "none";
+
+		Fu3.style.animation = "chooseFZ3 4.5s linear forwards normal 1"; 
+		Fu3.style.webkitAnimation = "chooseFZ3 4.5s linear forwards normal 1"; 
+	
+	    word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
+		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
+			
+	    var non7 = "none";
+			document.getElementById('callfz1').style.display = non7;
+            doTimer(
+			350,20,function(steps){
+						non7 = non7 - (1 / steps);
+						document.getElementById('callfz1').style.display = non7;				
+						},
+			function(){
+						document.getElementById('callfz1').style.display = "block";										
+						callfz1Animation();
+					}				
+            );	
+
+            var non7a = "none";
+			document.getElementById('feb1').style.display = non7a;
+            doTimer(
+			650,20,function(steps){
+						non7a = non7a - (1 / steps);
+						document.getElementById('feb1').style.display = non7a;				
+						},
+			function(){
+						document.getElementById('feb1').style.display = "block";										
+						feb1Animation();
+					}				
+            );
+
+			var non7b = "none";
+			document.getElementById('feb2').style.display = non7b;
+            doTimer(
+			750,20,function(steps){
+						non7b = non7b - (1 / steps);
+						document.getElementById('feb2').style.display = non7b;				
+						},
+			function(){
+						document.getElementById('feb2').style.display = "block";										
+						feb2Animation();
+					}						
+			);
+			
+			var non7c = "none";
+			document.getElementById('feb3').style.display = non7c;
+            doTimer(
+			850,20,function(steps){
+						non7c = non7c - (1 / steps);
+						document.getElementById('feb3').style.display = non7c;				
+						},
+			function(){
+						document.getElementById('feb3').style.display = "block";										
+						feb3Animation();
+					}			
+			);
+			
+			var non7d = "none";
+			document.getElementById('feb4').style.display = non7d;
+            doTimer(
+			950,20,function(steps){
+						non7d = non7d - (1 / steps);
+						document.getElementById('feb4').style.display = non7d;				
+						},
+			function(){
+						document.getElementById('feb4').style.display = "block";										
+						feb4Animation();
+					}			
+			);
+			
+			var non7e = "none";
+			document.getElementById('feb5').style.display = non7e;
+            doTimer(
+			1050,20,function(steps){
+						non7e = non7e - (1 / steps);
+						document.getElementById('feb5').style.display = non7e;				
+						},
+			function(){
+						document.getElementById('feb5').style.display = "block";										
+						feb5Animation();
+					}			
+			);
+			
+			var non7f = "none";
+			document.getElementById('feb6').style.display = non7f;
+            doTimer(
+			1150,20,function(steps){
+						non7f = non7f - (1 / steps);
+						document.getElementById('feb6').style.display = non7f;				
+						},
+			function(){
+						document.getElementById('feb6').style.display = "block";										
+						feb6Animation();
+					}			
+			);
+			
+			var non7g = "none";
+			document.getElementById('feb7').style.display = non7g;
+            doTimer(
+			1250,20,function(steps){
+						non7g = non7g - (1 / steps);
+						document.getElementById('feb7').style.display = non7g;				
+						},
+			function(){
+						document.getElementById('feb7').style.display = "block";										
+						feb7Animation();
+					}			
+			);
+			
+			var non7h = "none";
+			document.getElementById('feb8').style.display = non7h;
+            doTimer(
+			1350,20,function(steps){
+						non7h = non7h - (1 / steps);
+						document.getElementById('feb8').style.display = non7h;				
+						},
+			function(){
+						document.getElementById('feb8').style.display = "block";										
+						feb8Animation();
+					}			
+			);
+			
+		    var non9 = "none";
+			document.getElementById('shockWave1').style.display = non9;
+            doTimer(
+			2400,20,function(steps){
+						non9 = non9 - (1 / steps);
+						document.getElementById('shockWave1').style.display = non9;				
+						},
+			function(){
+						document.getElementById('shockWave1').style.display = "block";										
+						shockWave1Animation();
+					}			
+			);
+		
+		ca1();
+	
+	}
+	
 	function ca1(){
 		
 		cardBack1.style.display = "block";
 		cardBack1.style.animationPlayState = "running";
 		cardBack1.style.webkitAnimationPlayState = "running";
 	    
-		callfz1.style.animation = "opacity 0.5s forwards linear normal 1 2.7s";
-		callfz1.style.webkitAnimation = "opacity 0.5s forwards linear normal 1 2.7s";
+		callfz1.style.animation = "opacity 0.5s forwards linear normal 1 2.3s";
+		callfz1.style.webkitAnimation = "opacity 0.5s forwards linear normal 1 2.3s";
   	 
         card1.style.display = "block";
 		card1.style.animationPlayState = "running";
@@ -478,7 +782,7 @@ window.requestAnimFrame = (function(){
 		var non17 = "none";
 			document.getElementById('sb1').style.display = non17;
             doTimer(
-			8500,20,function(steps){
+			7900,20,function(steps){
 						non17 = non17 - (1 / steps);
 						document.getElementById('sb1').style.display = non17;				
 						},
@@ -487,110 +791,8 @@ window.requestAnimFrame = (function(){
 						sb1Animation();
 					}			
 			);	
-	     
-		
-	
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	var choose2 = document.getElementById("zf2");
-	choose2.onclick = function(){
 		
-		Fu1.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu1.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
-		
-		Fu3.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu3.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
-		
-		zf1.style.display = "none";
-		zf2.style.display = "none";
-		zf3.style.display = "none";
-		
-		Fu2.style.animation = "chooseFZ2 0.3s linear forwards normal 1"; 
-		Fu2.style.webkitAnimation = "chooseFZ2 0.3s linear forwards normal 1"; 
-	    
-        word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
-		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
-		
-		var non6 = "none";
-			document.getElementById('callfz2').style.display = non6;
-
-			doTimer(
-			150,20,function(steps){
-						non6 = non6 - (1 / steps);
-						document.getElementById('callfz2').style.display = non6;				
-						},
-			function(){
-						document.getElementById('callfz2').style.display = "block";										
-						callfz2Animation();
-					}				
-            );	
-			
-		
-			
-	}
-	
-	
-	var choose3 = document.getElementById('zf3');
-	choose3.onclick = function(){
-		
-		Fu1.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu1.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
-		
-		Fu2.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu2.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
-
-		zf1.style.display = "none";
-		zf2.style.display = "none";
-		zf3.style.display = "none";
-
-		Fu3.style.animation = "chooseFZ3 0.5s linear forwards normal 1"; 
-		Fu3.style.webkitAnimation = "chooseFZ3 0.5s linear forwards normal 1"; 
-	
-	    word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
-		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
-			
-	    var non8 = "none";
-			document.getElementById('callfz3').style.display = non8;
-            doTimer(
-			350,20,function(steps){
-						non8 = non8 - (1 / steps);
-						document.getElementById('callfz3').style.display = non8;				
-						},
-			function(){
-						document.getElementById('callfz3').style.display = "block";										
-						callfz3Animation();
-					}				
-            );	
-	
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	//风铃
 	var FengLingArray = [   
 	                        '0.png',
@@ -982,7 +1184,6 @@ window.requestAnimFrame = (function(){
 					   'zhz105.png'
 	                ];	
 		
-	/**第1张咒符 法阵**/
 		for(i=0; i < callArray.length; i++)
 	    {	 
 		    if(i < callArray.length)
@@ -1017,76 +1218,6 @@ window.requestAnimFrame = (function(){
 		}
 	} 	
     
-	/**第2张咒符 法阵**/
-	    for(j=0; j < callArray.length; j++)
-	    {	 
-		    if(j < callArray.length)
-		    {
-			     var callfz2Image = document.createElement("IMG");
-			     callfz2Image.setAttribute("src", callArray[j]);	
-			     callfz2Image.setAttribute("class","callfz2");
-			     callfz2.appendChild(callfz2Image);
-		    }
-	    }		
-	var rendercallfz2;
-	function callfz2Animation(){
-		var myIndex = 0;			
-		var callfz2Image = document.getElementsByClassName("callfz2");		
-		loopcallzf2();
-		
-		function loopcallzf2(){
-			var j;
-			for (j=0;j < callfz2Image.length;j++)
-			{
-				callfz2Image[j].style.display="none";
-			}
-			myIndex++;
-			if (myIndex > callfz2Image.length){}
-			callfz2Image[myIndex-1].style.display = "block";
-			rendercallfz2 = setTimeout(loopcallzf2,170);			
-			 
-			if (myIndex === 14){
-				clearTimeout(rendercallfz2);	
-				// callfz2.style.display = "none";
-			}		
-		}
-	} 	
-
-    /**第3张咒符 法阵**/
-	    for(k=0; k < callArray.length; k++)
-	    {	 
-		    if(k < callArray.length)
-		    {
-			     var callfz3Image = document.createElement("IMG");
-			     callfz3Image.setAttribute("src", callArray[k]);	
-			     callfz3Image.setAttribute("class","callfz3");
-			     callfz3.appendChild(callfz3Image);
-		    }
-	    }		
-	var rendercallfz3;
-	function callfz3Animation(){
-		var myIndex = 0;			
-		var callfz3Image = document.getElementsByClassName('callfz3');		
-		loopcallzf3();
-		
-		function loopcallzf3(){
-			var k;
-			for (k=0; k<callfz3Image.length; k++)
-			{
-				callfz3Image[k].style.display="none";
-			}
-			myIndex++;
-			if (myIndex > callfz3Image.length){}
-			callfz3Image[myIndex-1].style.display = "block";
-			rendercallfz3 = setTimeout(loopcallzf3,170);			
-			 
-			if (myIndex === 14){
-				clearTimeout(rendercallfz3);	
-				// callfz3.style.display = "none";
-			}		
-		}
-	}
-
 	//火焰特效
     var fireArray = [
                         'feb1.png',
@@ -1366,7 +1497,7 @@ window.requestAnimFrame = (function(){
 			}		
 		}
 	} 		
-			
+				
 	//ShockWave
 	var ShockWaveArray = [
 	                         'sw1.png',
@@ -1375,7 +1506,6 @@ window.requestAnimFrame = (function(){
 						     'sw23.png'
 	                      ];
 		
-	/**Shock Wave 1**/	
 		for(i=0; i < ShockWaveArray.length; i++)
 	    {	 
 		    if(i < ShockWaveArray.length)
@@ -1409,7 +1539,7 @@ window.requestAnimFrame = (function(){
 			}		
 		}
 	} 
-		
+	
 	//边框
     var borderArray = [
 	                    's1.png',
@@ -1455,13 +1585,7 @@ window.requestAnimFrame = (function(){
     //烟花
     var FireWorksArray = [
 	                        'fw1.png',
-							// 'fw5.png',
-							'fw9.png',
-							// 'fw13.png',
 							'fw17.png',
-							// 'fw21.png',
-							'fw25.png',
-							// 'fw29.png',
 							'fw33.png',
 							'fw35.png'
 	                     ];	
@@ -1492,9 +1616,9 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks1Image.length){}
 			FireWorks1Image[myIndex-1].style.display = "block";
-			renderFireWorks1 = setTimeout(loopFireWorks1,130);			
+			renderFireWorks1 = setTimeout(loopFireWorks1,150);			
 			 
-			if (myIndex === 5){
+			if (myIndex === 4){
 				clearTimeout(renderFireWorks1);
 				fireworks1.style.display = "none";
 			}		
@@ -1527,9 +1651,9 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks2Image.length){}
 			FireWorks2Image[myIndex-1].style.display = "block";
-			renderFireWorks2 = setTimeout(loopFireWorks2,130);			
+			renderFireWorks2 = setTimeout(loopFireWorks2,150);			
 			 
-			if (myIndex === 5){
+			if (myIndex === 4){
 				clearTimeout(renderFireWorks2);
 				fireworks2.style.display = "none";
 				// myIndex = 0;
@@ -1563,9 +1687,9 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks3Image.length){}
 			FireWorks3Image[myIndex-1].style.display = "block";
-			renderFireWorks3 = setTimeout(loopFireWorks3,130);			
+			renderFireWorks3 = setTimeout(loopFireWorks3,150);			
 			 
-			if (myIndex === 5){
+			if (myIndex === 4){
 				clearTimeout(renderFireWorks3);
 				fireworks3.style.display = "none";
 				// myIndex = 0;
@@ -1599,9 +1723,9 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks4Image.length){}
 			FireWorks4Image[myIndex-1].style.display = "block";
-			renderFireWorks4 = setTimeout(loopFireWorks4,130);			
+			renderFireWorks4 = setTimeout(loopFireWorks4,150);			
 			 
-			if (myIndex === 5){
+			if (myIndex === 4){
 				clearTimeout(renderFireWorks4);
 				fireworks4.style.display = "none";
 				// myIndex = 0;
@@ -1635,9 +1759,9 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks5Image.length){}
 			FireWorks5Image[myIndex-1].style.display = "block";
-			renderFireWorks5 = setTimeout(loopFireWorks5,130);			
+			renderFireWorks5 = setTimeout(loopFireWorks5,150);			
 			 
-			if (myIndex === 5){
+			if (myIndex === 4){
 				clearTimeout(renderFireWorks5);
 				fireworks5.style.display = "none";
 				// myIndex = 0;
@@ -1671,9 +1795,9 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks6Image.length){}
 			FireWorks6Image[myIndex-1].style.display = "block";
-			renderFireWorks6 = setTimeout(loopFireWorks6,130);			
+			renderFireWorks6 = setTimeout(loopFireWorks6,150);			
 			 
-			if (myIndex === 5){
+			if (myIndex === 4){
 				clearTimeout(renderFireWorks6);
 				fireworks6.style.display = "none";
 				// myIndex = 0;
@@ -1724,19 +1848,6 @@ window.requestAnimFrame = (function(){
 			}		
 		}
 	} 	
-			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 	function sizeData(w,h){
 	
