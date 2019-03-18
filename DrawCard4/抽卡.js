@@ -223,147 +223,7 @@ window.requestAnimFrame = (function(){
         amount1.style.animationPlayState = "running";
 		amount1.style.webkitAnimationPlayState = "running";	
 		
-		amount2.style.display = "block";
-		amount2.style.animationPlayState = "running";
-		amount2.style.webkitAnimationPlayState = "running";
-
-        amount3.style.animationPlayState = "running";
-		amount3.style.webkitAnimationPlayState = "running";
 		
-		amount4.style.animationPlayState = "running";
-		amount4.style.webkitAnimationPlayState = "running";
-	
-		    var non7 = "none";
-			document.getElementById('callfz1').style.display = non7;
-            doTimer(
-			350,20,function(steps){
-						non7 = non7 - (1 / steps);
-						document.getElementById('callfz1').style.display = non7;				
-						},
-			function(){
-						document.getElementById('callfz1').style.display = "block";										
-						callfz1Animation();
-					}				
-            );	
-
-            var non7a = "none";
-			document.getElementById('feb1').style.display = non7a;
-            doTimer(
-			650,20,function(steps){
-						non7a = non7a - (1 / steps);
-						document.getElementById('feb1').style.display = non7a;				
-						},
-			function(){
-						document.getElementById('feb1').style.display = "block";										
-						feb1Animation();
-					}				
-            );
-
-			var non7b = "none";
-			document.getElementById('feb2').style.display = non7b;
-            doTimer(
-			750,20,function(steps){
-						non7b = non7b - (1 / steps);
-						document.getElementById('feb2').style.display = non7b;				
-						},
-			function(){
-						document.getElementById('feb2').style.display = "block";										
-						feb2Animation();
-					}						
-			);
-			
-			var non7c = "none";
-			document.getElementById('feb3').style.display = non7c;
-            doTimer(
-			850,20,function(steps){
-						non7c = non7c - (1 / steps);
-						document.getElementById('feb3').style.display = non7c;				
-						},
-			function(){
-						document.getElementById('feb3').style.display = "block";										
-						feb3Animation();
-					}			
-			);
-			
-			var non7d = "none";
-			document.getElementById('feb4').style.display = non7d;
-            doTimer(
-			950,20,function(steps){
-						non7d = non7d - (1 / steps);
-						document.getElementById('feb4').style.display = non7d;				
-						},
-			function(){
-						document.getElementById('feb4').style.display = "block";										
-						feb4Animation();
-					}			
-			);
-			
-			var non7e = "none";
-			document.getElementById('feb5').style.display = non7e;
-            doTimer(
-			1050,20,function(steps){
-						non7e = non7e - (1 / steps);
-						document.getElementById('feb5').style.display = non7e;				
-						},
-			function(){
-						document.getElementById('feb5').style.display = "block";										
-						feb5Animation();
-					}			
-			);
-			
-			var non7f = "none";
-			document.getElementById('feb6').style.display = non7f;
-            doTimer(
-			1150,20,function(steps){
-						non7f = non7f - (1 / steps);
-						document.getElementById('feb6').style.display = non7f;				
-						},
-			function(){
-						document.getElementById('feb6').style.display = "block";										
-						feb6Animation();
-					}			
-			);
-			
-			var non7g = "none";
-			document.getElementById('feb7').style.display = non7g;
-            doTimer(
-			1250,20,function(steps){
-						non7g = non7g - (1 / steps);
-						document.getElementById('feb7').style.display = non7g;				
-						},
-			function(){
-						document.getElementById('feb7').style.display = "block";										
-						feb7Animation();
-					}			
-			);
-			
-			var non7h = "none";
-			document.getElementById('feb8').style.display = non7h;
-            doTimer(
-			1350,20,function(steps){
-						non7h = non7h - (1 / steps);
-						document.getElementById('feb8').style.display = non7h;				
-						},
-			function(){
-						document.getElementById('feb8').style.display = "block";										
-						feb8Animation();
-					}			
-			);
-			
-		    var non9 = "none";
-			document.getElementById('shockWave1').style.display = non9;
-            doTimer(
-			2400,20,function(steps){
-						non9 = non9 - (1 / steps);
-						document.getElementById('shockWave1').style.display = non9;				
-						},
-			function(){
-						document.getElementById('shockWave1').style.display = "block";										
-						shockWave1Animation();
-					}			
-			);	 
-
-		ca1();
 	}
     
 	var choose2 = document.getElementById("zf2");
@@ -388,147 +248,7 @@ window.requestAnimFrame = (function(){
         amount1.style.animationPlayState = "running";
 		amount1.style.webkitAnimationPlayState = "running";	
 		
-		amount2.style.display = "block";
-		amount2.style.animationPlayState = "running";
-		amount2.style.webkitAnimationPlayState = "running";
-
-        amount3.style.animationPlayState = "running";
-		amount3.style.webkitAnimationPlayState = "running";
 		
-		amount4.style.animationPlayState = "running";
-		amount4.style.webkitAnimationPlayState = "running";
-	  
-		    var non7 = "none";
-			document.getElementById('callfz1').style.display = non7;
-            doTimer(
-			350,20,function(steps){
-						non7 = non7 - (1 / steps);
-						document.getElementById('callfz1').style.display = non7;				
-						},
-			function(){
-						document.getElementById('callfz1').style.display = "block";										
-						callfz1Animation();
-					}				
-            );	
-
-            var non7a = "none";
-			document.getElementById('feb1').style.display = non7a;
-            doTimer(
-			650,20,function(steps){
-						non7a = non7a - (1 / steps);
-						document.getElementById('feb1').style.display = non7a;				
-						},
-			function(){
-						document.getElementById('feb1').style.display = "block";										
-						feb1Animation();
-					}				
-            );
-
-			var non7b = "none";
-			document.getElementById('feb2').style.display = non7b;
-            doTimer(
-			750,20,function(steps){
-						non7b = non7b - (1 / steps);
-						document.getElementById('feb2').style.display = non7b;				
-						},
-			function(){
-						document.getElementById('feb2').style.display = "block";										
-						feb2Animation();
-					}						
-			);
-			
-			var non7c = "none";
-			document.getElementById('feb3').style.display = non7c;
-            doTimer(
-			850,20,function(steps){
-						non7c = non7c - (1 / steps);
-						document.getElementById('feb3').style.display = non7c;				
-						},
-			function(){
-						document.getElementById('feb3').style.display = "block";										
-						feb3Animation();
-					}			
-			);
-			
-			var non7d = "none";
-			document.getElementById('feb4').style.display = non7d;
-            doTimer(
-			950,20,function(steps){
-						non7d = non7d - (1 / steps);
-						document.getElementById('feb4').style.display = non7d;				
-						},
-			function(){
-						document.getElementById('feb4').style.display = "block";										
-						feb4Animation();
-					}			
-			);
-			
-			var non7e = "none";
-			document.getElementById('feb5').style.display = non7e;
-            doTimer(
-			1050,20,function(steps){
-						non7e = non7e - (1 / steps);
-						document.getElementById('feb5').style.display = non7e;				
-						},
-			function(){
-						document.getElementById('feb5').style.display = "block";										
-						feb5Animation();
-					}			
-			);
-			
-			var non7f = "none";
-			document.getElementById('feb6').style.display = non7f;
-            doTimer(
-			1150,20,function(steps){
-						non7f = non7f - (1 / steps);
-						document.getElementById('feb6').style.display = non7f;				
-						},
-			function(){
-						document.getElementById('feb6').style.display = "block";										
-						feb6Animation();
-					}			
-			);
-			
-			var non7g = "none";
-			document.getElementById('feb7').style.display = non7g;
-            doTimer(
-			1250,20,function(steps){
-						non7g = non7g - (1 / steps);
-						document.getElementById('feb7').style.display = non7g;				
-						},
-			function(){
-						document.getElementById('feb7').style.display = "block";										
-						feb7Animation();
-					}			
-			);
-			
-			var non7h = "none";
-			document.getElementById('feb8').style.display = non7h;
-            doTimer(
-			1350,20,function(steps){
-						non7h = non7h - (1 / steps);
-						document.getElementById('feb8').style.display = non7h;				
-						},
-			function(){
-						document.getElementById('feb8').style.display = "block";										
-						feb8Animation();
-					}			
-			);
-			
-		    var non9 = "none";
-			document.getElementById('shockWave1').style.display = non9;
-            doTimer(
-			2400,20,function(steps){
-						non9 = non9 - (1 / steps);
-						document.getElementById('shockWave1').style.display = non9;				
-						},
-			function(){
-						document.getElementById('shockWave1').style.display = "block";										
-						shockWave1Animation();
-					}			
-			);
-		
-		ca1();
 	}
     
 	var choose3 = document.getElementById('zf3');
@@ -553,171 +273,13 @@ window.requestAnimFrame = (function(){
         amount1.style.animationPlayState = "running";
 		amount1.style.webkitAnimationPlayState = "running";	
 		
-		amount2.style.display = "block";
-		amount2.style.animationPlayState = "running";
-		amount2.style.webkitAnimationPlayState = "running";
-
-        amount3.style.animationPlayState = "running";
-		amount3.style.webkitAnimationPlayState = "running";
-		
-		amount4.style.animationPlayState = "running";
-		amount4.style.webkitAnimationPlayState = "running";
-		
-	    var non7 = "none";
-			document.getElementById('callfz1').style.display = non7;
-            doTimer(
-			350,20,function(steps){
-						non7 = non7 - (1 / steps);
-						document.getElementById('callfz1').style.display = non7;				
-						},
-			function(){
-						document.getElementById('callfz1').style.display = "block";										
-						callfz1Animation();
-					}				
-            );	
-
-            var non7a = "none";
-			document.getElementById('feb1').style.display = non7a;
-            doTimer(
-			650,20,function(steps){
-						non7a = non7a - (1 / steps);
-						document.getElementById('feb1').style.display = non7a;				
-						},
-			function(){
-						document.getElementById('feb1').style.display = "block";										
-						feb1Animation();
-					}				
-            );
-
-			var non7b = "none";
-			document.getElementById('feb2').style.display = non7b;
-            doTimer(
-			750,20,function(steps){
-						non7b = non7b - (1 / steps);
-						document.getElementById('feb2').style.display = non7b;				
-						},
-			function(){
-						document.getElementById('feb2').style.display = "block";										
-						feb2Animation();
-					}						
-			);
-			
-			var non7c = "none";
-			document.getElementById('feb3').style.display = non7c;
-            doTimer(
-			850,20,function(steps){
-						non7c = non7c - (1 / steps);
-						document.getElementById('feb3').style.display = non7c;				
-						},
-			function(){
-						document.getElementById('feb3').style.display = "block";										
-						feb3Animation();
-					}			
-			);
-			
-			var non7d = "none";
-			document.getElementById('feb4').style.display = non7d;
-            doTimer(
-			950,20,function(steps){
-						non7d = non7d - (1 / steps);
-						document.getElementById('feb4').style.display = non7d;				
-						},
-			function(){
-						document.getElementById('feb4').style.display = "block";										
-						feb4Animation();
-					}			
-			);
-			
-			var non7e = "none";
-			document.getElementById('feb5').style.display = non7e;
-            doTimer(
-			1050,20,function(steps){
-						non7e = non7e - (1 / steps);
-						document.getElementById('feb5').style.display = non7e;				
-						},
-			function(){
-						document.getElementById('feb5').style.display = "block";										
-						feb5Animation();
-					}			
-			);
-			
-			var non7f = "none";
-			document.getElementById('feb6').style.display = non7f;
-            doTimer(
-			1150,20,function(steps){
-						non7f = non7f - (1 / steps);
-						document.getElementById('feb6').style.display = non7f;				
-						},
-			function(){
-						document.getElementById('feb6').style.display = "block";										
-						feb6Animation();
-					}			
-			);
-			
-			var non7g = "none";
-			document.getElementById('feb7').style.display = non7g;
-            doTimer(
-			1250,20,function(steps){
-						non7g = non7g - (1 / steps);
-						document.getElementById('feb7').style.display = non7g;				
-						},
-			function(){
-						document.getElementById('feb7').style.display = "block";										
-						feb7Animation();
-					}			
-			);
-			
-			var non7h = "none";
-			document.getElementById('feb8').style.display = non7h;
-            doTimer(
-			1350,20,function(steps){
-						non7h = non7h - (1 / steps);
-						document.getElementById('feb8').style.display = non7h;				
-						},
-			function(){
-						document.getElementById('feb8').style.display = "block";										
-						feb8Animation();
-					}			
-			);
-			
-		    var non9 = "none";
-			document.getElementById('shockWave1').style.display = non9;
-            doTimer(
-			2400,20,function(steps){
-						non9 = non9 - (1 / steps);
-						document.getElementById('shockWave1').style.display = non9;				
-						},
-			function(){
-						document.getElementById('shockWave1').style.display = "block";										
-						shockWave1Animation();
-					}			
-			);
-		
-		ca1();
-	
 	}
 	
 	function ca1(){
-			
-		cardBack1.style.display = "block";
-		cardBack1.style.animationPlayState = "running";
-		cardBack1.style.webkitAnimationPlayState = "running";
-	    
+	
 		callfz1.style.animation = "opacity 0.5s forwards linear normal 1 2.3s";
 		callfz1.style.webkitAnimation = "opacity 0.5s forwards linear normal 1 2.3s";
   	 
-        card1.style.display = "block";
-		card1.style.animationPlayState = "running";
-		card1.style.webkitAnimationPlayState = "running";
-       
-		cardBack2.style.display = "block";
-		cardBack2.style.animationPlayState = "running";
-		cardBack2.style.webkitAnimationPlayState = "running";
-	
-	    card2.style.display = "block";
-		card2.style.animationPlayState = "running";
-		card2.style.webkitAnimationPlayState = "running";
-	
 	    cardBack3.style.display = "block";
 		cardBack3.style.animationPlayState = "running";
 		cardBack3.style.webkitAnimationPlayState = "running";
@@ -835,7 +397,30 @@ window.requestAnimFrame = (function(){
 			);	
 	}
 	
- 	
+	function getRandomImage(){
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//风铃
 	var FengLingArray = [ 
 	                        'data:image/png;base64,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',
