@@ -819,19 +819,6 @@ window.requestAnimFrame = (function(){
 	
 	
 	
-
-	
-	var pic = [];
-	pic[0] = card1();
-	pic[1] = card2();
-	pic[2] = card3();
-	
-	var randomBgIndex = Math.round( Math.random() * 3 );
- 
-    document.write("<img src=" + pic[randomBgIndex] + " .png'>")
-	
-	
-	
 	
 	
 	
