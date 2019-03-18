@@ -918,7 +918,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > KaiJuanZhouImage.length){}
 			KaiJuanZhouImage[myIndex-1].style.display = "block";
-			renderKaiJuanZhou = setTimeout(loopKaiJuanZhou,180);			
+			renderKaiJuanZhou = setTimeout(loopKaiJuanZhou,150);			
 			 
 			if (myIndex === 4){
 				clearTimeout(renderKaiJuanZhou);	
