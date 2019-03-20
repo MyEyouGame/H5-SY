@@ -94,7 +94,7 @@ body{
 		 background-Size   : 100% 100%; 
 	    
 		 -webkit-animation-name            : zoom;
- 		 -webkit-animation-duration        : 0.5s;
+ 		 -webkit-animation-duration        : 0.3s;
 		 -webkit-animation-direction       : normal;  
 		 -webkit-animation-timing-function : linear; 
 		 -webkit-animation-iteration-count : 1;
@@ -103,7 +103,7 @@ body{
 		 -webkit-animation-play-state      : paused;
 		 
 		 animation-name            : zoom;
- 		 animation-duration        : 0.5s;
+ 		 animation-duration        : 0.3s;
 		 animation-direction       : normal;  
 		 animation-timing-function : linear; 
 		 animation-iteration-count : 1;
@@ -304,7 +304,7 @@ body{
 		0%   { filter : opacity(0); }
 		100% { filter : opacity(1); } 
 	}
-	@-webkit-keyframes scale{
+	@-webkit-keyframes scales{
 		0%   { transform:scale(1.00); }
 		25%  { transform:scale(1.10); }
 		50%  { transform:scale(1.00); }
@@ -782,7 +782,7 @@ body{
 		 -webkit-animation-timing-function : linear   , linear   ; 
 		 -webkit-animation-iteration-count : 1        , 1        ;
 		 -webkit-animation-fill-mode       : forwards , forwards ;
-		 -webkit-animation-delay           : 2.30s    , 2.9s     ;
+		 -webkit-animation-delay           : 1.8s     , 2.3s     ;
 		 -webkit-animation-play-state      : paused   , paused   ; 
 		 
 		 animation-name            : cScale   , opacity  ;
@@ -791,7 +791,7 @@ body{
 		 animation-timing-function : linear   , linear   ; 
 		 animation-iteration-count : 1        , 1        ;
 		 animation-fill-mode       : forwards , forwards ;
-		 animation-delay           : 2.30s    , 2.9s     ;
+		 animation-delay           : 1.8s     , 2.3s     ;
 		 animation-play-state      : paused   , paused   ; 
 	}
     @webkit-keyframes cScale{
@@ -822,7 +822,7 @@ body{
 		 -webkit-animation-timing-function : linear   ; 
 		 -webkit-animation-iteration-count : 1        ;
 		 -webkit-animation-fill-mode       : forwards ;
-		 -webkit-animation-delay           : 2.60s    ;
+		 -webkit-animation-delay           : 2.10s    ;
 		 -webkit-animation-play-state      : paused   ; 
 		 
 		 animation-name            : callB    ;
@@ -831,7 +831,7 @@ body{
 		 animation-timing-function : linear   ; 
 		 animation-iteration-count : 1        ;
 		 animation-fill-mode       : forwards ;
-		 animation-delay           : 2.60s    ;
+		 animation-delay           : 2.10s    ;
 		 animation-play-state      : paused   ; 
 	}
     #card2{
@@ -853,7 +853,7 @@ body{
 		 -webkit-animation-timing-function : linear   ; 
 		 -webkit-animation-iteration-count : 1        ;
 		 -webkit-animation-fill-mode       : forwards ;
-		 -webkit-animation-delay           : 2.60s    ;
+		 -webkit-animation-delay           : 2.10s    ;
 		 -webkit-animation-play-state      : paused   ; 
 		 
 		 animation-name            : callB    ;
@@ -862,7 +862,7 @@ body{
 		 animation-timing-function : linear   ; 
 		 animation-iteration-count : 1        ;
 		 animation-fill-mode       : forwards ;
-		 animation-delay           : 2.60s    ;
+		 animation-delay           : 2.10s    ;
 		 animation-play-state      : paused   ;   
 	}
    	#card3{
@@ -884,7 +884,7 @@ body{
 		 -webkit-animation-timing-function : linear   ; 
 		 -webkit-animation-iteration-count : 1        ;
 		 -webkit-animation-fill-mode       : forwards ;
-		 -webkit-animation-delay           : 2.60s    ;
+		 -webkit-animation-delay           : 2.10s    ;
 		 -webkit-animation-play-state      : paused   ; 
 		 
 		 animation-name            : callB    ;
@@ -893,7 +893,7 @@ body{
 		 animation-timing-function : linear   ; 
 		 animation-iteration-count : 1        ;
 		 animation-fill-mode       : forwards ;
-		 animation-delay           : 2.60s    ;
+		 animation-delay           : 2.10s    ;
 		 animation-play-state      : paused   ;  
 	}
  
@@ -943,7 +943,6 @@ body{
          width             : 100%;]
     }
       
-	 
 	#fireworks1{
 		 position          : absolute;
 		 display           : none;
@@ -1054,7 +1053,7 @@ body{
 		 -webkit-animation-timing-function : linear   , linear   ; 
 		 -webkit-animation-iteration-count : 1        , infinite ;
 		 -webkit-animation-fill-mode       : forwards , forwards ;
-		 -webkit-animation-delay           : 2.7s     , 2.8s     ;
+		 -webkit-animation-delay           : 2.2s     , 2.3s     ;
 		 -webkit-animation-play-state      : paused   , paused   ;   
 		 
 		 animation-name            : callcl   , cl       ;
@@ -1063,7 +1062,7 @@ body{
 		 animation-timing-function : linear   , linear   ; 
 		 animation-iteration-count : 1        , infinite ;
 		 animation-fill-mode       : forwards , forwards ;
-		 animation-delay           : 2.7s     , 2.8s     ;
+		 animation-delay           : 2.2s     , 2.3s     ;
 		 animation-play-state      : paused   , paused   ;  
 	}
     @-webkit-keyframes cl{
@@ -1301,7 +1300,7 @@ window.requestAnimFrame = (function(){
 		var non = "none";
 			document.getElementById('zhoufu1').style.display = non;
             doTimer(
-			1300,20,function(steps){
+			1100,20,function(steps){
 						non = non - (1 / steps);
 						document.getElementById('zhoufu1').style.display = non;				
 						},
@@ -1314,7 +1313,7 @@ window.requestAnimFrame = (function(){
 		var non1 = "none";
 			document.getElementById('zhoufu2').style.display = non1;
             doTimer(
-			1300,20,function(steps){
+			1100,20,function(steps){
 						non1 = non1 - (1 / steps);
 						document.getElementById('zhoufu2').style.display = non1;				
 						},
@@ -1327,7 +1326,7 @@ window.requestAnimFrame = (function(){
 		var non2 = "none";
 			document.getElementById('zhoufu3').style.display = non2;
             doTimer(
-			1300,20,function(steps){
+			1100,20,function(steps){
 						non2 = non2 - (1 / steps);
 						document.getElementById('zhoufu3').style.display = non2;				
 						},
@@ -1340,7 +1339,7 @@ window.requestAnimFrame = (function(){
 		var non3 = "none";
 			document.getElementById('Fu1').style.display = non3;
             doTimer(
-			1500,20,function(steps){
+			1300,20,function(steps){
 						non3 = non3 - (1 / steps);
 						document.getElementById('Fu1').style.display = non3;				
 						},
@@ -1353,7 +1352,7 @@ window.requestAnimFrame = (function(){
 		var non4 = "none";
 			document.getElementById('Fu2').style.display = non4;
             doTimer(
-			1500,20,function(steps){
+			1300,20,function(steps){
 						non4 = non4 - (1 / steps);
 						document.getElementById('Fu2').style.display = non4;				
 						},
@@ -1366,7 +1365,7 @@ window.requestAnimFrame = (function(){
 		var non5 = "none";
 			document.getElementById('Fu3').style.display = non5;
             doTimer(
-			1500,20,function(steps){
+			1300,20,function(steps){
 						non5 = non5 - (1 / steps);
 						document.getElementById('Fu3').style.display = non5;				
 						},
@@ -1388,18 +1387,18 @@ window.requestAnimFrame = (function(){
 	var choose1 = document.getElementById('zf1');
 	choose1.onclick = function(){
 		
-		Fu2.style.animation = "opacity 0.5s linear forwards normal 1 ";
-		Fu2.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 ";
+		Fu2.style.animation = "opacity 0.3s linear forwards normal 1 ";
+		Fu2.style.webkitAnimation = "opacity 0.3s linear forwards normal 1 ";
 		
-		Fu3.style.animation = "opacity 0.5s linear forwards normal 1 ";
-		Fu3.style.webkitAnimation = "opacity 0.5s linear forwards normal 1";
+		Fu3.style.animation = "opacity 0.3s linear forwards normal 1 ";
+		Fu3.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
 
 		zf1.style.display = "none";
 		zf2.style.display = "none";
 		zf3.style.display = "none";
 
-		Fu1.style.animation = "chooseFZ1 4s linear forwards normal 1"; 
-		Fu1.style.webkitAnimation = "chooseFZ1 4s linear forwards normal 1"; 
+		Fu1.style.animation = "chooseFZ1 3s linear forwards normal 1"; 
+		Fu1.style.webkitAnimation = "chooseFZ1 3s linear forwards normal 1"; 
 	    
 		word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
 		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
@@ -1427,7 +1426,7 @@ window.requestAnimFrame = (function(){
             var non7a = "none";
 			document.getElementById('feb1').style.display = non7a;
             doTimer(
-			650,20,function(steps){
+			600,20,function(steps){
 						non7a = non7a - (1 / steps);
 						document.getElementById('feb1').style.display = non7a;				
 						},
@@ -1440,7 +1439,7 @@ window.requestAnimFrame = (function(){
 			var non7b = "none";
 			document.getElementById('feb2').style.display = non7b;
             doTimer(
-			750,20,function(steps){
+			650,20,function(steps){
 						non7b = non7b - (1 / steps);
 						document.getElementById('feb2').style.display = non7b;				
 						},
@@ -1453,7 +1452,7 @@ window.requestAnimFrame = (function(){
 			var non7c = "none";
 			document.getElementById('feb3').style.display = non7c;
             doTimer(
-			850,20,function(steps){
+			700,20,function(steps){
 						non7c = non7c - (1 / steps);
 						document.getElementById('feb3').style.display = non7c;				
 						},
@@ -1466,7 +1465,7 @@ window.requestAnimFrame = (function(){
 			var non7d = "none";
 			document.getElementById('feb4').style.display = non7d;
             doTimer(
-			950,20,function(steps){
+			750,20,function(steps){
 						non7d = non7d - (1 / steps);
 						document.getElementById('feb4').style.display = non7d;				
 						},
@@ -1479,7 +1478,7 @@ window.requestAnimFrame = (function(){
 			var non7e = "none";
 			document.getElementById('feb5').style.display = non7e;
             doTimer(
-			1050,20,function(steps){
+			800,20,function(steps){
 						non7e = non7e - (1 / steps);
 						document.getElementById('feb5').style.display = non7e;				
 						},
@@ -1492,7 +1491,7 @@ window.requestAnimFrame = (function(){
 			var non7f = "none";
 			document.getElementById('feb6').style.display = non7f;
             doTimer(
-			1150,20,function(steps){
+			850,20,function(steps){
 						non7f = non7f - (1 / steps);
 						document.getElementById('feb6').style.display = non7f;				
 						},
@@ -1505,7 +1504,7 @@ window.requestAnimFrame = (function(){
 			var non7g = "none";
 			document.getElementById('feb7').style.display = non7g;
             doTimer(
-			1250,20,function(steps){
+			900,20,function(steps){
 						non7g = non7g - (1 / steps);
 						document.getElementById('feb7').style.display = non7g;				
 						},
@@ -1518,7 +1517,7 @@ window.requestAnimFrame = (function(){
 			var non7h = "none";
 			document.getElementById('feb8').style.display = non7h;
             doTimer(
-			1350,20,function(steps){
+			950,20,function(steps){
 						non7h = non7h - (1 / steps);
 						document.getElementById('feb8').style.display = non7h;				
 						},
@@ -1531,7 +1530,7 @@ window.requestAnimFrame = (function(){
 		    var non9 = "none";
 			document.getElementById('shockWave1').style.display = non9;
             doTimer(
-			2200,20,function(steps){
+			1700,20,function(steps){
 						non9 = non9 - (1 / steps);
 						document.getElementById('shockWave1').style.display = non9;				
 						},
@@ -1547,18 +1546,18 @@ window.requestAnimFrame = (function(){
 	var choose2 = document.getElementById("zf2");
 	choose2.onclick = function(){
 		
-		Fu1.style.animation = "opacity 0.5s linear forwards normal 1";
-		Fu1.style.webkitAnimation = "opacity 0.5s linear forwards normal 1";
+		Fu1.style.animation = "opacity 0.3s linear forwards normal 1";
+		Fu1.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
 		
-		Fu3.style.animation = "opacity 0.5s linear forwards normal 1";
-		Fu3.style.webkitAnimation = "opacity 0.5s linear forwards normal 1";
+		Fu3.style.animation = "opacity 0.3s linear forwards normal 1";
+		Fu3.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
 		
 		zf1.style.display = "none";
 		zf2.style.display = "none";
 		zf3.style.display = "none";
 		
-		Fu2.style.animation = "chooseFZ2 22s linear forwards normal 1"; 
-		Fu2.style.webkitAnimation = "chooseFZ2 22s linear forwards normal 1"; 
+		Fu2.style.animation = "chooseFZ2 21s linear forwards normal 1"; 
+		Fu2.style.webkitAnimation = "chooseFZ2 21s linear forwards normal 1"; 
 
         word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
 		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
@@ -1569,7 +1568,7 @@ window.requestAnimFrame = (function(){
 	    amount4.style.display = "block";
 	    amount4.style.animationPlayState = "running";
 		amount4.style.webkitAnimationPlayState = "running";
-		    var non7 = "none";
+		   var non7 = "none";
 			document.getElementById('callfz1').style.display = non7;
             doTimer(
 			350,20,function(steps){
@@ -1585,7 +1584,7 @@ window.requestAnimFrame = (function(){
             var non7a = "none";
 			document.getElementById('feb1').style.display = non7a;
             doTimer(
-			650,20,function(steps){
+			600,20,function(steps){
 						non7a = non7a - (1 / steps);
 						document.getElementById('feb1').style.display = non7a;				
 						},
@@ -1598,7 +1597,7 @@ window.requestAnimFrame = (function(){
 			var non7b = "none";
 			document.getElementById('feb2').style.display = non7b;
             doTimer(
-			750,20,function(steps){
+			650,20,function(steps){
 						non7b = non7b - (1 / steps);
 						document.getElementById('feb2').style.display = non7b;				
 						},
@@ -1611,7 +1610,7 @@ window.requestAnimFrame = (function(){
 			var non7c = "none";
 			document.getElementById('feb3').style.display = non7c;
             doTimer(
-			850,20,function(steps){
+			700,20,function(steps){
 						non7c = non7c - (1 / steps);
 						document.getElementById('feb3').style.display = non7c;				
 						},
@@ -1624,7 +1623,7 @@ window.requestAnimFrame = (function(){
 			var non7d = "none";
 			document.getElementById('feb4').style.display = non7d;
             doTimer(
-			950,20,function(steps){
+			750,20,function(steps){
 						non7d = non7d - (1 / steps);
 						document.getElementById('feb4').style.display = non7d;				
 						},
@@ -1637,7 +1636,7 @@ window.requestAnimFrame = (function(){
 			var non7e = "none";
 			document.getElementById('feb5').style.display = non7e;
             doTimer(
-			1050,20,function(steps){
+			800,20,function(steps){
 						non7e = non7e - (1 / steps);
 						document.getElementById('feb5').style.display = non7e;				
 						},
@@ -1650,7 +1649,7 @@ window.requestAnimFrame = (function(){
 			var non7f = "none";
 			document.getElementById('feb6').style.display = non7f;
             doTimer(
-			1150,20,function(steps){
+			850,20,function(steps){
 						non7f = non7f - (1 / steps);
 						document.getElementById('feb6').style.display = non7f;				
 						},
@@ -1663,7 +1662,7 @@ window.requestAnimFrame = (function(){
 			var non7g = "none";
 			document.getElementById('feb7').style.display = non7g;
             doTimer(
-			1250,20,function(steps){
+			900,20,function(steps){
 						non7g = non7g - (1 / steps);
 						document.getElementById('feb7').style.display = non7g;				
 						},
@@ -1676,7 +1675,7 @@ window.requestAnimFrame = (function(){
 			var non7h = "none";
 			document.getElementById('feb8').style.display = non7h;
             doTimer(
-			1350,20,function(steps){
+			950,20,function(steps){
 						non7h = non7h - (1 / steps);
 						document.getElementById('feb8').style.display = non7h;				
 						},
@@ -1689,7 +1688,7 @@ window.requestAnimFrame = (function(){
 		    var non9 = "none";
 			document.getElementById('shockWave1').style.display = non9;
             doTimer(
-			2400,20,function(steps){
+			1700,20,function(steps){
 						non9 = non9 - (1 / steps);
 						document.getElementById('shockWave1').style.display = non9;				
 						},
@@ -1705,18 +1704,18 @@ window.requestAnimFrame = (function(){
 	var choose3 = document.getElementById('zf3');
 	choose3.onclick = function(){
 		
-		Fu1.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu1.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
+		Fu1.style.animation = "opacity 0.3s linear forwards normal 1 0.1s";
+		Fu1.style.webkitAnimation = "opacity 0.3s linear forwards normal 1 0.1s";
 		
-		Fu2.style.animation = "opacity 0.5s linear forwards normal 1 0.1s";
-		Fu2.style.webkitAnimation = "opacity 0.5s linear forwards normal 1 0.1s";
+		Fu2.style.animation = "opacity 0.3s linear forwards normal 1 0.1s";
+		Fu2.style.webkitAnimation = "opacity 0.3s linear forwards normal 1 0.1s";
 
 		zf1.style.display = "none";
 		zf2.style.display = "none";
 		zf3.style.display = "none";
 
-		Fu3.style.animation = "chooseFZ3 4s linear forwards normal 1"; 
-		Fu3.style.webkitAnimation = "chooseFZ3 4s linear forwards normal 1"; 
+		Fu3.style.animation = "chooseFZ3 3.5s linear forwards normal 1"; 
+		Fu3.style.webkitAnimation = "chooseFZ3 3.5s linear forwards normal 1"; 
 	
 	    word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
 		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
@@ -1728,7 +1727,7 @@ window.requestAnimFrame = (function(){
 	    amount4.style.animationPlayState = "running";
 		amount4.style.webkitAnimationPlayState = "running";
 		
-	    var non7 = "none";
+	   var non7 = "none";
 			document.getElementById('callfz1').style.display = non7;
             doTimer(
 			350,20,function(steps){
@@ -1744,7 +1743,7 @@ window.requestAnimFrame = (function(){
             var non7a = "none";
 			document.getElementById('feb1').style.display = non7a;
             doTimer(
-			650,20,function(steps){
+			600,20,function(steps){
 						non7a = non7a - (1 / steps);
 						document.getElementById('feb1').style.display = non7a;				
 						},
@@ -1757,7 +1756,7 @@ window.requestAnimFrame = (function(){
 			var non7b = "none";
 			document.getElementById('feb2').style.display = non7b;
             doTimer(
-			750,20,function(steps){
+			650,20,function(steps){
 						non7b = non7b - (1 / steps);
 						document.getElementById('feb2').style.display = non7b;				
 						},
@@ -1770,7 +1769,7 @@ window.requestAnimFrame = (function(){
 			var non7c = "none";
 			document.getElementById('feb3').style.display = non7c;
             doTimer(
-			850,20,function(steps){
+			700,20,function(steps){
 						non7c = non7c - (1 / steps);
 						document.getElementById('feb3').style.display = non7c;				
 						},
@@ -1783,7 +1782,7 @@ window.requestAnimFrame = (function(){
 			var non7d = "none";
 			document.getElementById('feb4').style.display = non7d;
             doTimer(
-			950,20,function(steps){
+			750,20,function(steps){
 						non7d = non7d - (1 / steps);
 						document.getElementById('feb4').style.display = non7d;				
 						},
@@ -1796,7 +1795,7 @@ window.requestAnimFrame = (function(){
 			var non7e = "none";
 			document.getElementById('feb5').style.display = non7e;
             doTimer(
-			1050,20,function(steps){
+			800,20,function(steps){
 						non7e = non7e - (1 / steps);
 						document.getElementById('feb5').style.display = non7e;				
 						},
@@ -1809,7 +1808,7 @@ window.requestAnimFrame = (function(){
 			var non7f = "none";
 			document.getElementById('feb6').style.display = non7f;
             doTimer(
-			1150,20,function(steps){
+			850,20,function(steps){
 						non7f = non7f - (1 / steps);
 						document.getElementById('feb6').style.display = non7f;				
 						},
@@ -1822,7 +1821,7 @@ window.requestAnimFrame = (function(){
 			var non7g = "none";
 			document.getElementById('feb7').style.display = non7g;
             doTimer(
-			1250,20,function(steps){
+			900,20,function(steps){
 						non7g = non7g - (1 / steps);
 						document.getElementById('feb7').style.display = non7g;				
 						},
@@ -1835,7 +1834,7 @@ window.requestAnimFrame = (function(){
 			var non7h = "none";
 			document.getElementById('feb8').style.display = non7h;
             doTimer(
-			1350,20,function(steps){
+			950,20,function(steps){
 						non7h = non7h - (1 / steps);
 						document.getElementById('feb8').style.display = non7h;				
 						},
@@ -1848,7 +1847,7 @@ window.requestAnimFrame = (function(){
 		    var non9 = "none";
 			document.getElementById('shockWave1').style.display = non9;
             doTimer(
-			2400,20,function(steps){
+			1700,20,function(steps){
 						non9 = non9 - (1 / steps);
 						document.getElementById('shockWave1').style.display = non9;				
 						},
@@ -1867,8 +1866,8 @@ window.requestAnimFrame = (function(){
 		cardBack1.style.animationPlayState = "running";
 		cardBack1.style.webkitAnimationPlayState = "running";
 	    
-		callfz1.style.animation = "opacity 0.5s forwards linear normal 1 2.3s";
-		callfz1.style.webkitAnimation = "opacity 0.5s forwards linear normal 1 2.3s";
+		callfz1.style.animation = "opacity 0.1s forwards linear normal 1 1.7s";
+		callfz1.style.webkitAnimation = "opacity 0.1s forwards linear normal 1 1.7s";
 	 
 	    cl1.style.display = "block";
 		cl1.style.animationPlayState = "running";
@@ -1877,7 +1876,7 @@ window.requestAnimFrame = (function(){
 	    var non10 = "none";
 			document.getElementById('border1').style.display = non10;
             doTimer(
-			2500,20,function(steps){
+			2000,20,function(steps){
 						non10 = non10 - (1 / steps);
 						document.getElementById('border1').style.display = non10;				
 						},
@@ -1890,7 +1889,7 @@ window.requestAnimFrame = (function(){
         var non10a = "none";
 			document.getElementById('border2').style.display = non10a;
             doTimer(
-			2500,20,function(steps){
+			2000,20,function(steps){
 						non10a = non10a - (1 / steps);
 						document.getElementById('border2').style.display = non10a;				
 						},
@@ -1903,7 +1902,7 @@ window.requestAnimFrame = (function(){
 		var non10b = "none";
 			document.getElementById('border3').style.display = non10b;
             doTimer(
-			2500,20,function(steps){
+			2000,20,function(steps){
 						non10b = non10b - (1 / steps);
 						document.getElementById('border3').style.display = non10b;				
 						},
@@ -1916,7 +1915,7 @@ window.requestAnimFrame = (function(){
 	    var non11 = "none";
 			document.getElementById('fireworks1').style.display = non11;
             doTimer(
-			3000,20,function(steps){
+			2500,20,function(steps){
 						non11 = non11 - (1 / steps);
 						document.getElementById('fireworks1').style.display = non11;				
 						},
@@ -1929,7 +1928,7 @@ window.requestAnimFrame = (function(){
 		var non12 = "none";
 			document.getElementById('fireworks2').style.display = non12;
             doTimer(
-			3300,20,function(steps){
+			2800,20,function(steps){
 						non12 = non12 - (1 / steps);
 						document.getElementById('fireworks2').style.display = non12;				
 						},
@@ -1942,7 +1941,7 @@ window.requestAnimFrame = (function(){
 		var non13 = "none";
 			document.getElementById('fireworks3').style.display = non13;
             doTimer(
-			3600,20,function(steps){
+			3100,20,function(steps){
 						non13 = non13 - (1 / steps);
 						document.getElementById('fireworks3').style.display = non13;				
 						},
@@ -1955,7 +1954,7 @@ window.requestAnimFrame = (function(){
 		var non14 = "none";
 			document.getElementById('fireworks4').style.display = non14;
             doTimer(
-			3900,20,function(steps){
+			3400,20,function(steps){
 						non14 = non14 - (1 / steps);
 						document.getElementById('fireworks4').style.display = non14;				
 						},
@@ -1968,7 +1967,7 @@ window.requestAnimFrame = (function(){
 	    var non15 = "none";
 			document.getElementById('fireworks5').style.display = non15;
             doTimer(
-			4200,20,function(steps){
+			3700,20,function(steps){
 						non15 = non15 - (1 / steps);
 						document.getElementById('fireworks5').style.display = non15;				
 						},
@@ -1981,7 +1980,7 @@ window.requestAnimFrame = (function(){
 	    var non16 = "none";
 			document.getElementById('fireworks6').style.display = non16;
             doTimer(
-			4500,20,function(steps){
+			4000,20,function(steps){
 						non16 = non16 - (1 / steps);
 						document.getElementById('fireworks6').style.display = non16;				
 						},
@@ -1994,7 +1993,7 @@ window.requestAnimFrame = (function(){
 		var non17 = "none";
 			document.getElementById('sb1').style.display = non17;
             doTimer(
-			4000,20,function(steps){
+			3300,20,function(steps){
 						non17 = non17 - (1 / steps);
 						document.getElementById('sb1').style.display = non17;				
 						},
@@ -2447,7 +2446,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > callfz1Image.length){}
 			callfz1Image[myIndex-1].style.display = "block";
-			rendercallfz1 = setTimeout(loopcallfz1,150);			
+			rendercallfz1 = setTimeout(loopcallfz1,120);			
 			 
 			if (myIndex === 14){
 				clearTimeout(rendercallfz1);	
@@ -2769,7 +2768,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ShockWave1Image.length){}
 			ShockWave1Image[myIndex-1].style.display = "block";
-			renderShockWave1 = setTimeout(loopShockWave1,50);			
+			renderShockWave1 = setTimeout(loopShockWave1,70);			
 			 
 			if (myIndex === 4){
 				clearTimeout(renderShockWave1);
