@@ -1364,7 +1364,7 @@ body{
 	 
 </div>
 
-<script id="x" >
+<script id="x">
 window.requestAnimFrame = (function(){
 	  return  window.requestAnimationFrame       ||
 			  window.webkitRequestAnimationFrame ||
@@ -1562,7 +1562,10 @@ window.requestAnimFrame = (function(){
 		
 		Fu3.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu3.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
+	
+		choose2.style.display = "none";		
+		choose3.style.display = "none";	
+        
 		Fu1.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
 		Fu1.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1"; 
 	    
@@ -1731,6 +1734,10 @@ window.requestAnimFrame = (function(){
 		Fu3.style.animation = "opacity 0.3s linear forwards normal 1";
 		Fu3.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
 	
+        choose1.style.display = "none";		
+		// choose2.style.display = "none";		
+		choose3.style.display = "none";	
+       		
         Fu2.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
 		Fu2.style.webkitAnimation = "chooseFZ2 12s linear forwards normal 1"; 
 
@@ -1899,6 +1906,10 @@ window.requestAnimFrame = (function(){
 		Fu2.style.animation = "opacity 0.3s linear forwards normal 1 0.1s";
 		Fu2.style.webkitAnimation = "opacity 0.3s linear forwards normal 1 0.1s";
 
+        choose1.style.display = "none";		
+		choose2.style.display = "none";		
+		// choose3.style.display = "none";	
+        
 		Fu3.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
 		Fu3.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1"; 
 	
@@ -2067,7 +2078,7 @@ window.requestAnimFrame = (function(){
 	    
 		callfz1.style.animation = "opacity 0.1s forwards linear normal 1 1.7s";
 		callfz1.style.webkitAnimation = "opacity 0.1s forwards linear normal 1 1.7s";
-  	 
+  		 
         card1.style.display = "block";
 		card1.style.animationPlayState = "running";
 		card1.style.webkitAnimationPlayState = "running";
@@ -2114,11 +2125,7 @@ window.requestAnimFrame = (function(){
 						ZhouFu3Animation();
 					}				
             );
-		  
-		Fu11.style.display = "block";
-		Fu12.style.display = "block";
-		Fu13.style.display = "block";
-	   		
+		
 		    var non3a = "none";
 			document.getElementById('Fu11').style.display = non3a;
             doTimer(
@@ -2170,7 +2177,10 @@ window.requestAnimFrame = (function(){
 
 		Fu11.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
 		Fu11.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1";
-		
+
+		choose12.style.display = "none";		
+		choose13.style.display = "none";		
+	    	
 		amount2.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount2.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
 		
@@ -2333,8 +2343,12 @@ window.requestAnimFrame = (function(){
 		
 		Fu13.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu13.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-		
-		Fu12.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
+	
+        choose11.style.display = "none";		
+		// choose12.style.display = "none";		
+		choose13.style.display = "none";		
+	    	
+     	Fu12.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
 		Fu12.style.webkitAnimation = "chooseFZ2 12s linear forwards normal 1"; 
 	
 		amount2.style.animation = "opacity 0.1s linear forwards normal 1";
@@ -2500,6 +2514,10 @@ window.requestAnimFrame = (function(){
 		Fu12.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu12.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
       
+	    choose11.style.display = "none";		
+		choose12.style.display = "none";		
+		// choose13.style.display = "none";		
+	    
 		Fu13.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
 		Fu13.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1";
 		
@@ -2671,7 +2689,7 @@ window.requestAnimFrame = (function(){
 	}
 	
 	function last(){
-		var non = "none";
+		    var non = "none";
 			document.getElementById('zhoufu1').style.display = non;
             doTimer(
 			4200,20,function(steps){
@@ -2684,7 +2702,7 @@ window.requestAnimFrame = (function(){
 					}				
             );	
 		
-		var non1 = "none";
+		    var non1 = "none";
 			document.getElementById('zhoufu2').style.display = non1;
             doTimer(
 			4200,20,function(steps){
@@ -2697,7 +2715,7 @@ window.requestAnimFrame = (function(){
 					}				
             );	
 		
-		var non2 = "none";
+		    var non2 = "none";
 			document.getElementById('zhoufu3').style.display = non2;
             doTimer(
 			4200,20,function(steps){
@@ -2709,11 +2727,7 @@ window.requestAnimFrame = (function(){
 						ZhouFu3Animation();
 					}				
             );
-	  		
-		Fu21.style.display = "block";
-		Fu22.style.display = "block";
-		Fu23.style.display = "block";
-	    
+	   
 		    var non3b = "none";
 			document.getElementById('Fu21').style.display = non3b;
             doTimer(
@@ -2763,6 +2777,9 @@ window.requestAnimFrame = (function(){
 		Fu23.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu23.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
 
+        choose22.style.display = "none";		
+		choose23.style.display = "none";	
+  
 		Fu21.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
 		Fu21.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1";
 		
@@ -2928,8 +2945,11 @@ window.requestAnimFrame = (function(){
 		
 		Fu23.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu23.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
-        Fu22.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
+       
+	    choose11.style.display = "none";		
+		choose13.style.display = "none";	
+        
+		Fu22.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
 		Fu22.style.webkitAnimation = "chooseFZ2 12s linear forwards normal 1"; 
 		
 		amount3.style.animation = "opacity 0.1s linear forwards normal 1";
@@ -3094,6 +3114,9 @@ window.requestAnimFrame = (function(){
 		
 		Fu22.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu22.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
+
+        choose11.style.display = "none";		
+		choose12.style.display = "none";	
 
 		Fu23.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
 		Fu23.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1";
@@ -4757,6 +4780,7 @@ window.requestAnimFrame = (function(){
 	
 	 window.addEventListener("orientationchange", function() {location.reload();}, false);
      document.getElementById("x").innerHTML = "";
+
 </script>
 
 <noscript> 
