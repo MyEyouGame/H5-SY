@@ -74,7 +74,7 @@ body{
 	#square{
 		 position          : absolute;
 		 width             : 100%;
-         height            : 63%;
+         height            : 62.5%;
 		 left              : 0%;
 		 overflow          : hidden;
 		 background-repeat : no-repeat;
@@ -702,14 +702,14 @@ body{
     @webkit-keyframes chooseFZ1{
 		0%   { filter:brightness(1.0); left: 15% ; top: 33%; transform:scale(1.0); }
 		4%   { filter:brightness(1.5); left: 15% ; top: 33%; transform:scale(1.2); }
-		8%   { filter:brightness(1.0); left: 15% ; top: 33%; transform:scale(1.0); }
+		10%  { filter:brightness(1.0); left: 15% ; top: 33%; transform:scale(1.0); }
 		15%  { filter:brightness(1.0); left: 43% ; top: 26%; transform:scale(1.0); }
 		100% { filter:opacity(0);      left: 43% ; top: 26%; transform:scale(1.0); }
 	}
 	@keyframes chooseFZ1{
 		0%   { filter:brightness(1.0); left: 15% ; top: 33%; transform:scale(1.0); }
 		4%   { filter:brightness(1.5); left: 15% ; top: 33%; transform:scale(1.2); }
-		8%   { filter:brightness(1.0); left: 15% ; top: 33%; transform:scale(1.0); }
+		10%  { filter:brightness(1.0); left: 15% ; top: 33%; transform:scale(1.0); }
 		15%  { filter:brightness(1.0); left: 43% ; top: 26%; transform:scale(1.0); }
 		100% { filter:opacity(0);      left: 43% ; top: 26%; transform:scale(1.0); }
 	}
@@ -832,16 +832,16 @@ body{
          left              : 0%;
 	}
     @webkit-keyframes chooseFZ3{
-		0%   { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
+	    0%   { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
 		4%   { filter:brightness(1.5); left: 70% ; top: 33%; transform:scale(1.2); }
-		8%   { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
+		10%  { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
 		15%  { filter:brightness(1.0); left: 43% ; top: 26%; transform:scale(1.0); }
 		100% { filter:opacity(0);      left: 43% ; top: 26%; transform:scale(1.0); }
 	}
 	@keyframes chooseFZ3{
-		0%   { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
+	    0%   { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
 		4%   { filter:brightness(1.5); left: 70% ; top: 33%; transform:scale(1.2); }
-		8%   { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
+		10%  { filter:brightness(1.0); left: 70% ; top: 33%; transform:scale(1.0); }
 		15%  { filter:brightness(1.0); left: 43% ; top: 26%; transform:scale(1.0); }
 		100% { filter:opacity(0);      left: 43% ; top: 26%; transform:scale(1.0); }
 	}
@@ -1388,9 +1388,9 @@ body{
 	   100% { filter : brightness(1) opacity(1); }
    }
    @keyframes amount{
-	   0%   { filter : brightness(3) opacity(1); transform:scale(1);}
-	   50%  { filter : brightness(3) opacity(1); transform:scale(2);}
-	   75%  { filter : brightness(3) opacity(1); transform:scale(1);}
+	   0%   { filter : brightness(4) opacity(1); transform:scale(1);}
+	   50%  { filter : brightness(4) opacity(1); transform:scale(2);}
+	   75%  { filter : brightness(4) opacity(1); transform:scale(1);}
 	   100% { filter : brightness(1) opacity(1); transform:scale(1);}
    }
    
@@ -1700,8 +1700,8 @@ window.requestAnimFrame = (function(){
 		zf2.style.display = "none";
 		zf3.style.display = "none";
 
-		Fu1.style.animation = "chooseFZ1 2.9s linear forwards normal 1"; 
-		Fu1.style.webkitAnimation = "chooseFZ1 2.9s linear forwards normal 1"; 
+		Fu1.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
+		Fu1.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1"; 
 	    
 		word.style.animation = "opacity 0.3s 1 linear forwards normal"; 
 		word.style.webkitAnimation = "opacity 0.3s 1 linear forwards normal"; 
@@ -1872,8 +1872,8 @@ window.requestAnimFrame = (function(){
 		zf2.style.display = "none";
 		zf3.style.display = "none";
 
-        Fu2.style.animation = "chooseFZ2 15s linear forwards normal 1"; 
-		Fu2.style.webkitAnimation = "chooseFZ2 15s linear forwards normal 1"; 
+        Fu2.style.animation = "chooseFZ2 12.5s linear forwards normal 1"; 
+		Fu2.style.webkitAnimation = "chooseFZ2 12.5s linear forwards normal 1"; 
 
         word.style.animation = "opacity 0.5s 1 linear forwards normal"; 
 		word.style.webkitAnimation = "opacity 0.5s 1 linear forwards normal"; 
@@ -2028,7 +2028,6 @@ window.requestAnimFrame = (function(){
 					}			
 			);
 			
-			
 		c1();
 	}
     
@@ -2045,8 +2044,8 @@ window.requestAnimFrame = (function(){
 		zf2.style.display = "none";
 		zf3.style.display = "none";
 
-		Fu3.style.animation = "chooseFZ3 2.9s linear forwards normal 1"; 
-		Fu3.style.webkitAnimation = "chooseFZ3 2.9s linear forwards normal 1"; 
+		Fu3.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
+		Fu3.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1"; 
 	
 	    word.style.animation = "opacity 0.3s 1 linear forwards normal"; 
 		word.style.webkitAnimation = "opacity 0.3s 1 linear forwards normal";  
@@ -2322,8 +2321,8 @@ window.requestAnimFrame = (function(){
 		zf12.style.display = "none";
 		zf13.style.display = "none";
 
-		Fu11.style.animation = "chooseFZ1 2.9s linear forwards normal 1"; 
-		Fu11.style.webkitAnimation = "chooseFZ1 3.1s linear forwards normal 1";
+		Fu11.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
+		Fu11.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1";
 		
 		amount2.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount2.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
@@ -2492,8 +2491,8 @@ window.requestAnimFrame = (function(){
 		zf12.style.display = "none";
 		zf13.style.display = "none";
 
-		Fu12.style.animation = "chooseFZ2 15s linear forwards normal 1"; 
-		Fu12.style.webkitAnimation = "chooseFZ2 15s linear forwards normal 1"; 
+		Fu12.style.animation = "chooseFZ2 12.5s linear forwards normal 1"; 
+		Fu12.style.webkitAnimation = "chooseFZ2 12.5s linear forwards normal 1"; 
 		
 		amount2.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount2.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
@@ -2662,8 +2661,8 @@ window.requestAnimFrame = (function(){
 		zf12.style.display = "none";
 		zf13.style.display = "none";
 
-		Fu13.style.animation = "chooseFZ3 2.9s linear forwards normal 1"; 
-		Fu13.style.webkitAnimation = "chooseFZ3 2.9s linear forwards normal 1";
+		Fu13.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
+		Fu13.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1";
 		
 		amount2.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount2.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
@@ -2933,8 +2932,8 @@ window.requestAnimFrame = (function(){
 		zf22.style.display = "none";
 		zf23.style.display = "none";
 
-		Fu21.style.animation = "chooseFZ1 2.9s linear forwards normal 1"; 
-		Fu21.style.webkitAnimation = "chooseFZ1 2.9s linear forwards normal 1";
+		Fu21.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
+		Fu21.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1";
 		
 		amount3.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount3.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
@@ -3103,8 +3102,8 @@ window.requestAnimFrame = (function(){
 		zf22.style.display = "none";
 		zf23.style.display = "none";
 
-		Fu22.style.animation = "chooseFZ2 15s linear forwards normal 1"; 
-		Fu22.style.webkitAnimation = "chooseFZ2 15s linear forwards normal 1"; 
+		Fu22.style.animation = "chooseFZ2 12.5s linear forwards normal 1"; 
+		Fu22.style.webkitAnimation = "chooseFZ2 12.5s linear forwards normal 1"; 
 		
 		amount3.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount3.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
@@ -3273,8 +3272,8 @@ window.requestAnimFrame = (function(){
 		zf22.style.display = "none";
 		zf23.style.display = "none";
 
-		Fu23.style.animation = "chooseFZ3 2.9s linear forwards normal 1"; 
-		Fu23.style.webkitAnimation = "chooseFZ3 2.9s linear forwards normal 1";
+		Fu23.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
+		Fu23.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1";
 		
 		amount3.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount3.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
@@ -3839,10 +3838,11 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFuImage.length){}
 			ZhouFuImage[myIndex-1].style.display = "block";
-			renderFu1 = setTimeout(loopFu1,180);			
-			 
+			renderFu1 = setTimeout(loopFu1,150);			
+		
 			if (myIndex === 6){
 				myIndex = 0;
+		
 			}		
 		}
 	} 	
@@ -3875,7 +3875,7 @@ window.requestAnimFrame = (function(){
 			ZhouFu11Image[myIndex-1].style.display = "block";
 			renderFu11 = setTimeout(loopFu11,150);			
 			 
-			if (myIndex ===6){
+			if (myIndex === 6){
 				myIndex = 0;
 			}		
 		}
@@ -3909,7 +3909,7 @@ window.requestAnimFrame = (function(){
 			ZhouFu21Image[myIndex-1].style.display = "block";
 			renderFu21 = setTimeout(loopFu21,150);			
 			 
-			if (myIndex ===6){
+			if (myIndex === 6){
 				myIndex = 0;
 			}		
 		}
@@ -3941,7 +3941,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFuImage.length){}
 			ZhouFuImage[myIndex-1].style.display = "block";
-			renderFu2 = setTimeout(loopFu2,180);			
+			renderFu2 = setTimeout(loopFu2,150);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -4043,7 +4043,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFuImage.length){}
 			ZhouFuImage[myIndex-1].style.display = "block";
-			renderFu3 = setTimeout(loopFu3,180);			
+			renderFu3 = setTimeout(loopFu3,150);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -4616,7 +4616,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks1Image.length){}
 			FireWorks1Image[myIndex-1].style.display = "block";
-			renderFireWorks1 = setTimeout(loopFireWorks1,80);			
+			renderFireWorks1 = setTimeout(loopFireWorks1,90);			
 			 
 			if (myIndex === 10){
 				clearTimeout(renderFireWorks1);
@@ -4651,7 +4651,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks2Image.length){}
 			FireWorks2Image[myIndex-1].style.display = "block";
-			renderFireWorks2 = setTimeout(loopFireWorks2,80);			
+			renderFireWorks2 = setTimeout(loopFireWorks2,90);			
 			 
 			if (myIndex === 10){
 				clearTimeout(renderFireWorks2);
@@ -4687,7 +4687,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks3Image.length){}
 			FireWorks3Image[myIndex-1].style.display = "block";
-			renderFireWorks3 = setTimeout(loopFireWorks3,80);			
+			renderFireWorks3 = setTimeout(loopFireWorks3,90);			
 			 
 			if (myIndex === 10){
 				clearTimeout(renderFireWorks3);
@@ -4723,7 +4723,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks4Image.length){}
 			FireWorks4Image[myIndex-1].style.display = "block";
-			renderFireWorks4 = setTimeout(loopFireWorks4,80);			
+			renderFireWorks4 = setTimeout(loopFireWorks4,90);			
 			 
 			if (myIndex === 10){
 				clearTimeout(renderFireWorks4);
@@ -4759,7 +4759,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks5Image.length){}
 			FireWorks5Image[myIndex-1].style.display = "block";
-			renderFireWorks5 = setTimeout(loopFireWorks5,80);			
+			renderFireWorks5 = setTimeout(loopFireWorks5,90);			
 			 
 			if (myIndex === 10){
 				clearTimeout(renderFireWorks5);
@@ -4795,7 +4795,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > FireWorks6Image.length){}
 			FireWorks6Image[myIndex-1].style.display = "block";
-			renderFireWorks6 = setTimeout(loopFireWorks6,80);			
+			renderFireWorks6 = setTimeout(loopFireWorks6,90);			
 			 
 			if (myIndex === 10){
 				clearTimeout(renderFireWorks6);
