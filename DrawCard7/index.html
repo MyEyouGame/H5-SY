@@ -336,7 +336,7 @@ body{
          left              : 35%;
 		 background-repeat : no-repeat;
 		 background-Size   : 100% 100%; 
-		 z-index           : 100;
+		 z-index           : 150;
 		 filter            : opacity(0); 
 		 
 		 -webkit-animation-name            : callB    , scale;
@@ -436,18 +436,7 @@ body{
 		0%   { filter : opacity(1); }
 		100% { filter : opacity(0); }
 	}
-
-    #tstart{
-		 position          : absolute;
-		 overflow          : hidden;
-         width             : 40%;
-         height            : 9%;
-         top               : 84%;
-         left              : 28%;
-		 z-index           : 150;
-		 /* border            : solid; */
-	}
-	   
+   
 	#zhoufu1{
 		 position          : absolute;
 		 display           : none;
@@ -548,107 +537,8 @@ body{
 		 animation-delay           : 1.5s     , 0.5s;
 		 animation-play-state      : running  , running;  	
 	}
- 
-    #zf1{
-		 position          : absolute;
-		 overflow          : hidden;
-         width             : 13%;
-         height            : 50%;
-         top               : 32%;
-         left              : 16%;
-		 z-index           : 150;
-		 /* border            : solid; */
-	}  
-	
-	#zf2{
-		 position          : absolute;
-		 overflow          : hidden;
-         width             : 15%;
-         height            : 50%;
-         top               : 26%;
-         left              : 42%;
-		 z-index           : 150;
-		 /* border            : solid; */
-	}  
-	
-	#zf3{
-		 position          : absolute;
-		 overflow          : hidden;
-         width             : 13%;
-         height            : 50%;
-         top               : 32%;
-         left              : 72%;
-		 z-index           : 150;
-		 /* border            : solid; */
-	}
- 
-	#zf11{
-		 position          : absolute;
-		 display           : none;
-         width             : 13%;
-         height            : 50%;
-         top               : 32%;
-         left              : 16%;
-		 z-index           : 140;
-		 /* border            : green 5px solid; */
-	}  
-	
-	#zf12{
-		 position          : absolute;
-		 display           : none;
-         width             : 15%;
-         height            : 50%;
-         top               : 26%;
-         left              : 42%;
-		 z-index           : 140;		 
-		 /* border            : red 5px solid; */
-	}  
-	
-	#zf13{
-		 position          : absolute;
-		 display           : none;
-         width             : 13%;
-         height            : 50%;
-         top               : 32%;
-         left              : 72%;
-		 z-index           : 140;
-		 /* border            : solid; */
-	}
-      
-	#zf21{
-		 position          : absolute;
-		 display           : none;
-         width             : 13%;
-         height            : 50%;
-         top               : 32%;
-         left              : 16%;
-		 z-index           : 130;
-		 /* border            : green 5px solid; */
-	}  
-	
-	#zf22{
-		 position          : absolute;
-		 display           : none;
-         width             : 15%;
-         height            : 50%;
-         top               : 26%;
-         left              : 42%;
-		 z-index           : 130;		 
-		 /* border            : red 5px solid; */
-	}  
-	
-	#zf23{
-		 position          : absolute;
-		 display           : none;
-         width             : 13%;
-         height            : 50%;
-         top               : 32%;
-         left              : 72%;
-		 z-index           : 130;
-		 /* border            : yellow 5px solid; */
-	}
-   	
-	#Fu1{
+  
+    #Fu1{
 		 position          : absolute;
 		 display           : none;
          width             : 16%;
@@ -672,7 +562,7 @@ body{
          height            : 48%;  
          top               : 33%;
          left              : 15%;
-		 z-index           : 110;
+		 z-index           : 130;
 	}
 	.Fu11{
 		 position          : absolute;
@@ -689,7 +579,7 @@ body{
          height            : 48%;  
          top               : 33%;
          left              : 15%;
-		 z-index           : 110;
+		 z-index           : 140;
 	}
 	.Fu21{
 		 position          : absolute;
@@ -738,7 +628,7 @@ body{
          height            : 48%;         
          left              : 43%;
 		 top               : 26%;
-		 z-index           : 110;
+		 z-index           : 130;
 	}
 	.Fu12{
 		 position          : absolute;
@@ -755,7 +645,7 @@ body{
          height            : 48%;         
          left              : 43%;
 		 top               : 26%;
-		 z-index           : 110;
+		 z-index           : 140;
 	}
 	.Fu22{
 		 position          : absolute;
@@ -804,7 +694,7 @@ body{
          height            : 48%;  
          top               : 33%;
          left              : 70%;
-		 z-index           : 110;
+		 z-index           : 130;
 	}
 	.Fu13{
 		 position          : absolute;
@@ -821,7 +711,7 @@ body{
          height            : 48%;  
          top               : 33%;
          left              : 70%;
-		 z-index           : 110;
+		 z-index           : 140;
 	}
 	.Fu23{
 		 position          : absolute;
@@ -1419,7 +1309,6 @@ body{
 		 
 	     <div id="KaiJuanZhou"></div>
          
-		 <div id="tstart" ></div>
 	     <div id="call" class="c" onclick="start()" ontouchstart="start()"></div>
          <div id="call2" class="c"></div>  
 		 
@@ -1429,12 +1318,9 @@ body{
 		 <div id="zhoufu2"></div>
 		 <div id="zhoufu3"></div>
 
-		 <div id="zf1" onclick="choose1"  ontouchstart="choose1"></div>
-	     <div id="Fu1"></div>
-		 <div id="zf2" onclick="choose2"  ontouchstart="choose2"></div>
-		 <div id="Fu2"></div>
-		 <div id="zf3" onclick="choose3"  ontouchstart="choose3"></div>
-		 <div id="Fu3"></div> 
+	     <div id="Fu1" onclick="choose1" ontouchstart="choose1"></div>
+		 <div id="Fu2" onclick="choose2" ontouchstart="choose2"></div>
+		 <div id="Fu3" onclick="choose3" ontouchstart="choose3"></div> 
 		 <div id="word"></div>
 		 <div id="callfz1">
 		     <div id="feb1"></div>
@@ -1449,22 +1335,16 @@ body{
 		 <div id="shockWave1"></div> 
 		 <div id="cardBack1" class="cardback"></div>
 		 <div id="card1"></div>
-	
-		 <div id="zf11" onclick="choose11"  ontouchstart="choose11"></div>
-		 <div id="Fu11"></div>
- 		 <div id="zf12" onclick="choose12"  ontouchstart="choose12"></div>
-		 <div id="Fu12"></div>
- 		 <div id="zf13" onclick="choose13"  ontouchstart="choose13"></div>
-		 <div id="Fu13"></div>
+	     
+		 <div id="Fu11" onclick="choose11" ontouchstart="choose11"></div>
+		 <div id="Fu12" onclick="choose12" ontouchstart="choose12"></div>
+		 <div id="Fu13" onclick="choose13" ontouchstart="choose13"></div>
 		 <div id="cardBack2" class="cardback"></div>
 		 <div id="card2"></div>
 				
-		 <div id="zf21" onclick="choose21"  ontouchstart="choose21"></div>
-	     <div id="Fu21"></div>
-		 <div id="zf22" onclick="choose22"  ontouchstart="choose22"></div>
-		 <div id="Fu22"></div>
-		 <div id="zf23" onclick="choose23"  ontouchstart="choose23"></div>
-		 <div id="Fu23"></div>
+	     <div id="Fu21" onclick="choose21" ontouchstart="choose21"></div>
+		 <div id="Fu22" onclick="choose22" ontouchstart="choose22"></div>
+		 <div id="Fu23" onclick="choose23" ontouchstart="choose23"></div>
 		 <div id="cardBack3" class="cardback"></div>
 		 <div id="card3">
 		    <div id="border1"></div>
@@ -1484,7 +1364,7 @@ body{
 	 
 </div>
 
-<script id="x">
+<script id="x" >
 window.requestAnimFrame = (function(){
 	  return  window.requestAnimationFrame       ||
 			  window.webkitRequestAnimationFrame ||
@@ -1536,10 +1416,6 @@ window.requestAnimFrame = (function(){
 		var newWidth = window.innerWidth;
 		var newHeight = window.innerHeight;
 		
-		zf1.style.display = "none";
-        zf2.style.display = "none";
-        zf3.style.display = "none";
-		
 		sizeData(newWidth,newHeight);
 		resize(newWidth,newHeight);	
 		
@@ -1572,17 +1448,11 @@ window.requestAnimFrame = (function(){
 		timeouts = window.setTimeout(instance, speed);
 	}
 		
-	var start = document.getElementById("tstart");
+	var start = document.getElementById("call");
 	start.onclick = function(){
    
         call.style.display = "none";
       
-	    tstart.style.display = "none";
-   
-        zf1.style.display = "none";
-        zf2.style.display = "none";
-        zf3.style.display = "none";
-
         call2.style.display = "block";		
 		call2.style.animationPlayState = "running";
 		call2.style.webkitAnimationPlayState = "running";
@@ -1678,17 +1548,13 @@ window.requestAnimFrame = (function(){
 						Fu3Animation();
 					}				
             );	
-       
-        zf1.style.display = "block";
-        zf2.style.display = "block";
-        zf3.style.display = "block";
-			
+     	
 		word.style.display = "block";
 		word.style.animation = "scale 0.5s normal linear infininte forwards 2.2s";
 		word.style.webkitAnimation = "scale 0.5s normal linear infininte forwards 2.2s";
 	}
 	
-	var choose1 = document.getElementById('zf1');
+	var choose1 = document.getElementById('Fu1');
 	choose1.onclick = function(){
 		
 		Fu2.style.animation = "opacity 0.3s linear forwards normal 1 ";
@@ -1696,10 +1562,6 @@ window.requestAnimFrame = (function(){
 		
 		Fu3.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu3.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
-		zf1.style.display = "none";
-		zf2.style.display = "none";
-		zf3.style.display = "none";
 
 		Fu1.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
 		Fu1.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1"; 
@@ -1860,7 +1722,7 @@ window.requestAnimFrame = (function(){
 	    c1();
 	}
     
-	var choose2 = document.getElementById("zf2");
+	var choose2 = document.getElementById("Fu2");
 	choose2.onclick = function(){
 		
 		Fu1.style.animation = "opacity 0.3s linear forwards normal 1";
@@ -1868,11 +1730,7 @@ window.requestAnimFrame = (function(){
 		
 		Fu3.style.animation = "opacity 0.3s linear forwards normal 1";
 		Fu3.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-		
-		zf1.style.display = "none";
-		zf2.style.display = "none";
-		zf3.style.display = "none";
-
+	
         Fu2.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
 		Fu2.style.webkitAnimation = "chooseFZ2 12s linear forwards normal 1"; 
 
@@ -2032,7 +1890,7 @@ window.requestAnimFrame = (function(){
 		c1();
 	}
     
-	var choose3 = document.getElementById('zf3');
+	var choose3 = document.getElementById('Fu3');
 	choose3.onclick = function(){
 		
 		Fu1.style.animation = "opacity 0.3s linear forwards normal 1 0.1s";
@@ -2040,10 +1898,6 @@ window.requestAnimFrame = (function(){
 		
 		Fu2.style.animation = "opacity 0.3s linear forwards normal 1 0.1s";
 		Fu2.style.webkitAnimation = "opacity 0.3s linear forwards normal 1 0.1s";
-
-		zf1.style.display = "none";
-		zf2.style.display = "none";
-		zf3.style.display = "none";
 
 		Fu3.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
 		Fu3.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1"; 
@@ -2260,11 +2114,7 @@ window.requestAnimFrame = (function(){
 						ZhouFu3Animation();
 					}				
             );
-		
-		zf11.style.display = "block";
-		zf12.style.display = "block";
-		zf13.style.display = "block"; 
-		  		
+		  
 		Fu11.style.display = "block";
 		Fu12.style.display = "block";
 		Fu13.style.display = "block";
@@ -2309,7 +2159,7 @@ window.requestAnimFrame = (function(){
             );	
 	}
 	
-	var choose11 = document.getElementById('zf11');
+	var choose11 = document.getElementById('Fu11');
 	choose11.onclick = function(){
 		
 		Fu12.style.animation = "opacity 0.3s linear forwards normal 1 ";
@@ -2317,10 +2167,6 @@ window.requestAnimFrame = (function(){
 		
 		Fu13.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu13.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
-		zf11.style.display = "none";
-		zf12.style.display = "none";
-		zf13.style.display = "none";
 
 		Fu11.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
 		Fu11.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1";
@@ -2479,7 +2325,7 @@ window.requestAnimFrame = (function(){
 		
 	}
 	
-	var choose12 = document.getElementById('zf12');
+	var choose12 = document.getElementById('Fu12');
 	choose12.onclick = function(){
 		
 		Fu11.style.animation = "opacity 0.3s linear forwards normal 1 ";
@@ -2487,14 +2333,10 @@ window.requestAnimFrame = (function(){
 		
 		Fu13.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu13.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
-		zf11.style.display = "none";
-		zf12.style.display = "none";
-		zf13.style.display = "none";
-
+		
 		Fu12.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
 		Fu12.style.webkitAnimation = "chooseFZ2 12s linear forwards normal 1"; 
-		
+	
 		amount2.style.animation = "opacity 0.1s linear forwards normal 1";
 		amount2.style.webkitAnimation = "opacity 0.1s linear forwards normal 1";
 		
@@ -2649,7 +2491,7 @@ window.requestAnimFrame = (function(){
 		
 	}
 	
-	var choose13 = document.getElementById('zf13');
+	var choose13 = document.getElementById('Fu13');
 	choose13.onclick = function(){
 		
 		Fu11.style.animation = "opacity 0.3s linear forwards normal 1 ";
@@ -2657,11 +2499,7 @@ window.requestAnimFrame = (function(){
 		
 		Fu12.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu12.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
-		zf11.style.display = "none";
-		zf12.style.display = "none";
-		zf13.style.display = "none";
-
+      
 		Fu13.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
 		Fu13.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1";
 		
@@ -2871,11 +2709,7 @@ window.requestAnimFrame = (function(){
 						ZhouFu3Animation();
 					}				
             );
-		
-		zf21.style.display = "block";
-		zf22.style.display = "block";
-		zf23.style.display = "block"; 
-		  		
+	  		
 		Fu21.style.display = "block";
 		Fu22.style.display = "block";
 		Fu23.style.display = "block";
@@ -2920,7 +2754,7 @@ window.requestAnimFrame = (function(){
             );
 	}
 	
-	var choose21 = document.getElementById('zf21');
+	var choose21 = document.getElementById('Fu21');
 	choose21.onclick = function(){
 		
 		Fu22.style.animation = "opacity 0.3s linear forwards normal 1 ";
@@ -2928,10 +2762,6 @@ window.requestAnimFrame = (function(){
 		
 		Fu23.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu23.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
-		zf21.style.display = "none";
-		zf22.style.display = "none";
-		zf23.style.display = "none";
 
 		Fu21.style.animation = "chooseFZ1 2.2s linear forwards normal 1"; 
 		Fu21.style.webkitAnimation = "chooseFZ1 2.2s linear forwards normal 1";
@@ -3090,7 +2920,7 @@ window.requestAnimFrame = (function(){
 		
 	}
 	
-    var choose22 = document.getElementById('zf22');
+    var choose22 = document.getElementById('Fu22');
 	choose22.onclick = function(){
 		
 		Fu21.style.animation = "opacity 0.3s linear forwards normal 1 ";
@@ -3099,11 +2929,7 @@ window.requestAnimFrame = (function(){
 		Fu23.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu23.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
 
-		zf21.style.display = "none";
-		zf22.style.display = "none";
-		zf23.style.display = "none";
-
-		Fu22.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
+        Fu22.style.animation = "chooseFZ2 12s linear forwards normal 1"; 
 		Fu22.style.webkitAnimation = "chooseFZ2 12s linear forwards normal 1"; 
 		
 		amount3.style.animation = "opacity 0.1s linear forwards normal 1";
@@ -3260,7 +3086,7 @@ window.requestAnimFrame = (function(){
 		
 	}
 	
-	var choose23 = document.getElementById('zf23');
+	var choose23 = document.getElementById('Fu23');
 	choose23.onclick = function(){
 		
 		Fu21.style.animation = "opacity 0.3s linear forwards normal 1 ";
@@ -3268,10 +3094,6 @@ window.requestAnimFrame = (function(){
 		
 		Fu22.style.animation = "opacity 0.3s linear forwards normal 1 ";
 		Fu22.style.webkitAnimation = "opacity 0.3s linear forwards normal 1";
-
-		zf21.style.display = "none";
-		zf22.style.display = "none";
-		zf23.style.display = "none";
 
 		Fu23.style.animation = "chooseFZ3 2.2s linear forwards normal 1"; 
 		Fu23.style.webkitAnimation = "chooseFZ3 2.2s linear forwards normal 1";
@@ -3839,7 +3661,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFuImage.length){}
 			ZhouFuImage[myIndex-1].style.display = "block";
-			renderFu1 = setTimeout(loopFu1,150);			
+			renderFu1 = setTimeout(loopFu1,120);			
 		
 			if (myIndex === 6){
 				myIndex = 0;
@@ -3873,7 +3695,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFu11Image.length){}
 			ZhouFu11Image[myIndex-1].style.display = "block";
-			renderFu11 = setTimeout(loopFu11,150);			
+			renderFu11 = setTimeout(loopFu11,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -3907,7 +3729,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFu21Image.length){}
 			ZhouFu21Image[myIndex-1].style.display = "block";
-			renderFu21 = setTimeout(loopFu21,150);			
+			renderFu21 = setTimeout(loopFu21,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -3941,7 +3763,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFuImage.length){}
 			ZhouFuImage[myIndex-1].style.display = "block";
-			renderFu2 = setTimeout(loopFu2,150);			
+			renderFu2 = setTimeout(loopFu2,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -3975,7 +3797,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFu12Image.length){}
 			ZhouFu12Image[myIndex-1].style.display = "block";
-			renderFu12 = setTimeout(loopFu12,150);			
+			renderFu12 = setTimeout(loopFu12,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -4009,7 +3831,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFu22Image.length){}
 			ZhouFu22Image[myIndex-1].style.display = "block";
-			renderFu22 = setTimeout(loopFu22,150);			
+			renderFu22 = setTimeout(loopFu22,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -4043,7 +3865,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFuImage.length){}
 			ZhouFuImage[myIndex-1].style.display = "block";
-			renderFu3 = setTimeout(loopFu3,150);			
+			renderFu3 = setTimeout(loopFu3,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -4077,7 +3899,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFu13Image.length){}
 			ZhouFu13Image[myIndex-1].style.display = "block";
-			renderFu13 = setTimeout(loopFu13,150);			
+			renderFu13 = setTimeout(loopFu13,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -4111,7 +3933,7 @@ window.requestAnimFrame = (function(){
 			myIndex++;
 			if (myIndex > ZhouFu23Image.length){}
 			ZhouFu23Image[myIndex-1].style.display = "block";
-			renderFu23 = setTimeout(loopFu23,150);			
+			renderFu23 = setTimeout(loopFu23,120);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
