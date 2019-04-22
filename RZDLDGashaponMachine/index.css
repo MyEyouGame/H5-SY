@@ -1501,15 +1501,17 @@ body{
 		100% { filter:brightness(1.0) opacity(1); }
 	}
 	@-webkit-keyframes scaleCB{
-		0%   { transform:scale(1.0); filter:opacity(1); }
+        0%   { transform:scale(1.0); filter:opacity(1); }
+		25%  { transform:scale(0.8); filter:opacity(1); }
 		50%  { transform:scale(0.8); filter:opacity(1); }
-		99%  { transform:scale(1.0); filter:opacity(1); }
+		75%  { transform:scale(1.0); filter:opacity(1); }
 		100% { transform:scale(1.0); filter:opacity(0); }
 	}
 	@keyframes scaleCB{
 		0%   { transform:scale(1.0); filter:opacity(1); }
+		25%  { transform:scale(0.8); filter:opacity(1); }
 		50%  { transform:scale(0.8); filter:opacity(1); }
-		99%  { transform:scale(1.0); filter:opacity(1); }
+		75%  { transform:scale(1.0); filter:opacity(1); }
 		100% { transform:scale(1.0); filter:opacity(0); }
 	}
 	
@@ -1561,7 +1563,34 @@ body{
 		 animation-play-state      : paused   ;
 	}
     
-	
+	#ct1,#ct2{
+	     position          : absolute;
+		 display           : none;
+		 height            : 8%; 
+		 width             : 32%;  
+		 top               : 80%; 
+		 left              : 34%; 
+		 filter            : opacity(0);
+		 z-index           : 150;	
+		 
+		 -webkit-animation-name            : gc       ;
+ 		 -webkit-animation-duration        : 1s       ;
+		 -webkit-animation-direction       : normal   ;  
+		 -webkit-animation-timing-function : linear   ; 
+		 -webkit-animation-iteration-count : 1        ;
+		 -webkit-animation-fill-mode       : forwards ;
+		 -webkit-animation-delay           : 2.0s     ;
+		 -webkit-animation-play-state      : paused   ;
+		 
+         animation-name            : gc       ;
+ 		 animation-duration        : 1s       ;
+		 animation-direction       : normal   ;  
+		 animation-timing-function : linear   ; 
+		 animation-iteration-count : 1        ;
+		 animation-fill-mode       : forwards ;
+		 animation-delay           : 2.0s     ;
+		 animation-play-state      : paused   ;
+	}
 	
 	
 	
