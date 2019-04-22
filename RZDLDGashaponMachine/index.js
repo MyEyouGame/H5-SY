@@ -334,7 +334,7 @@
             collect1.style.display = "block";	
 			collect1.style.animationPlayState = "running";
 			collect1.style.webkitAnimationPlayState = "running";
-			
+			 
             tut.style.display = "block";			
 			tut.style.animationPlayState = "running";
 			tut.style.webkitAnimationPlayState = "running";
@@ -429,7 +429,7 @@
         var non7 = "none";
 			document.getElementById('flashGlow').style.display = non7;
            	doTimer(
-			1000,20,function(steps){
+			1200,20,function(steps){
 					non7 = non7 - (1 / steps);
 					document.getElementById('flashGlow').style.display = non7;				
 					},
@@ -466,8 +466,8 @@
         tut.style.animation = "opacity 1s 1 linear forwards normal 1s";
         tut.style.webkitAnimation = "opacity 1s 1 linear forwards normal 1s";
 
-        collect1.style.animation = "scaleCB 0.3s normal linear 1 forwards ";
-        collect1.style.webkitAnimation = "scaleCB 0.3s normal linear 1 forwards ";
+        collect1.style.animation = "scaleCB 0.1s normal linear 1 forwards ";
+        collect1.style.webkitAnimation = "scaleCB 0.1s normal linear 1 forwards ";
 		  
         var non3 = "none";
 			document.getElementById('gashapon').style.display = non3;
@@ -517,8 +517,8 @@
         tut2.style.animation = "opacity 1s 1 linear forwards normal 1s";
         tut2.style.webkitAnimation = "opacity 1s 1 linear forwards normal 1s";
 
-        collect2.style.animation = "scaleCB 0.3s normal linear 1 forwards ";
-        collect2.style.webkitAnimation = "scaleCB 0.3s normal linear 1 forwards ";
+        collect2.style.animation = "scaleCB 0.1s normal linear 1 forwards ";
+        collect2.style.webkitAnimation = "scaleCB 0.1s normal linear 1 forwards ";
 		  
         var non3 = "none";
 			document.getElementById('gashapon').style.display = non3;
@@ -610,7 +610,7 @@
 			myIndex++;
 			if (myIndex > butterfly2Image.length){}
 			butterfly2Image[myIndex-1].style.display = "block";
-			renderButterfly2 = setTimeout(loopButterfly2,80);			
+			renderButterfly2 = setTimeout(loopButterfly2,150);			
 			 
 			if (myIndex === 6){
 				myIndex = 0;
@@ -831,7 +831,7 @@
 			myIndex++;
 			if (myIndex > flashGlowImage.length){}
 			flashGlowImage[myIndex-1].style.display = "block";
-			renderFlashGlow = setTimeout(loopFlashGlow,300);			
+			renderFlashGlow = setTimeout(loopFlashGlow,280);			
 			 
 			if (myIndex === 4){
 				clearTimeout(renderFlashGlow);
