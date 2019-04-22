@@ -780,9 +780,9 @@
 			thirdImage[myIndex-1].style.display = "block";
 			renderThirdGashapon = setTimeout(loopThirdGashapon,150);			
 			 
-			if (myIndex === 9){
+			if (myIndex === 10){
 			    clearTimeout(renderThirdGashapon);
-				// tgashapon.style.display = "none";
+				tgashapon.style.display = "none";
 			}		
 		}
 	} 
