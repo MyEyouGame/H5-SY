@@ -1052,7 +1052,7 @@ body{
 		 -webkit-animation-timing-function : linear   , linear            ; 
 		 -webkit-animation-iteration-count : 1        , infinite          ;
 		 -webkit-animation-fill-mode       : forwards , forwards          ;
-		 -webkit-animation-delay           : 0.50s    , 1.3s              ;
+		 -webkit-animation-delay           : 0.80s    , 1.3s              ;
 		 -webkit-animation-play-state      : paused   , paused            ;
 		 
 		 animation-name            : sRC1     , rc1Down           ;
@@ -1061,7 +1061,7 @@ body{
 		 animation-timing-function : linear   , linear            ; 
 		 animation-iteration-count : 1        , infinite          ;
 		 animation-fill-mode       : forwards , forwards          ;
-		 animation-delay           : 0.50s    , 1.3s              ;
+		 animation-delay           : 0.80s    , 1.3s              ;
 		 animation-play-state      : paused   , paused            ;
 	}	
 	@-webkit-keyframes collect{
@@ -1110,7 +1110,7 @@ body{
 		 -webkit-animation-timing-function : linear   , linear            ; 
 		 -webkit-animation-iteration-count : 1        , infinite          ;
 		 -webkit-animation-fill-mode       : forwards , forwards          ;
-		 -webkit-animation-delay           : 0.50s    , 1.3s              ;
+		 -webkit-animation-delay           : 0.80s    , 1.3s              ;
 		 -webkit-animation-play-state      : paused   , paused            ;
 		 
 		 animation-name            : sRC1     , rc2Down           ;
@@ -1119,7 +1119,7 @@ body{
 		 animation-timing-function : linear   , linear            ; 
 		 animation-iteration-count : 1        , infinite          ;
 		 animation-fill-mode       : forwards , forwards          ;
-		 animation-delay           : 0.50s    , 1.3s              ;
+		 animation-delay           : 0.80s    , 1.3s              ;
 		 animation-play-state      : paused   , paused            ;
 	}	
 	@-webkit-keyframes rc2Down{
@@ -1158,7 +1158,7 @@ body{
 		 -webkit-animation-timing-function : linear   , linear            ; 
 		 -webkit-animation-iteration-count : 1        , infinite          ;
 		 -webkit-animation-fill-mode       : forwards , forwards          ;
-		 -webkit-animation-delay           : 0.50s    , 1.3s              ;
+		 -webkit-animation-delay           : 0.80s    , 1.3s              ;
 		 -webkit-animation-play-state      : paused   , paused            ;
 		 
 		 animation-name            : sRC1     , rc3Down           ;
@@ -1167,7 +1167,7 @@ body{
 		 animation-timing-function : linear   , linear            ; 
 		 animation-iteration-count : 1        , infinite          ;
 		 animation-fill-mode       : forwards , forwards          ;
-		 animation-delay           : 0.50s    , 1.3s              ;
+		 animation-delay           : 0.80s    , 1.3s              ;
 		 animation-play-state      : paused   , paused            ;
 	}	
 	@-webkit-keyframes rc3Down{
