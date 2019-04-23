@@ -1599,8 +1599,7 @@ body{
 		 animation-fill-mode       : forwards ;
 		 animation-delay           : 2.0s     ;
 		 animation-play-state      : paused   ;
-	}
-
+	} 
 </style>
 
 </head>
@@ -1693,7 +1692,8 @@ body{
 
 </div>
 
-<script id="x">
+<script id="x" >
+
     window.requestAnimFrame = (function(){
 	  return  window.requestAnimationFrame       ||
 			  window.webkitRequestAnimationFrame ||
@@ -2154,6 +2154,8 @@ body{
 		star.style.animation = "star 1s forwards linear normal 1";
 		star.style.webkitAnimation = "star 1s forwards linear normal 1";
         
+		ct.style.display = "none";
+		
         book.style.animation = "bookScale 1s normal linear 1 forwards";
         book.style.webkitAnimation = "bookScale 1s normal linear 1 forwards";
 
@@ -2181,7 +2183,6 @@ body{
 				}				
            	);
 			
-		 ct.style.display = "none"; 
 		 chargebar2.style.display="block";	
 		 bar2.style.display="block";
 		 frameBar2.style.display = "block";
@@ -2486,21 +2487,14 @@ body{
 			myIndex++;
 			if (myIndex > butterflyImage.length){}
 			butterflyImage[myIndex-1].style.display = "block";
-			renderButterfly = setTimeout(loopButterfly,150);			
+			renderButterfly = setTimeout(loopButterfly,120);			
 			 
 			if (myIndex === 6){
-				clearTimeout(renderButterfly);
+				myIndex=0;
 				
 			}		
 		}
 	} 
-	function fly(){
-	
-	    requestAnimationFrame(fly);
-		 
-	
-	}
-	
 	
 	
     	for(i=0; i < butterflyArray.length; i++)
@@ -2528,11 +2522,10 @@ body{
 			myIndex++;
 			if (myIndex > butterfly2Image.length){}
 			butterfly2Image[myIndex-1].style.display = "block";
-			renderButterfly2 = setTimeout(loopButterfly2,150);			
+			renderButterfly2 = setTimeout(loopButterfly2,120);			
 			 
 			if (myIndex === 6){
-			
-				clearTimeout(renderButterfly2);
+			     myIndex=0;
 			}		
 		}
 	} 
@@ -2636,6 +2629,8 @@ body{
 	
 	window.addEventListener("orientationchange", function() {location.reload();}, false);
     document.getElementById("x").innerHTML = "";
+	 
+	 
 </script>
 
 <noscript> 
