@@ -793,19 +793,11 @@
 			renderButterfly = setTimeout(loopButterfly,150);			
 			 
 			if (myIndex === 6){
-				clearTimeout(renderButterfly);
+				myIndex=0;
 				
 			}		
 		}
 	} 
-
-	function fly(){
-	
-	    requestAnimationFrame(fly);
-		 
-	    setTimeout(butterfly,150);
-	}
-	
 	
 	
     	for(i=0; i < butterflyArray.length; i++)
@@ -836,8 +828,7 @@
 			renderButterfly2 = setTimeout(loopButterfly2,150);			
 			 
 			if (myIndex === 6){
-			
-				clearTimeout(renderButterfly2);
+			     myIndex=0;
 			}		
 		}
 	} 
