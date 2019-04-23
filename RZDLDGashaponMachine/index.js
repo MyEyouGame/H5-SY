@@ -790,7 +790,7 @@
 			myIndex++;
 			if (myIndex > butterflyImage.length){}
 			butterflyImage[myIndex-1].style.display = "block";
-			renderButterfly = setTimeout(loopButterfly,150);			
+			renderButterfly = setTimeout(loopButterfly,120);			
 			 
 			if (myIndex === 6){
 				myIndex=0;
@@ -825,7 +825,7 @@
 			myIndex++;
 			if (myIndex > butterfly2Image.length){}
 			butterfly2Image[myIndex-1].style.display = "block";
-			renderButterfly2 = setTimeout(loopButterfly2,150);			
+			renderButterfly2 = setTimeout(loopButterfly2,120);			
 			 
 			if (myIndex === 6){
 			     myIndex=0;
