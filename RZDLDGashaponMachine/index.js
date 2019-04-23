@@ -458,6 +458,8 @@
 		star.style.animation = "star 1s forwards linear normal 1";
 		star.style.webkitAnimation = "star 1s forwards linear normal 1";
         
+		ct.style.display = "none";
+		
         book.style.animation = "bookScale 1s normal linear 1 forwards";
         book.style.webkitAnimation = "bookScale 1s normal linear 1 forwards";
 
@@ -485,7 +487,6 @@
 				}				
            	);
 			
-		 ct.style.display = "none"; 
 		 chargebar2.style.display="block";	
 		 bar2.style.display="block";
 		 frameBar2.style.display = "block";
