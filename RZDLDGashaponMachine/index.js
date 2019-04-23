@@ -798,11 +798,12 @@
 			}		
 		}
 	} 
+
 	function fly(){
 	
 	    requestAnimationFrame(fly);
 		 
-	
+	    setTimeout(butterfly,150);
 	}
 	
 	
