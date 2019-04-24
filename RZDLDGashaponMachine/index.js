@@ -794,11 +794,20 @@
 			renderButterfly = setTimeout(loopButterfly,120);			
 			 
 			if (myIndex === 6){
-				myIndex=0;
-				
+			    clearTimeout(renderButterfly);
+
 			}		
 		}
 	} 
+	
+	function fly(){
+		
+		
+		
+		
+	}
+	
+	
 	
 	
     	for(i=0; i < butterflyArray.length; i++)
