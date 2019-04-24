@@ -800,16 +800,6 @@
 		}
 	} 
 	
-	function fly(){
-		
-		
-		
-		
-	}
-	
-	
-	
-	
     	for(i=0; i < butterflyArray.length; i++)
 	    {	 
 		    if(i < butterflyArray.length)
