@@ -794,8 +794,7 @@
 			renderButterfly = setTimeout(loopButterfly,120);			
 			 
 			if (myIndex === 6){
-			    clearTimeout(renderButterfly);
-
+			 myIndex=0;
 			}		
 		}
 	} 
@@ -818,15 +817,18 @@
 		
 		function loopButterfly2(){
 	        var i;    
-				for (i=0;i<img.length;i++) {
-					img[i].style.display="none";
+				for (i=0;i<butterfly2Image.length;i++) {
+					butterfly2Image[i].style.display="none";
 				}
 				myIndex++;
-				if (myIndex <= img.length) {
-					img[myIndex-1].style.display = "block";
+				
+				if (myIndex <= butterfly2Image.length) {
+					butterfly2Image[myIndex-1].style.display = "block";
+					
 				}
-					render = setTimeout(loopEffect,70);
-				if (myIndex === img.length){
+					renderButterfly2 = setTimeout(loopButterfly2,120);
+					
+				if (myIndex === butterfly2Image.length){
 					myIndex = 0;
 				}			
 		}
