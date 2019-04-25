@@ -817,19 +817,18 @@
 		loopButterfly2();
 		
 		function loopButterfly2(){
-			var i;
-			for (i=0;i<butterfly2Image.length;i++)
-			{
-				butterfly2Image[i].style.display="none";
-			}
-			myIndex++;
-			if (myIndex > butterfly2Image.length){}
-			butterfly2Image[myIndex-1].style.display = "block";
-			renderButterfly2 = setTimeout(loopButterfly2,120);			
-			 
-			if (myIndex === 6){
-			     myIndex=0;
-			}		
+	        var i;    
+				for (i=0;i<img.length;i++) {
+					img[i].style.display="none";
+				}
+				myIndex++;
+				if (myIndex <= img.length) {
+					img[myIndex-1].style.display = "block";
+				}
+					render = setTimeout(loopEffect,70);
+				if (myIndex === img.length){
+					myIndex = 0;
+				}			
 		}
 	} 
 			
