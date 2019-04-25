@@ -853,8 +853,7 @@
 				||(newWidth === 2560 && newHeight=== 1700) ||(newWidth === 3000 && newHeight=== 2000)
 				||(newWidth === 2160 && newHeight=== 1440) ||(newWidth === 2736 && newHeight=== 1824)){widthToHeight = 3 / 2;}
 				
-		else if ((newWidth === 320 && newHeight === 480) || (newWidth === 640 && newHeight=== 960)
-				||(newWidth === 480 && newHeight === 320) || (newWidth === 960 && newHeight=== 640)){widthToHeight = 2 / 3;}		
+		else if ((newWidth === 480 && newHeight === 320) || (newWidth === 320 && newHeight === 480)){widthToHeight = 2 / 3;}			
 				
 		// Chromobox 30, Dell Venue 8,MacBook 12, MAcbook Air 13,Macbook Pro 13, Macbook Pro 15
 		// Nexus 15,Nexus 7, Samsung Galaxy Tab 10,Sony Xperia Z3/Z4 Tablet
