@@ -1232,40 +1232,57 @@ body{
 		 z-index           : 106;
 		 filter            : opacity(0);
 		 
-		 -webkit-animation-name            : w1       ;
- 		 -webkit-animation-duration        : 1s       ;
-		 -webkit-animation-direction       : normal   ;  
-		 -webkit-animation-timing-function : linear   ; 
-		 -webkit-animation-iteration-count : 1        ;
-		 -webkit-animation-fill-mode       : forwards ;
-		 -webkit-animation-delay           : 1s       ;
-		 -webkit-animation-play-state      : paused   ;
+		 -webkit-animation-name            : w1       , ww       ;
+ 		 -webkit-animation-duration        : 1.0s     , 3s       ;
+		 -webkit-animation-direction       : normal   , normal   ;    
+		 -webkit-animation-timing-function : linear   , linear   ; 
+		 -webkit-animation-iteration-count : 1        , 1        ;
+		 -webkit-animation-fill-mode       : forwards , forwards ;
+		 -webkit-animation-delay           : 1s       , 1s       ;
+		 -webkit-animation-play-state      : paused   , paused   ;
 		 
-		 animation-name            : w1       ;
- 		 animation-duration        : 1.0s     ;
-		 animation-direction       : normal   ;  
-		 animation-timing-function : linear   ; 
-		 animation-iteration-count : 1        ;
-		 animation-fill-mode       : forwards ;
-		 animation-delay           : 1s       ;
-		 animation-play-state      : paused   ;
+		 animation-name            : w1       , ww       ;
+ 		 animation-duration        : 1.0s     , 3s       ;
+		 animation-direction       : normal   , normal   ;  
+		 animation-timing-function : linear   , linear   ; 
+		 animation-iteration-count : 1        , 1        ;
+		 animation-fill-mode       : forwards , forwards ;
+		 animation-delay           : 1s       , 1s       ;
+		 animation-play-state      : paused   , paused   ;
 	}
 	@-webkit-keyframes w1{
-		0%   { filter:opacity(0);   transform:scale(1.00); }
-		20%  { filter:opacity(0.5); transform:scale(1.00); }
-		40%  { filter:opacity(0.7); transform:scale(1.04); }
-		60%  { filter:opacity(0.9); transform:scale(1.08); }
-		80%  { filter:opacity(1);   transform:scale(1.12); }
-		100% { filter:opacity(1);   transform:scale(1.14); }
+		0%   { filter:opacity(0);   transform:scale(0.94); }
+		20%  { filter:opacity(0.5); transform:scale(0.94); }
+		40%  { filter:opacity(0.7); transform:scale(0.94); }
+		60%  { filter:opacity(0.9); transform:scale(0.94); }
+		80%  { filter:opacity(1);   transform:scale(0.94); }
+		100% { filter:opacity(1);   transform:scale(0.94); }
 	}
 	@keyframes w1{
-		0%   { filter:opacity(0);   transform:scale(1.00); }
-		20%  { filter:opacity(0.5); transform:scale(1.00); }
-		40%  { filter:opacity(0.7); transform:scale(1.04); }
-		60%  { filter:opacity(0.9); transform:scale(1.08); }
-		80%  { filter:opacity(1);   transform:scale(1.12); }
-		100% { filter:opacity(1);   transform:scale(1.14); }
+		0%   { filter:opacity(0);   transform:scale(0.94); }
+		20%  { filter:opacity(0.5); transform:scale(0.94); }
+		40%  { filter:opacity(0.7); transform:scale(0.94); }
+		60%  { filter:opacity(0.9); transform:scale(0.94); }
+		80%  { filter:opacity(1);   transform:scale(0.94); }
+		100% { filter:opacity(1);   transform:scale(0.94); }
 	}
+	@-webkit-keyframes ww{
+		0%   { filter:opacity(1); transform:scale(0.96); }
+		20%  { filter:opacity(1); transform:scale(1.00); }
+		40%  { filter:opacity(1); transform:scale(1.04); }
+		60%  { filter:opacity(1); transform:scale(1.08); }
+		80%  { filter:opacity(1); transform:scale(1.12); }
+		100% { filter:opacity(1); transform:scale(1.14); }
+	}
+	@keyframes ww{
+		0%   { filter:opacity(1); transform:scale(0.96); }
+		20%  { filter:opacity(1); transform:scale(1.00); }
+		40%  { filter:opacity(1); transform:scale(1.04); }
+		60%  { filter:opacity(1); transform:scale(1.08); }
+		80%  { filter:opacity(1); transform:scale(1.12); }
+		100% { filter:opacity(1); transform:scale(1.14); }
+	}
+	
 	#w2{
 		 position          : absolute;
 		 display           : none;
@@ -1279,23 +1296,23 @@ body{
 		 z-index           : 106;
 		 filter            : opacity(0);
 		 
-		 -webkit-animation-name            : w1       ;
- 		 -webkit-animation-duration        : 1s       ;
-		 -webkit-animation-direction       : normal   ;  
-		 -webkit-animation-timing-function : linear   ; 
-		 -webkit-animation-iteration-count : 1        ;
-		 -webkit-animation-fill-mode       : forwards ;
-		 -webkit-animation-delay           : 1s       ;
-		 -webkit-animation-play-state      : paused   ;
+		 -webkit-animation-name            : w1       , ww       ;
+ 		 -webkit-animation-duration        : 1.0s     , 3s       ;
+		 -webkit-animation-direction       : normal   , normal   ;    
+		 -webkit-animation-timing-function : linear   , linear   ; 
+		 -webkit-animation-iteration-count : 1        , 1        ;
+		 -webkit-animation-fill-mode       : forwards , forwards ;
+		 -webkit-animation-delay           : 1s       , 1s       ;
+		 -webkit-animation-play-state      : paused   , paused   ;
 		 
-		 animation-name            : w1       ;
- 		 animation-duration        : 1.0s     ;
-		 animation-direction       : normal   ;  
-		 animation-timing-function : linear   ; 
-		 animation-iteration-count : 1        ;
-		 animation-fill-mode       : forwards ;
-		 animation-delay           : 1s       ;
-		 animation-play-state      : paused   ;
+		 animation-name            : w1       , ww       ;
+ 		 animation-duration        : 1.0s     , 3s       ;
+		 animation-direction       : normal   , normal   ;  
+		 animation-timing-function : linear   , linear   ; 
+		 animation-iteration-count : 1        , 1        ;
+		 animation-fill-mode       : forwards , forwards ;
+		 animation-delay           : 1s       , 1s       ;
+		 animation-play-state      : paused   , paused   ;
 	}
 	#w3{
 		 position          : absolute;
@@ -1310,23 +1327,23 @@ body{
 		 z-index           : 106;
 		 filter            : opacity(0);
 		 
-		 -webkit-animation-name            : w1       ;
- 		 -webkit-animation-duration        : 1s       ;
-		 -webkit-animation-direction       : normal   ;  
-		 -webkit-animation-timing-function : linear   ; 
-		 -webkit-animation-iteration-count : 1        ;
-		 -webkit-animation-fill-mode       : forwards ;
-		 -webkit-animation-delay           : 1s       ;
-		 -webkit-animation-play-state      : paused   ;
+		 -webkit-animation-name            : w1       , ww       ;
+ 		 -webkit-animation-duration        : 1.0s     , 3s       ;
+		 -webkit-animation-direction       : normal   , normal   ;    
+		 -webkit-animation-timing-function : linear   , linear   ; 
+		 -webkit-animation-iteration-count : 1        , 1        ;
+		 -webkit-animation-fill-mode       : forwards , forwards ;
+		 -webkit-animation-delay           : 1s       , 1s       ;
+		 -webkit-animation-play-state      : paused   , paused   ;
 		 
-		 animation-name            : w1       ;
- 		 animation-duration        : 1.0s     ;
-		 animation-direction       : normal   ;  
-		 animation-timing-function : linear   ; 
-		 animation-iteration-count : 1        ;
-		 animation-fill-mode       : forwards ;
-		 animation-delay           : 1s       ;
-		 animation-play-state      : paused   ;
+		 animation-name            : w1       , ww       ;
+ 		 animation-duration        : 1.0s     , 3s       ;
+		 animation-direction       : normal   , normal   ;  
+		 animation-timing-function : linear   , linear   ; 
+		 animation-iteration-count : 1        , 1        ;
+		 animation-fill-mode       : forwards , forwards ;
+		 animation-delay           : 1s       , 1s       ;
+		 animation-play-state      : paused   , paused   ;
 	}
 	
 	#tut,#tut2,#tut3{	
@@ -1600,8 +1617,6 @@ body{
 		 animation-delay           : 2.0s     ;
 		 animation-play-state      : paused   ;
 	}
-
-
 </style>
 
 </head>
@@ -1694,7 +1709,7 @@ body{
 
 </div>
 
-<script id="x" >
+<script id="x">
     window.requestAnimFrame = (function(){
 	  return  window.requestAnimationFrame       ||
 			  window.webkitRequestAnimationFrame ||
