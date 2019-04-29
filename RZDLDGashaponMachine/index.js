@@ -747,7 +747,7 @@
 			myIndex++;
 			if (myIndex > flashGlowImage.length){}
 			flashGlowImage[myIndex-1].style.display = "block";
-			renderFlashGlow = setTimeout(loopFlashGlow,130);			
+			renderFlashGlow = setTimeout(loopFlashGlow,140);			
 			 
 			if (myIndex === 4){
 				clearTimeout(renderFlashGlow);
