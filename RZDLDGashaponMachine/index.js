@@ -433,7 +433,10 @@
 			rc33.style.animationPlayState = "running";
 			rc33.style.webkitAnimationPlayState = "running";
 					
-       
+            cl1.style.display = "block";
+			cl1.style.animationPlayState = "running";
+			cl1.style.webkitAnimationPlayState = "running";
+		
         var non7 = "none";
 			document.getElementById('flashGlow').style.display = non7;
            	doTimer(
