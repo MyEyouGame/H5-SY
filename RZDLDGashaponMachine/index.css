@@ -1559,7 +1559,7 @@ body{
 		 background-repeat : no-repeat;
 		 background-Size   : 100% 100%; 
 		 filter            : opacity(0);
-		 z-index           : 152;
+		 z-index           : 170;
 		 
          -webkit-animation-name            : show     ;
  		 -webkit-animation-duration        : 1s       ;
