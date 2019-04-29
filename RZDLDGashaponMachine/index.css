@@ -770,7 +770,7 @@ body{
 		 z-index           : 101;
 	
 	     -webkit-animation-name            : RtorL    , bookScale;
- 		 -webkit-animation-duration        : 0.5s     , 1.5s;
+ 		 -webkit-animation-duration        : 0.5s     , 0.5s;
 		 -webkit-animation-direction       : normal   , normal;  
 		 -webkit-animation-timing-function : linear   , linear; 
 		 -webkit-animation-iteration-count : 1        , 1;
@@ -779,7 +779,7 @@ body{
 		 -webkit-animation-play-state      : running  , paused;
 		 
 	     animation-name            : RtorL    , bookScale;
- 		 animation-duration        : 0.5s     , 1.5s;
+ 		 animation-duration        : 0.5s     , 0.5s;
 		 animation-direction       : normal   , normal;  
 		 animation-timing-function : linear   , linear; 
 		 animation-iteration-count : 1        , 1;
@@ -792,7 +792,7 @@ body{
 		 z-index           : 100;
 	
 	     -webkit-animation-name            : bookScale;
- 		 -webkit-animation-duration        : 1.5s;
+ 		 -webkit-animation-duration        : 0.5s;
 		 -webkit-animation-direction       : normal;  
 		 -webkit-animation-timing-function : linear; 
 		 -webkit-animation-iteration-count : 1;
@@ -801,7 +801,7 @@ body{
 		 -webkit-animation-play-state      : paused;
 		 
 	     animation-name            : bookScale;
- 		 animation-duration        : 1.5s;
+ 		 animation-duration        : 0.5s;
 		 animation-direction       : normal;  
 		 animation-timing-function : linear; 
 		 animation-iteration-count : 1;
@@ -848,7 +848,7 @@ body{
 		 z-index           : 102;
 		
          -webkit-animation-name            : star     ;
- 		 -webkit-animation-duration        : 1.5s     ;
+ 		 -webkit-animation-duration        : 0.5s     ;
 		 -webkit-animation-direction       : normal   ;  
 		 -webkit-animation-timing-function : linear   ; 
 		 -webkit-animation-iteration-count : 1        ;
@@ -857,7 +857,7 @@ body{
 		 -webkit-animation-play-state      : paused   ;
 		 
          animation-name            : star     ;
- 		 animation-duration        : 1.5s     ;
+ 		 animation-duration        : 0.5s     ;
 		 animation-direction       : normal   ;  
 		 animation-timing-function : linear   ; 
 		 animation-iteration-count : 1        ;
@@ -872,7 +872,7 @@ body{
 		 z-index           : 102;
 		 
          -webkit-animation-name            : star     ;
- 		 -webkit-animation-duration        : 1.5s     ;
+ 		 -webkit-animation-duration        : 0.5s     ;
 		 -webkit-animation-direction       : normal   ;  
 		 -webkit-animation-timing-function : linear   ; 
 		 -webkit-animation-iteration-count : 1        ;
@@ -881,7 +881,7 @@ body{
 		 -webkit-animation-play-state      : paused   ;
 		 
          animation-name            : star     ;
- 		 animation-duration        : 1.5s     ;
+ 		 animation-duration        : 0.5s     ;
 		 animation-direction       : normal   ;  
 		 animation-timing-function : linear   ; 
 		 animation-iteration-count : 1        ;
@@ -1592,7 +1592,3 @@ body{
 		 animation-play-state      : paused   ;
 	}
 
-	
-	
-	
-	
