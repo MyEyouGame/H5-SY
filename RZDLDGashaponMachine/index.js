@@ -834,7 +834,6 @@
 		}
 		
 	} 
-			
 	
 	function sizeData(w,h){
 	
