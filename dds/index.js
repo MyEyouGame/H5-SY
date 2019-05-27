@@ -321,12 +321,7 @@
 			document.getElementById('lyb').style.top  = y-80+"px";        
 			var oEvent = oEvent||event;  
 	    }
-	   
-	
-		
-	}	 
-
-	var hitToggle = 0; 
+	   var hitToggle = 0; 
 		container.addEventListener("mousedown",hit);
 		function hit() { 
 			if (hitToggle === 0) {
@@ -340,6 +335,9 @@
 				hitToggle = 0;
 		    }
 	    } 
+	}	 
+
+	
 	 
 	//倒计时
     function djs(){
