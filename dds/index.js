@@ -337,8 +337,14 @@
 		    }
 	    } 
 		
+		function move(){
+			x = oEvent.clientX;
+			y = oEvent.clientY;            
+			document.getElementById('lyb').style.left = (parseInt(x))-0+"px"; 
+			document.getElementById('lyb').style.top  = y-80+"px";        
+			var oEvent = oEvent||event;  
+		}
 		
-	   
 	}	
 	
 	//倒计时
