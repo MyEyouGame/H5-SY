@@ -322,8 +322,12 @@
 			var oEvent = oEvent||event;  
 	    }
 	   
-	    var hitToggle = 0; 
-		ele.addEventListener("mousedown",hit);
+	
+		
+	}	 
+
+	var hitToggle = 0; 
+		container.addEventListener("mousedown",hit);
 		function hit() { 
 			if (hitToggle === 0) {
 				lyb.style.animationPlayState = "running";
@@ -336,9 +340,7 @@
 				hitToggle = 0;
 		    }
 	    } 
-		
-	}	
-	
+	 
 	//倒计时
     function djs(){
         lose(); 
