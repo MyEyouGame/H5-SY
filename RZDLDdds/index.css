@@ -1186,17 +1186,17 @@
 	@keyframes bc {
 		0%   { left: 11%; }
 		20%  { left: 5%;  }
-		40%  { left: 17%; }
+		40%  { left: 21%; }
 		70%  { left: 7%;  }
-		85%  { left: 18%; }
+		85%  { left: 23%; }
 		100% { left: 7%;  }
 	}
 	@-webkit-keyframes bc {
 		0%   { left: 11%; }
 		20%  { left: 5%;  }
-		40%  { left: 17%; }
+		40%  { left: 21%; }
 		70%  { left: 7%;  }
-		85%  { left: 18%; }
+		85%  { left: 23%; }
 		100% { left: 7%;  }
 	}
 	
