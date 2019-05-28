@@ -1185,19 +1185,19 @@
 	}
 	@keyframes bc {
 		0%   { left: 11%; }
-		20%  { left: 6%;  }
-		40%  { left: 16%; }
-		70%  { left: 8%;  }
-		85%  { left: 17%; }
-		100% { left: 8%;  }
+		20%  { left: 5%;  }
+		40%  { left: 17%; }
+		70%  { left: 7%;  }
+		85%  { left: 18%; }
+		100% { left: 7%;  }
 	}
 	@-webkit-keyframes bc {
 		0%   { left: 11%; }
-		20%  { left: 6%;  }
-		40%  { left: 16%; }
-		70%  { left: 8%;  }
-		85%  { left: 17%; }
-		100% { left: 8%;  }
+		20%  { left: 5%;  }
+		40%  { left: 17%; }
+		70%  { left: 7%;  }
+		85%  { left: 18%; }
+		100% { left: 7%;  }
 	}
 	
 	#bear1 {
