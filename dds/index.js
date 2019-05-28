@@ -268,7 +268,7 @@
 	function hitAnimal(id) {
 		select[id].classList.add("bc");
 		hitEffect[id].style.display = "block";
-		countAnimal(); 
+		countAnimal();		
 	}
 	
 	var count = 0;
@@ -276,7 +276,8 @@
 		count++;
 		if (count == 5) { 
 			setTimeout(win, 600);
-			clearTimeout(loseTimer);
+			clearTimeout (circle);
+			clearTimeout(loseTimer); 
 		}
 		if (count == 1){
 		score.style.background = scoreArray[0];
@@ -296,13 +297,15 @@
     closeInfo.onclick = function(){
 		hideAllBear();
 		hideAllMonster();
-		startGame();
-		
+		startGame(); 
 		this.style.animation = "close 0.5s normal linear 1 forwards";
 		this.style.webkitAnimation = "close 0.5s normal linear 1 forwards";
 		
 		info.style.animationPlayState = "running";
 		info.style.webkitAnimationPlayState = "running";
+		
+		lyb.style.animationPlayState = "running";
+		lyb.style.webkitnimationPlayState = "running";
 		
 		djs15.style.display = "none";
 	    	
@@ -310,35 +313,41 @@
 			info.style.display = "none";
 			tut.style.display="none";
 		}, 800);
-		
-		var ele = document.getElementById("container");	
-		ele.onmousemove = function(){GetMouse(event);}
-		function GetMouse(oEvent,snum)
-		{
-			x = oEvent.clientX;
-			y = oEvent.clientY;            
-			document.getElementById('lyb').style.left = (parseInt(x))-0+"px"; 
-			document.getElementById('lyb').style.top  = y-80+"px";        
-			var oEvent = oEvent||event;  
-	    }
-	   var hitToggle = 0; 
-		container.addEventListener("mousedown",hit);
-		function hit() { 
-			if (hitToggle === 0) {
-				lyb.style.animationPlayState = "running";
-				lyb.style.WebkitAnimationPlayState = "running";
-				hitToggle = 1;
-			}
-			else{
-				lyb.style.animationPlayState = "running";
-				lyb.style.WebkitAnimationPlayState = "running";
-				hitToggle = 0;
-		    }
-	    } 
-	}	 
-
-	
+  
 	 
+  
+		// var ele = document.getElementById("container");
+		// ele.onmousemove = function(){GetMouse(event);}
+		// function GetMouse(oEvent,snum) 
+		// {   
+			// var oEvent = window.event;
+			// x = oEvent.clientX;
+			// y = oEvent.clientY;            
+			// document.getElementById('lyb').style.left = (parseInt(x))-650+"px";  
+			// document.getElementById('lyb').style.top  = y-80+"px";       		
+			// var oEvent = oEvent||event;  
+	    // }
+	       
+		// ele.addEventListener("mousedown",hit);
+	    // var hitToggle = 0; 
+		// function hit() { 
+			// if (hitToggle === 0) {
+				// lyb.style.animationPlayState = "running";
+				// lyb.style.WebkitAnimationPlayState = "running";
+			 
+				// hitToggle = 1;
+			// }
+			// else{
+				// lyb.style.animationPlayState = "running";
+				// lyb.style.WebkitAnimationPlayState = "running";
+		 
+				// hitToggle = 0;
+		    // }
+	    // } 
+		
+	}	 
+ 
+	
 	//倒计时
     function djs(){
         lose(); 
@@ -359,6 +368,7 @@
 		leaf1Animation();
 		leaf2Animation();
 		
+		clearTimeout(renderDJS);
 		clearTimeout("djs()");
 		clearInterval(circle);
 		
