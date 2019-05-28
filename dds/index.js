@@ -313,38 +313,7 @@
 			info.style.display = "none";
 			tut.style.display="none";
 		}, 800);
-  
-	 
-  
-		// var ele = document.getElementById("container");
-		// ele.onmousemove = function(){GetMouse(event);}
-		// function GetMouse(oEvent,snum) 
-		// {   
-			// var oEvent = window.event;
-			// x = oEvent.clientX;
-			// y = oEvent.clientY;            
-			// document.getElementById('lyb').style.left = (parseInt(x))-650+"px";  
-			// document.getElementById('lyb').style.top  = y-80+"px";       		
-			// var oEvent = oEvent||event;  
-	    // }
-	       
-		// ele.addEventListener("mousedown",hit);
-	    // var hitToggle = 0; 
-		// function hit() { 
-			// if (hitToggle === 0) {
-				// lyb.style.animationPlayState = "running";
-				// lyb.style.WebkitAnimationPlayState = "running";
-			 
-				// hitToggle = 1;
-			// }
-			// else{
-				// lyb.style.animationPlayState = "running";
-				// lyb.style.WebkitAnimationPlayState = "running";
-		 
-				// hitToggle = 0;
-		    // }
-	    // } 
-		
+   
 	}	 
  
 	
