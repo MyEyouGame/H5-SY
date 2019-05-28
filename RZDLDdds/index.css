@@ -1168,7 +1168,7 @@
 		 z-index           : 102;
 		 
 		 -webkit-animation-name            : bc; 
- 		 -webkit-animation-duration        : 0.5s; 
+ 		 -webkit-animation-duration        : 0.3s; 
 		 -webkit-animation-direction       : normal;
 		 -webkit-animation-timing-function : linear;
 		 -webkit-animation-iteration-count : 1; 
@@ -1176,7 +1176,7 @@
 		 -webkit-animation-play-state      : running;
 		 
 		 animation-name            : bc; 
- 		 animation-duration        : 0.5s; 
+ 		 animation-duration        : 0.3s; 
 		 animation-direction       : normal;
 		 animation-timing-function : linear;
 		 animation-iteration-count : 1; 
@@ -1185,19 +1185,19 @@
 	}
 	@keyframes bc {
 		0%   { left: 11%; }
-		20%  { left: 7%;  }
-		40%  { left: 15%; }
-		70%  { left: 9%;  }
-		85%  { left: 16%; }
-		100% { left: 9%;  }
+		20%  { left: 6%;  }
+		40%  { left: 16%; }
+		70%  { left: 8%;  }
+		85%  { left: 17%; }
+		100% { left: 8%;  }
 	}
 	@-webkit-keyframes bc {
 		0%   { left: 11%; }
-		20%  { left: 7%;  }
-		40%  { left: 15%; }
-		70%  { left: 9%;  }
-		85%  { left: 16%; }
-		100% { left: 9%;  }
+		20%  { left: 6%;  }
+		40%  { left: 16%; }
+		70%  { left: 8%;  }
+		85%  { left: 17%; }
+		100% { left: 8%;  }
 	}
 	
 	#bear1 {
@@ -1457,13 +1457,13 @@
 		z-index           : 102;
 		
 		-webkit-animation-name            : talisman    ; 
- 		-webkit-animation-duration        : 0.5s        ; 
+ 		-webkit-animation-duration        : 0.3s        ; 
 		-webkit-animation-direction       : normal      ;
 		-webkit-animation-timing-function : linear      ;
 		-webkit-animation-iteration-count : 1           ;
 		
 		animation-name            : talisman    ; 
- 		animation-duration        : 0.5s        ; 
+ 		animation-duration        : 0.3s        ; 
 		animation-direction       : normal      ;
 		animation-timing-function : linear      ;
 		animation-iteration-count : 1           ;
@@ -1557,13 +1557,13 @@
 		z-index           : 102;
 		
 		-webkit-animation-name            : add    ; 
- 		-webkit-animation-duration        : 0.5s        ; 
+ 		-webkit-animation-duration        : 0.3s        ; 
 		-webkit-animation-direction       : normal      ;
 		-webkit-animation-timing-function : linear      ;
 		-webkit-animation-iteration-count : 1           ;
 		
 		animation-name            : add    ; 
- 		animation-duration        : 0.5s        ; 
+ 		animation-duration        : 0.3s        ; 
 		animation-direction       : normal      ;
 		animation-timing-function : linear      ;
 		animation-iteration-count : 1           ;
@@ -1738,81 +1738,81 @@
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m2{
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m3{
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m4{
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m5{
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m6{
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m7{
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m8{
 		position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	#m9{
 		 position          : absolute;
 		 display           : inherit;
 		 top               : 100%; 
-		 left              : 14%; 
+		 left              : 12%; 
 		 height            : 100%; 
-		 width             : 68%;    		 
+		 width             : 71%;    		 
 		 z-index           : 102; 
 	}
 	@keyframes shake {
@@ -1836,9 +1836,9 @@
 	
 	#score{
 	     position          : absolute;
-		 height            : 4%; 
-		 width             : 9%; 
-		 top               : 13%; 
+		 height            : 2.5%; 
+		 width             : 8%; 
+		 top               : 14%; 
 		 left              : 81%; 
 		 background-image  : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAA5BAMAAAAl/gOHAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAADBQTFRFAAAA9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LV9/LVlI3EOgAAABB0Uk5TABEiZnf/u6pEiO7Mmd0zVZAvnksAAAPNSURBVHichZZPSJRREMDfumKrmX5UFnXaMqE8eUjouB02ijDQfKt+u58Kqf0jEEoqiNiojagOXgwKoiJXwkNmIIRQePEQXQzcq6yQQR3Eg1489c3M+/t93+Zcdnbm/YaZefPe9xjbSfbuuCJS9qWH/uuP376Uj7K/GuazpD2/HIWVOG+Lshc57wcl1sH5Qsid8N18JoKr8e0XQdn2lUySjM0b0p3mIFfCXB0sh8C4YPLoi6EyO8QHhLee8wrgmm/t9n+ruRT3aol7wrsojcESY2O+0XMoX0Py6G1U/z8GOPRA9D02Ry3WxkyAO4yZ+UrB5rrQu6UNgUSHuagvwHVrL8k7C4uj7WeYw61JBA1KCiqHqDzrDUPW4hZleWzC5nCEWlB1yZI0sISuZdjm3oKNhqWPQqYMjvo8GOa8MtjmUF94NqZWCWnXmRM3VaRiboIpJhL8M6UyIKkqqlKIyzn7753aPPuA3DQtGdYwrTpFUmskvqgqVbIb3b0skaZfJVtGg9OCe5K3q+CjLLZtx2yANN0vBpd77fdY+Uu4C37/H8PCHmV/CvaepMFxPuAod1xt0jHX2nhsxR1mcTzzRrpx5PkSJOaBZsXLrgY4zpcd0wIzmPgKmmPGm2UhTl5DVJ5WZcOg8+66E+b4OBgSYvdUReIEol2fDpPLgaFatUUMfYoW1qjIIY5vSL/gcKMHaSEcEld3fcLkPgS4JtlZkbMxV9Z5cB2bw4M4qndhuQIHF77JFWTy/ucE1AuVuK5KHM6mlwpxmZG709R+k2tX/cTZlJ8RkDFcBtN6sOQrZcHldFDoZ2wONPNuo31ISXVcHE5PO5dUkwcMDlu2guoBXET73qOTGZeFWlcN3JViouGcd5p3HV00bTLheaM8VkVHFGSNStAcncS8uHGyD5kpJ+bvG6V2i+SQ24WcI47QzKrFsSPiF7eoWzQfW0fdYOLy2nRYpPwFZ68InoVFGMEVRygT+KLJKLGSGBjK7rO+R+li7EtZ2LlbxynLDlz1SR5A9zRrRaWPVaX1zkjxWza3Ens0coPGDQZAfP28NhrBLsrE7bc4LP0al4IHU+hZ+lmgQFk7zVZuScSnLUmcZ3cz8LntlPuoJCcSt9MMcgtgazEtXYIbtbkmC8NdM55Q1Cgc0w2bs59LovbFQKQxeQ9raTQx+TiqLikTvrPa/bYkA6ARWz9D40VpwuGqC7+3zCeVcQ38+kGm9/ivNtRO843jWaX/xurKqMeK1muEZP3kyzPXAQvMe/N3/XYpTIYwkobzmXzI2PxNao3lChxjSfH7DzaTOKWzKV+dAAAAAElFTkSuQmCC');
 		 background-repeat : no-repeat !important;
