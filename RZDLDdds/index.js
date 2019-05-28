@@ -141,7 +141,7 @@
 			cancelAnimationFrame(showBear[id]);
 			timer[id] = setTimeout(function() {
 				hideOneBear(id);
-			}, 350);
+			}, 300);
 		}
 	}
 	
@@ -195,7 +195,7 @@
 			cancelAnimationFrame(showMonst[id]);
 			timerMonst[id] = setTimeout(function() {
 				hideOneMonster(id);
-			}, 350);
+			}, 300);
 		}else if (posMonster[id] <= 0 && lose1 == 1){
 			cancelAnimationFrame(showMonst[id]);
 			monsterShake();
