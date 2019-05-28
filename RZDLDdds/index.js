@@ -75,6 +75,7 @@
 		resize(newWidth,newHeight);	
 		
 	} 
+	
 	// Bear的进出Animation
 	var bearAllArray = ['1','2','3','4','5','6','7','8','9'];
 	var bears = {};
@@ -106,7 +107,7 @@
 		bears[id] = document.querySelector("#bear"+id);
 		lights[id] = document.querySelector("#hole"+id);
 		bears[id].style.top = pos[id]+"%";
-		pos[id]+=4.5;
+		pos[id]+=5.5;
 		hideBear[id] = requestAnimationFrame(function() {
 			hideBearAnimation(id, pos[id]);
 		});
@@ -132,7 +133,7 @@
 		pos[id] = Number(position);
 		bears[id] = document.querySelector("#bear"+id);
 		bears[id].style.top = pos[id]+"%";
-		pos[id]-=4.5;
+		pos[id]-=5.5;
 		showBear[id] = requestAnimationFrame(function() {
 			show(id, pos[id]);
 		});
@@ -140,7 +141,7 @@
 			cancelAnimationFrame(showBear[id]);
 			timer[id] = setTimeout(function() {
 				hideOneBear(id);
-			}, 500);
+			}, 350);
 		}
 	}
 	
@@ -194,7 +195,7 @@
 			cancelAnimationFrame(showMonst[id]);
 			timerMonst[id] = setTimeout(function() {
 				hideOneMonster(id);
-			}, 500);
+			}, 350);
 		}else if (posMonster[id] <= 0 && lose1 == 1){
 			cancelAnimationFrame(showMonst[id]);
 			monsterShake();
