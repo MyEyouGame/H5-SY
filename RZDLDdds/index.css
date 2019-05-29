@@ -168,7 +168,7 @@
 	@keyframes infoS{
 		0%   { filter:opacity(0); }
 		10%  { filter:opacity(1); }
-		100% { filter:opacity(1); }
+		100% { filter:opacity(0); }
 	}
   
 	#tut{
