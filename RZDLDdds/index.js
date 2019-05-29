@@ -295,18 +295,20 @@
 	
 	var lyb = document.querySelector("#lyb");
 	
-    closeInfo.onclick = function(){
+    startPage.onclick = function(){
 		hideAllBear();
 		hideAllMonster();
 		startGame(); 
-		this.style.animation = "close 0.5s normal linear 1 forwards";
-		this.style.webkitAnimation = "close 0.5s normal linear 1 forwards";
-		
+	 
 		info.style.animationPlayState = "running";
 		info.style.webkitAnimationPlayState = "running";
 		
 		lyb.style.animationPlayState = "running";
 		lyb.style.webkitnimationPlayState = "running";
+		
+		infoS.style.display = "block";
+		infoS.style.animationPlayState = "running";
+		infoS.style.webkitnimationPlayState = "running";
 		
 		djs15.style.display = "none";
 	    	
