@@ -227,7 +227,7 @@
 		var num1 = rand(1, 9);
 		var num2 = rand(1, 100);
 		
-		if (num2 < 75) {
+		if (num2 < 85) {
 			showBearAnimation(num1);
 		}else {
 			showMonsterAnimation(num1);
