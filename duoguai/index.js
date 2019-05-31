@@ -97,20 +97,7 @@
 					// }				
             // );	
 	}
-
-    //人物跟着鼠标移动
- 	// var ele = document.getElementById("container");	
-		// ele.onmousemove = function(){GetMouse(event);}
-		// function GetMouse(oEvent,snum)
-		// {
-			// x = oEvent.clientX;
-			// y = oEvent.clientY;            
-			// document.getElementById('character').style.left = (parseInt(x))-30+"px"; 
-			// document.getElementById('character').style.top  = y-80+"px";        
-			// var oEvent = oEvent||event;  
-	    // }
-
-	
+ 
 	function startGame() {
 		CAnimation();
 		character.style.zIndex = "1";
@@ -213,18 +200,24 @@
 	    return Math.round(Math.random()*(max-min)+min);
     }
 	
+	var life = 3;
+	var mm = document.querySelector("#monst");
+	
 	function eventadd() {
 		container.addEventListener("mousemove", function(event){
-			var rect = gamePage.getBoundingClientRect();
-		
+			
+			var rect = gamePage.getBoundingClientRect();  
+			
 			var x = event.clientX - rect.left;
 			var y = event.clientY - rect.top; 
 		
 			character.style.top = (y-(y*0.12)) +'px';
 			character.style.left = (x-(x*0.12)) +'px';
+ 
 		});
 	}
 	
+	 
 	
 	
 	
