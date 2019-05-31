@@ -225,7 +225,17 @@
 			character.style.top = (y-(y*0.12)) +'px';
 			character.style.left = (x-(x*0.12)) +'px';
 		
-		
+		    var l1 = character.offsetLeft;
+			var r1 = character.offsetWidth;
+			var t1 = character.offsetTop;
+			var b1 = character.offserHeight;
+			
+			var l2 = ghosthead.offsetLeft;
+			var r2 = ghosthead.offsetWidth;
+			var t2 = ghosthead.offsetTop;
+			var b2 = ghosthead.offserHeight;
+			
+			 
 		});
 	}
 	
