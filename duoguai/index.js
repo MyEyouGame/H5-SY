@@ -110,22 +110,137 @@
 			// var oEvent = oEvent||event;  
 	    // }
 
- 
- 
-
+	
 	function startGame() {
 		CAnimation();
-	 
+		character.style.zIndex = "1";
+		setInterval(chooseMonster, 500);
+		eventadd();
 	}
 	
-	//碰撞检测
+	var status1 = {};
+	function resetStatus() {
+		for (i=1; i<11;i++) {
+			status1[i] = 0;
+		}
+	}
+	resetStatus();
+	function chooseMonster() {
+		var lane = rand(1, 5);
+		if (lane == 1) {
+			if (status1[1] == 0) {
+				createMonster(1);
+			}else if (status1[2] == 0) {
+				createMonster(2);
+			}else {
+				chooseMonster();
+			}
+		}else if (lane == 2) {
+			if (status1[3] == 0) {
+				createMonster(3);
+			}else if (status1[4] == 0) {
+				createMonster(4);
+			}else {
+				chooseMonster();
+			}
+		}else if (lane == 3) {
+			if (status1[5] == 0) {
+				createMonster(5);
+			}else if (status1[6] == 0) {
+				createMonster(6);
+			}else {
+				chooseMonster();
+			}
+		}else if (lane == 4) {
+			if (status1[7] == 0) {
+				createMonster(7);
+			}else if (status1[8] == 0) {
+				createMonster(8);
+			}else {
+				chooseMonster();
+			}
+		}else if (lane == 5) {
+			if (status1[9] == 0) {
+				createMonster(9);
+			}else if (status1[10] == 0) {
+				createMonster(10);
+			}else {
+				chooseMonster();
+			}
+		}
+		
+	}
 	
 	
-	//获取两个矩形相交区域
-    function getInRect(x1,y1,x2,y2,x3,y3,x4,y4) {
-        return [Math.max(x1,x3),Math.max(y1,y3),Math.min(x2,x4),Math.min(y2,y4)];
+	function createMonster(id) {
+		var el = document.querySelector("#monst"+id);
+		var pos = -13;
+		var speed;
+		var num = rand(0, 99);
+		if (num < 20) {
+			speed = 1;
+		}else if (num > 20 && num < 40) {
+			speed = 2;
+		}else if (num > 40 && num < 60) {
+			speed = 2.5;
+		}else if (num > 60 && num < 80) {
+			speed = 1.5;
+		}else if (num > 80 && num < 100) {
+			speed = 0.5;
+		}
+		monsterFall(id, speed, pos);
+		status1[id] = 1;
+	}
+	
+	var monster = {};
+	var fall = {};
+	var pos = {};
+	function monsterFall(id, speed, position) {
+		pos[id] = Number(position);
+		monster[id] = document.querySelector("#monst"+id);
+		monster[id].style.top = pos[id]+"%";
+		pos[id] += speed;
+		fall[id] = requestAnimationFrame(function() {
+			monsterFall(id, speed, pos[id]);
+		});
+		if (pos[id] >= 100) {
+			cancelAnimationFrame(fall[id]);
+			status1[id] = 0;
+		}
+	}
+	
+	function rand(min,max){
+	    return Math.round(Math.random()*(max-min)+min);
     }
- 
+	
+	var life = 3;
+	
+	function eventadd() {
+		container.addEventListener("mousemove", function(event){
+			var rect = gamePage.getBoundingClientRect();
+		
+			var x = event.clientX - rect.left;
+			var y = event.clientY - rect.top; 
+		
+			character.style.top = (y-(y*0.12)) +'px';
+			character.style.left = (x-(x*0.12)) +'px';
+		
+		
+		});
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     function lose1(){
 		loseContainer.style.display = "block";
 		character.style.zIndex = "0";
